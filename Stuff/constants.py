@@ -1,10 +1,10 @@
-PARTICIPATION_FEE = 250
+PARTICIPATION_FEE = 200
 LIMIT = 24
 BONUS = 20
 
 AUTOFILL = False
-TESTING = False
+TESTING = True
 GOTHROUGH = False
-URL = "https://bahnik.pythonanywhere.com/"
-#URL = "TEST"
+#URL = "https://bahnik.pythonanywhere.com/"
+URL = "TEST"
 #URL = "http://127.0.0.1:8000/"

@@ -10,7 +10,7 @@ import urllib.parse
 import os
 import json
 
-from constants import TESTING, URL, GOTHROUGH
+from constants import TESTING, URL, GOTHROUGH, PARTICIPATION_FEE
 
 
 class GUI(Tk):
@@ -47,7 +47,9 @@ class GUI(Tk):
         self.texts = defaultdict(str)
         self.status = defaultdict(str)
         self.status["logged"] = False
-                                    
+        self.status["reward"] = PARTICIPATION_FEE
+        self.status["results"] = []
+
         self.count = -1
 
         self.columnconfigure(0, weight = 1)
@@ -146,7 +148,7 @@ class GUI(Tk):
 
 
     def uploadResults(self):
-        for i in range(5):
+        for i in range(20):
             # Set the URL of the Django app that handles file uploads
             url = URL + "results/"
 

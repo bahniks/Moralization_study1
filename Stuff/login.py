@@ -15,7 +15,7 @@ import urllib.parse
 from common import InstructionsFrame
 from gui import GUI
 from constants import TESTING, URL
-
+from moralization import neutral, monetary, person_moralization, task_moralization
 
 
 
@@ -59,18 +59,13 @@ class Login(InstructionsFrame):
         self.login()
 
     def update_intros(self):
-        versions = ["R", "S"]
-        random.shuffle(versions)
-        self.root.status["versions"] = versions
-        self.root.status["videoNumber"] = 1
-        self.root.texts["version1"] = versions[0]
-        self.root.texts["version2"] = versions[1]            
-        self.root.status["condition"] = random.choice(["high", "low"])    
-        self.root.texts["condition"] = "1000" if self.root.status["condition"] == "high" else "10"
+        conditions = ["neutral", "monetary", "person_moralization", "task_moralization"]
+        self.root.status["condition"] = random.choice(conditions)
+        self.root.texts["condition"] = eval(self.root.status["condition"])
 
     def write(self, response):
         self.file.write("Login" + "\n")
-        self.file.write(self.id + self.root.status["condition"] + "\t" + self.root.texts["version1"] + "\t" + self.root.texts["version2"] + "\n\n")        
+        self.file.write(self.id + self.root.status["condition"] + "\n\n")        
 
     def gothrough(self):
         self.run()
