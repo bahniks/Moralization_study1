@@ -1,0 +1,293 @@
+0 Bujon Bujon 
+ 1618kJ 
+ B 60,6 
+ T 15,9 
+ S  0,0  30,3    8,0    8,0  30,3    8,0    8,0 
+Alergen: 
+0BRK Banány Polévka selská Kaše bramborová 
+ 4584kJ Veka balená 100g Kaše bramborová Banány 
+ B 25,6 Banány 
+ T 13,7 
+ S203,7   9,3    3,5   54,9  10,6    8,1   30,8   5,7    2,1   24,9 
+Alergen: 1 1,3,7,9 7
+0M Veka balená 100g Polévka selská Polévka selská 
+ 2727kJ Banány 
+ B 19,0 
+ T 15,5 
+ S103,4   9,3    3,5   26,3   4,8    6,0   20,6   4,8    6,0   20,6 
+Alergen: 1 1,3,9 1,3,9 
+1 Veka balená 100g Pyré Polévka selská Jogurt ovocný 150 g Vep řové po víde ňsku 
+ 9018kJ Pudink 125g Ku ře na protlaku Kaše bramborová 
+ B 88,8 Flora porce Kaše bramborová 
+ T 60,1 
+ S302,5   8,4   11,3   11,3   0,0    0,1   21,9  50,4   35,7   70,3   5,3    2,0   22,3  24,7   11,1   45,7 
+Alergen: 1,7 1,3,7,9 7 1,7 
+10 Rohlík 2 ks Jablka Polévka selská Kolá č Tvaroh p řírodní 
+ 8985kJ Flora porce Ku ře na protlaku Máslo porce 
+ B 93,3 Džem porce 2 ks Těstoviny Veka balená 100g 
+ T 74,2 Mandarinky 
+ S265,6   7,0   12,8   35,7   0,5    0,8   16,6  58,0   39,3  102,2   3,1    4,0   40,2  24,6   17,3   22,6 
+Alergen: 1 1,3,9 1,3,7 1,7 
+10/9 Rohlík 2 ks Jablka Polévka selská Jablka Tvaroh p řírodní Rohlík 
+ 9093kJ Flora porce Ku ře na protlaku Flora porce Rama porce 
+ B 94,9 Džem porce dia 2 ks Těstoviny Veka balená 100g Rajče
+ T 79,7 Mandarinky 
+ S256,0   7,0   12,8   22,2   0,5    0,8   16,6  58,0   39,3  102,2   0,5    0,8   16,6  24,5   17,1   22,3   4,4    9,0   11,5 
+Alergen: 1 1,3,9 1,7 1
+11-1 Chléb 100g Rohlík Pol.slepi čí s t ěst. Rohlík sýrový Kr ůtí prsa 100g Chléb 50g 
+11317kJ Máslo porce 2 ks Pudink 125g Knedlíky ovocné Rohlík selský 2 ks Rama porce 
+ B 80,0 Paštika 48g Mléko 1/4 Mou čník Máslo porce 2 ks Rajče
+ T 90,5 Džus 0,25l Mandarinky 
+ S376,7  18,2   25,6   46,9   3,8    2,4    2,4  20,6   27,1   53,0   4,4    3,0   29,9  28,4   25,3   30,5   4,6    7,2    9,7 
+Alergen: 1,12,7 1,7 1,3,7,9 1,7 1,7 1,12 
+11-2 Pol.slepi čí s t ěst. Rohlík sýrový Salát burghulový se Chléb 50g 
+12932kJ Uzené maso va řené Rohlík selský 2 ks Rama porce 
+ B 90,1 Čočka na kyselo Máslo porce 2 ks Rajče
+ T105,4 Okurka kyselá Mandarinky 
+ S417,0 Mou čník 
+ B T S  36,9   32,8   58,7   4,4    3,0   29,9  22,2   34,4   39,7   4,6    7,2    9,7 
+Alergen: 1,12,7 1,7 1,12,3,9 1,7 1,7 1,12 
+11ML-1 Chléb 100g Rohlík Pol.slepi čí s t ěst. Jogurt ovocný 150 g Tvaroh p řírodní Chléb 50g 
+12616kJ Máslo porce 2 ks Pudink 125g Ku ře na protlaku Máslo porce 2 ks Rama porce 
+ B107,3 Šunka 40g Mléko 1/4 Brambory va řené Veka balená 100g Rajče
+ T 99,6 Džus 0,25l Mou čník Banány 
+ S403,5  16,2   21,5   42,8   3,8    2,4    2,4  51,9   40,8   66,8   5,3    2,0   22,3  25,6   25,6   48,4   4,6    7,2    9,7 
+Alergen: 1,12,7 1,7 1,3,9 7 1,7 1,12 Čtvrtek T: 3 D: 4 Jídelní lístek: Dosp ělá 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře30.05.2019 
+11ML-2 Pol.slepi čí s t ěst. Jogurt ovocný 150 g Vep řové po víde ňsku Chléb 50g 
+ 9784kJ Uzené maso va řené Kaše bramborová Rama porce 
+ B 66,6 Kaše bramborová mašt Rajče
+ T 62,3 Okurka kyselá 
+ S359,1 Mou čník 
+ B T S  12,1   18,2   44,1   5,3    2,0   22,3  24,7   11,1   45,7   4,6    7,2    9,7 
+Alergen: 1,12,7 1,7 1,12,3,7,9 7 1,7 1,12 
+12 Rohlík Rohlík Polévka selská Kolá č Vep řové po víde ňsku 
+ 6452kJ Flora porce Mléko 1/4 Ku ře na protlaku Jablka Kaše bramborová 
+ B 61,6 Šunka 40g Kaše bramborová 
+ T 47,1 Džus 0,25l
+ S204,8  12,2   14,3   35,6   3,4    2,4    2,4  27,9   19,2   53,8   3,6    4,8   20,6  14,6    6,5   41,1 
+Alergen: 1 1,7 1,3,7,9 1,3,7 1,7 
+12M Piškoty 120g Mléko 1/4 Polévka selská Pyré Vep řové po víde ňsku 
+ 5996kJ Termix 90g Ku ře na protlaku Kaše bramborová 
+ B 59,8 Kaše bramborová 
+ T 35,1 
+ S210,4  17,4    9,4   21,4   0,0    0,0    0,1  27,9   19,2   53,8   0,0    0,1   21,9  14,6    6,5   41,1 
+Alergen: 1,3,7 7 1,3,7,9 1,7 
+13-1 Chléb 100g Rohlík Pol.slepi čí s t ěst. Rohlík sýrový Kr ůtí prsa 100g 
+ 7876kJ Flora porce Mléko 1/4 Knedlíky ovocné Rohlík selský 2 ks 
+ B 73,8 Paštika 48g Jablka Máslo porce 2 ks 
+ T 66,4 Džus 0,25l Mandarinky 
+ S234,4  18,0   17,1   38,4   3,9    3,2   18,9  19,1   17,8   38,6   4,4    3,0   29,9  28,4   25,3   30,5 
+Alergen: 1,12 1,7 1,3,7,9 1,7 1,7 
+13-2 Pol.slepi čí s t ěst. Rohlík sýrový Salát burghulový se 
+ 9914kJ Teplá šunka Rohlík selský 2 ks 
+ B101,9 Čočka na kyselo Máslo porce 2 ks 
+ T 84,2 Okurka kyselá Mandarinky 
+ S274,7  53,3   26,5   29,0   4,4    3,0   29,9  22,2   34,4   39,7 
+Alergen: 1,12 1,7 1,12,3,9 1,7 1,7 
+1NEM Veka balená 100g Pyré Polévka selská Jogurt ovocný 150 g Vep řové po víde ňsku 
+ 7265kJ Termix 90g Ku ře na protlaku Kaše bramborová 
+ B 92,4 Kaše bramborová 
+ T 55,3 
+ S207,1  12,0    6,5   18,5   0,0    0,1   21,9  50,4   35,7   70,3   5,3    2,0   22,3  24,7   11,1   45,7 
+Alergen: 1,7 1,3,7,9 7 1,7 
+2 Rohlík 2 ks Jablka Polévka selská Kolá č Sýr fénix 
+ 9062kJ Flora porce Ku ře na protlaku Máslo porce 
+ B 96,0 Šunka 40g Těstoviny Veka balená 100g 
+ T 87,1 Mandarinky 
+ S240,0  13,9   16,3   16,8   0,5    0,8   16,6  58,0   39,3  102,2   3,1    4,0   40,2  20,5   26,7   32,0 
+Alergen: 1 1,3,9 1,3,7 1,7 
+2NEM Rohlík 2 ks Jablka Polévka selská Kolá č Tvaroh p řírodní 
+ 8238kJ Šunka 40g Ku ře na protlaku Veka balená 100g 
+ B100,0 Těstoviny Mandarinky 
+ T 61,5 
+ S243,2  13,9    8,3    8,8   0,5    0,8   16,6  58,0   39,3  102,2   3,1    4,0   40,2  24,5    9,1   14,3 
+Alergen: 1 1,3,9 1,3,7 1,7 
+3-1 Chléb 100g Džus 0,25l Pol.slepi čí s t ěst. Rohlík sýrový Kr ůtí prsa 100g 
+ 7015kJ Flora porce Knedlíky ovocné Rohlík selský 2 ks 
+ B 69,9 Paštika 48g Máslo porce 2 ks 
+ T 63,2 Mandarinky 
+ S196,8  16,3   16,7   17,1   1,7    0,3   21,7  19,1   17,8   38,6   4,4    3,0   29,9  28,4   25,3   30,5 
+Alergen: 1,12 1,3,7,9 1,7 1,7 Čtvrtek T: 3 D: 4 Jídelní lístek: Dosp ělá 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře30.05.2019 
+3-2 Pol.slepi čí s t ěst. Rohlík sýrový Salát burghulový se 
+ 8630kJ Uzené maso va řené Rohlík selský 2 ks 
+ B 80,0 Čočka na kyselo Máslo porce 2 ks 
+ T 78,0 Okurka kyselá Mandarinky 
+ S237,1  35,3   23,5   26,1   4,4    3,0   29,9  22,2   34,4   39,7 
+Alergen: 1,12 1,12,3,9 1,7 1,7 
+3G Veka balená 100g Džus 0,25l Pol.slepi čí s t ěst. Kolá č Kr ůtí prsa 100g 
+ 7117kJ Flora porce Knedlíky ovocné Máslo porce 2 ks 
+ B 66,1 Šunka 40g Veka balená 100g 
+ T 58,8 Banány 
+ S217,0  15,1   14,9   15,5   1,7    0,3   21,7  19,1   17,8   38,6   3,1    4,0   40,2  27,1   21,6   44,4 
+Alergen: 1 1,3,7,9 1,3,7 1,7 
+3NB Chléb 100g Banány Pol.slepi čí s t ěst. Rohlík Lu čina 100g 
+ 6627kJ Máslo porce 2 ks Mléko 1/4 Knedlíky ovocné Pomeran č Máslo porce 2 ks 
+ B 42,2 Šunka 40g Houska 2 ks 
+ T 79,8 Mandarinky 
+ S166,5   7,2   20,1   20,7   1,3    0,2    0,3   8,3   19,5   59,9   4,4    2,5   10,3  21,1   37,5   42,8 
+Alergen: 7 7 1,3,7,9 1 1,12,7 
+3PK-1 Chléb 100g Rohlík Pol.slepi čí s t ěst. Rohlík sýrový Kr ůtí prsa 100g Chléb 50g 
+10624kJ Flora porce Pudink 125g Knedlíky ovocné Rohlík selský 2 ks Rama porce 
+ B 79,6 Paštika 48g Banány Máslo porce 2 ks Rajče
+ T 73,0 Džus 0,25l Mandarinky 
+ S373,3  18,0   17,1   38,4   5,1    2,5   25,3  19,1   17,8   38,6   4,4    3,0   29,9  28,4   25,3   30,5   4,6    7,2    9,7 
+Alergen: 1,12 1,7 1,3,7,9 1,7 1,7 1,12 
+3PK-2 Pol.slepi čí s t ěst. Rohlík sýrový Salát burghulový se Chléb 50g 
+10812kJ Uzené maso va řené Rohlík selský 2 ks Rama porce 
+ B 64,9 Kaše bramborová mašt Máslo porce 2 ks Rajče
+ T 73,2 Okurka kyselá Mandarinky 
+ S394,2  10,5    8,9   11,5   4,4    3,0   29,9  22,2   34,4   39,7   4,6    7,2    9,7 
+Alergen: 1,12 1,7 1,12,3,7,9 1,7 1,7 1,12 
+3S Veka balená 100g Džus 0,25l Pol.slepi čí s t ěst. Jogurt ovocný 150 g Vep řové po víde ňsku 
+ 6709kJ Máslo porce 2 ks Uzené maso va řené Kaše bramborová 
+ B 55,6 Pudink piruet Kaše bramborová mašt 
+ T 50,3 Okurka kyselá 
+ S219,3  13,4   28,0   61,2   1,7    0,3   21,7  10,5    8,9   11,5   5,3    2,0   22,3  24,7   11,1   45,7 
+Alergen: 1,7 1,12,3,7,9 7 1,7 
+4 Rohlík 2 ks Jablka Polévka selská Kolá č Sýr fénix 
+ 9062kJ Flora porce Ku ře na protlaku Máslo porce 
+ B 96,0 Šunka 40g Těstoviny Veka balená 100g 
+ T 87,1 Mandarinky 
+ S240,0  13,9   16,3   16,8   0,5    0,8   16,6  58,0   39,3  102,2   3,1    4,0   40,2  20,5   26,7   32,0 
+Alergen: 1 1,3,9 1,3,7 1,7 
+4ML Veka balená 100g Pyré Polévka selská Pyré Tvaroh p řírodní 
+ 8880kJ Flora porce Ku ře na protlaku Máslo porce 
+ B 98,6 Šunka 40g Těstoviny Veka balená 100g 
+ T 71,8 Banány 
+ S260,3  15,1   14,9   15,5   0,0    0,1   21,9  58,0   39,3  102,2   0,0    0,1   21,9  25,5   17,4   40,2 
+Alergen: 1 1,3,9 1,7 
+4S Rohlík 2 ks Polévka mrkvová Rohlík Sedlina bílková s mr 
+ 7584kJ Džem porce 2 ks Omá čka citrónová B Kaše bramborová vodo 
+ B 56,6 Pyré Knedlík žemlový jemn Pyré 
+ T 33,9 Banány 
+ S304,8   7,0    4,9   26,7  21,4    7,0   29,8   3,4    2,3   24,1  24,7   19,6   41,4 
+Alergen: 1 1,3,7 1 3,7 Čtvrtek T: 3 D: 4 Jídelní lístek: Dosp ělá 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře30.05.2019 
+4S/9 Rohlík 2 ks Polévka rýžová Rohlík Rýže zape čená s meru 
+ 5364kJ Džem porce dia 2 ks Mrkev dušená B Pyré dia 
+ B 26,4 Pyré dia Kaše bramborová vodo 
+ T 10,6 Pyré dia 
+ S259,7   7,4    4,9   14,4   7,8    2,6   12,1   3,4    2,3   24,1   7,8    0,8   10,3 
+Alergen: 1 1,7 1
+5 Rohlík 2 ks Bujon Rohlík Sýr fénix 
+ 8574kJ Flora porce Ku ře na protlaku Máslo porce 
+ B120,9 Šunka 40g Těstoviny Veka balená 100g 
+ T 86,5 
+ S190,1  13,9   16,3   16,8  83,5   41,3  104,2   3,4    2,3   24,1  20,1   26,6   78,0 
+Alergen: 1 1,3 1 1,7 
+9-150 Kaiserka Jablka Teplá šunka Kiwi Kr ůtí prsa 100g Mandarinky 
+ 5819kJ Šunka 40g Čočka na kyselo Rohlík selský 
+ B 86,8 Okurka kyselá dia Paprika kapie 
+ T 34,8 
+ S163,1  13,0    4,6    5,2   0,5    0,8   16,6  47,6   22,9   27,8   0,7    0,4    7,0  24,6    5,8   15,1   0,4    0,2    5,4 
+Alergen: 1,12 1,12 1
+9-200 Kaiserka Jablka Pol.slepi čí s t ěst. Kiwi Kr ůtí prsa 100g Chléb 50g 
+ 8794kJ Paštika 48g Uzené maso va řené Rohlík selský 2 ks Rama porce 
+ B 89,8 Flora porce Čočka na kyselo Rama porce 2 ks Rajče
+ T 71,3 Okurka kyselá dia Mandarinky 
+ S254,5  21,1   17,7   17,7   0,5    0,8   16,6  34,7   23,4   28,3   0,7    0,4    7,0  28,3   21,8   27,0   4,6    7,2    9,7 
+Alergen: 1,12 1,12,3,9 1 1,12 
+9-250 Kaiserka Jablka Pol.slepi čí s t ěst. Kiwi Kr ůtí prsa 100g Chléb 50g 
+ 8794kJ Paštika 48g Uzené maso va řené Rohlík selský 2 ks Rama porce 
+ B 89,8 Flora porce Čočka na kyselo Rama porce 2 ks Rajče
+ T 71,3 Okurka kyselá dia Mandarinky 
+ S254,5  21,1   17,7   17,7   0,5    0,8   16,6  34,7   23,4   28,3   0,7    0,4    7,0  28,3   21,8   27,0   4,6    7,2    9,7 
+Alergen: 1,12 1,12,3,9 1 1,12 
+9-DYSF Instantní kaše porce Pol.slepi čí s t ěst. Chléb 50g 
+ 6437kJ Jogurt bílý 150g Uzené maso va řené Máslo porce 
+ B123,0 Mléko 1/4 Čočka na kyselo Kr ůtí prsa 100g 
+ T 52,4 Pyré dia Okurka kyselá dia Bujon 
+ S128,9 Bujon Pyré dia 
+Pyré dia 
+ B T S   5,6    2,5   12,0  65,4   31,4   40,9  52,0   18,4   27,9 
+Alergen: 7 1,12,3,9 1,12,7 
+9/BLP Chléb blp pe čený Jablka Bujon Kiwi Sýr fénix Rama porce 
+ 8893kJ Flora porce Uzené maso va řené Rama porce 2 ks Rajče
+ B 73,8 Šunka 40g Kaše bramborová mašt Chléb blp kuku řičný 
+ T 75,1 Okurka kyselá dia Mandarinky 
+ S279,5  14,0   24,6   25,2   0,5    0,8   16,6  35,1   13,3   18,2   0,7    0,4    7,0  22,5   29,2   34,5   1,0    6,7    9,2 
+Alergen: 12,7 7
+9ML Chléb 100g Pyré dia Pol.slepi čí s t ěst. Jogurt ovocný dia Tvaroh p řírodní Chléb 50g 
+ 6434kJ Flora porce Uzené maso va řené Chléb 100g Rama porce 
+ B 59,5 Šunka 40g Kaše bramborová mašt Rama porce 2 ks Rajče
+ T 50,6 Okurka kyselá dia Pyré dia 
+ S200,2  14,3   12,7   13,2   0,4    0,1    9,6   9,9    8,8   13,7   6,5    2,1   14,1  23,9   19,7   29,2   4,6    7,2    9,7 
+Alergen: 1,12 1,12,3,7,9 7 1,12,7 1,12 
+9NB Chléb 100g Kiwi Pol.slepi čí s t ěst. Pomeran č Lu čina 100g Chléb 50g 
+ 8389kJ Máslo porce 2 ks Mléko 1/4 Ku ře na protlaku Máslo porce 2 ks Paštika 48g 
+ B 99,6 Šunka 40g Těstoviny Chléb 100g 
+ T 98,4 Mandarinky 
+ S170,5   7,2   20,1   20,7   0,7    0,5    0,5  58,2   36,7   99,6   0,9    0,2    7,9  19,8   32,7   38,0  12,7    8,2    8,6 
+Alergen: 7 7 1,3,9 1,12,7 1,12 Čtvrtek T: 3 D: 4 Jídelní lístek: Dosp ělá 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře30.05.2019 
+9S Rohlík 2 ks Jablka Polévka selská Jablka Sýr fénix Rohlík 
+ 9358kJ Flora porce Ku ře na protlaku Rama porce Rama porce 
+ B 97,7 Šunka 40g Těstoviny Veka balená 100g Rajče
+ T 91,2 Mandarinky 
+ S244,0  13,9   16,3   16,8   0,5    0,8   16,6  58,0   39,3  102,2   0,5    0,8   16,6  20,4   25,0   30,2   4,4    9,0   11,5 
+Alergen: 1 1,3,9 1,7 1
+9SML Veka balená 100g Pyré dia Polévka selská Jogurt ovocný dia Tvaroh p řírodní Rohlík 
+ 9209kJ Flora porce Ku ře na protlaku Rama porce Rama porce 
+ B108,9 Šunka 40g Těstoviny Veka balená 100g Rajče
+ T 81,0 Pyré dia 
+ S249,3  15,1   14,9   15,5   0,4    0,1    9,6  58,0   39,3  102,2   6,5    2,1   14,1  24,6   15,5   25,0   4,4    9,0   11,5 
+Alergen: 1 1,3,9 7 1,7 1
+BLP Chléb blp pe čený Džus 0,25l Bujon Piškot BLP (soják) Sýr fénix 
+10432kJ Flora porce Uzené maso va řené Jablka Máslo porce 2 ks 
+ B 81,1 Šunka 40g Kaše bramborová mašt Chléb blp kuku řičný 
+ T 79,8 Okurka kyselá Mandarinky 
+ S351,0  14,0   24,6   25,2   1,7    0,3   21,7  35,7   13,5   16,1   7,0    8,6   24,4  22,6   32,7   38,0 
+Alergen: 12,7 3,7 7
+BML Rohlík 2 ks Džus 0,25l Polévka selská Rohlík Kr ůtí prsa 100g 
+ 6765kJ Flora porce Uzené maso va řené Rohlík selský 2 ks 
+ B 59,4 Paštika 48g Brambory va řené Rama porce 2 ks 
+ T 51,3 Okurka kyselá Mandarinky 
+ S215,7  15,9   20,4   20,7   1,7    0,3   21,7  10,0    6,5    9,1   3,4    2,3   24,1  28,3   21,8   27,0 
+Alergen: 1 1,12,3,9 1 1
+OK Rohlík 2 ks Mléko 1/4 Polévka mlé čná s nud Sýr baby 
+ 6845kJ Jogurt bílý 150g Sedlina vaje čná Máslo porce 
+ B 50,6 Máslo porce 2 ks Kaše bramborová mašt Houska 2 ks 
+ T 77,7 Pyré 
+ S176,4  12,2   23,6   23,7   0,0    0,0    0,1  15,6   16,4   38,2  22,8   37,7   92,2 
+Alergen: 1,7 7 1,3,7 1,12,7 
+S-T Rohlík 2 ks Rohlík Pol. zele. s krupicí Rohlík Pomazánka budapeš ťsk 
+ 7312kJ Džem porce 2 ks Pyré Králík dušený Pomeran č Houska 2 ks 
+ B 66,0 Brambory va řené Jablka 
+ T 28,4 Salát okurkový 
+ S289,2   7,0    4,8   27,7   3,4    2,4   24,2  26,0    8,0   17,3   4,4    2,5   10,3  25,2   10,7   26,4 
+Alergen: 1 1 1,12,3,9 1 1,12,7 
+S30 Chléb 100g Těstov. zape č. s hou Jablka Sýr trojuhelník 
+ 6441kJ Flora porce Okurka kyselá Máslo porce 
+ B 36,6 Džem porce 2 ks Houska 2 ks 
+ T 44,2 Jablka Mandarinky 
+ S234,8   7,9   10,0   25,7  19,2   19,2   21,7   0,5    0,8   16,6   9,0   14,3   19,5 
+Alergen: 1,12 1,12,3 1,12,7 
+SP Rohlík 2 ks Polévka mrkvová Rohlík Sedlina bílková s mr 
+ 7773kJ Kr ůtí prso spec 50g Hov ězí dušené Kaše bramborová vodo 
+ B 85,7 Pomeran č Knedlík žemlový jemn Pyré 
+ T 37,4 Omá čka citrónová B 
+ S278,1 Banány 
+ B T S  16,6    5,7   13,4  41,0    9,8   32,5   3,4    2,3   24,1  24,7   19,6   41,4 
+Alergen: 1 1,3,7 1 3,7 
+SPD Suchar 200g Polévka rýžová Pyré Ku řecí plátek dušený 
+ 7608kJ Džem porce 2 ks Hov ězí dušené Kaše bramborová vodo 
+ B 70,4 Banány Kaše bramborová vodo 
+ T 17,3 
+ S328,2  21,3    8,9   31,7  24,9    4,4   46,0   0,0    0,1   21,9  24,2    3,8   45,5 
+Alergen: 1 1,7 1,7 Čtvrtek T: 3 D: 4 Jídelní lístek: Dosp ělá 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře30.05.2019 
+VEG Rohlík 2 ks Džus 0,25l Polévka selská Rohlík sýrový Salát burghulový se 
+ 9415kJ Flora porce Čočka na kyselo Máslo porce 2 ks 
+ B 79,6 Pudink piruet Vejce na tvrdo Rohlík selský 2 ks 
+ T 83,0 Okurka kyselá Mandarinky 
+ S273,4  12,1   20,9   54,0   1,7    0,3   21,7  39,2   24,4   27,0   4,4    3,0   29,9  22,2   34,4   39,7 
+Alergen: 1,7 1,12,3,9 1,7 1,7 
+VNM Rohlík 2 ks Bujon Rohlík Sýr baby 
+ 9050kJ Flora porce Ku ře pe čené A Mléko 1/4 Máslo porce 
+ B119,2 Šunka 40g Rýže Veka balená 100g 
+ T 94,3 Mléko 1/4 Mléko 1/4 
+ S203,8  13,9   16,3   16,3  79,5   40,5  119,4   3,4    2,4    2,4  22,3   35,2   35,3 
+Alergen: 1,7 1 1,7 1,7 Čtvrtek T: 3 D: 4 Jídelní lístek: Dosp ělá 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře30.05.2019 

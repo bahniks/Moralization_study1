@@ -35,6 +35,9 @@ Přečtěte si prosím každé prohlášení a rozhodněte se, do jaké míry s 
 
 attentiontext = "Chcete-li prokázat, že zadání věnujete pozornost, vyberte možnost "
 
+
+pmsIntro = "Ohodnoďte tvrzení níže, jak je sami cítíte, od 1 (rozhodně nesouhlasím) do 5 (rozhodně souhlasím):"
+
 ################################################################################
 
 
@@ -204,11 +207,18 @@ class Hexaco(Quest):
 
 
 
+class PMS(Quest):
+    def __init__(self, root):
+        super().__init__(root, 8, "pms.txt", "PMS", instructions = pmsIntro, width = 85,
+                         left = "rozhodně nesouhlasím", right = "rozhodně souhlasím",
+                         height = 3, options = 5, center = True)
+
+
 
 QuestInstructions = (InstructionsFrame, {"text": questintro, "height": 15})
 
 
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([Hexaco, QuestInstructions
+    GUI([PMS, Hexaco, QuestInstructions
          ])

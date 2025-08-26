@@ -14,8 +14,8 @@ from comments import Comments
 from login import Login
 #from videointros import VideoIntro1, VideoIntro2, Sound, VideoIntro4, VideoIntro5, Selection, VideoIntro6
 #from videos import Videos, JOL, IMI1, Quiz1, Quiz2, IMI2, Quiz3, IMI3
-from moralization import MoralizationInstructions, Task
-from quest import QuestInstructions, Hexaco
+from moralization import MoralizationInstructions, Task, Ratings1, Choice
+from quest import QuestInstructions, Hexaco, PMS
 #from questionnaire import NFC, Boredom, Social
 
 
@@ -26,7 +26,24 @@ frames = [Initial,
           Intro,            
           MoralizationInstructions,
           Task, 
-        #   VideoIntro1,
+          Ratings1,
+          Choice,
+          Task,
+          Choice,
+          #Ratings2,
+          #BDMInstructions,
+          #BDM,
+          #BDMResult,
+          Task,
+          QuestInstructions,
+          PMS,
+          Hexaco,
+          Demographics,
+          Comments,
+          Ending
+         ]
+
+#frames = [VideoIntro1,
         #   VideoIntro2,
         #   Sound,
         #   Videos, JOL, IMI1, Quiz1,
@@ -37,18 +54,10 @@ frames = [Initial,
         #   VideoIntro6,
         #   Videos, Videos, Videos, Videos, Videos,
         #   IMI3,
-        #   Quiz3,
-          QuestInstructions,
-          #NFC,
-          #Boredom,
-          Hexaco,
-          #Social,
-          Demographics,
-          Comments,
-          Ending
-         ]
-
-#frames = [Login, Selection, Quiz3, Hexaco, Ending]
+        #   Quiz3
+        #NFC,
+        #Boredom,
+        #Social,]
 
 if __name__ == "__main__":
     GUI(frames, load = os.path.exists("temp.json"))

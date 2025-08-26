@@ -49,27 +49,57 @@ Feedback2 = ["Špatně. Máte přesně přepsat údaje o energii, bílkovinách,
 
 
 
-task = "V záložce Jídelníčky v menu nahoře je seznam všech diet a jejich složení. Prosíme, <b>najděte v seznamu dietu označenou jako {} a vyplňte nejdříve údaje o jejím složení</b>. Následně jídlo ohodnoťte."
+task = "V záložce Jídelníčky v menu nahoře je seznam všech diet a jejich složení. Prosíme, nejdříve <b>najděte v seznamu dietu označenou jako {} a vyplňte údaje o jejím složení</b>. Následně jídlo ohodnoťte."
 
-tasteText = "Jak chutně toto jídlo může působit?"
-lookText = "Jak vizuálně přitažlivě jídlo může působit?"
+tasteText = "Jak chutně toto jídlo působí?"
+lookText = "Jak bude jídlo nejspíše vizuálně přitažlivě?"
 nutritionText = "Jak nutričně bohaté se Vám toto jídlo zdá?"
 
 
 menus_text = """V seznamu níže najděte <b>dietu označenou jako {}</b> a v záložce Hodnocení vyplňte údaje o jejím nutričním složení.
-Každý řádek odpovídá jídelníčku pro daný den pro danou dietu. Označení diety naleznete v levém horním rohu v prvním sloupci. 
-Jídla, která budete hodnotit naleznete ve sloupcích Snídaně, Oběd a Večeře v daném řádku."""
+Označení diet naleznete v levém horním rohu v prvním sloupci. Každý řádek odpovídá jídelníčku pro danou dietu ve vybraný den.  
+Jídla, která budete posléze hodnotit naleznete ve sloupcích Snídaně, Oběd a Večeře v řádku s Vámi nalezenou dietou."""
+
+difficultyQ1 = "Jak obtížný se Vám úkol zdá?"
+satisfactionQ1 = "Jak moc jste spokojen(a) s úsilím, které jste do úkolu zatím vložil(a)?"
+
+proceedText = "<center>Ohodnoťte právě dokončený úkol a poté stiskněte tlačítko “Pokračovat”.</center>"
+
+difficultyQ2 = "Jak obtížný se Vám celý úkol zdál?"
+difficultyL = "Velmi snadný"
+difficultyR = "Velmi obtížný"
+
+satisfactionQ2= "Jak moc jste spokojen(a) s úsilím, které jste do celého úkolu vložil(a)?"
+satisfactionL = "Velmi nespokojen(a)"
+satisfactionR = "Velmi spokojen(a)"
+
+guiltQ2 = "Do jaké míry cítíte vinu za to, jak jste celý úkol zvládl(a)?"
+guiltL = "Necítím žádnou vinu"
+guiltR = "Cítím velkou vinu"
+
+continuation = """Dosud jste dokončili hodnocení {} a strávili na úkolu X minut.
+
+<b>Uveďte, zda chcete pokračovat hodnocení dalších jídel, nebo zda chcete úkol ukončit.</b>
+V úkolu je možné pokračovat nejdéle do uplynutí 20 minut od jeho začátku.
+
+Pokud zvolíte „Pokračovat“, zobrazí se Vám další dieta k přepsání a ohodnocení. 
+Pokud zvolíte „Ukončit“, úkol skončí a přesunete se na další část studie.
+
+Je to zcela na Vás: můžete kdykoliv přestat bez jakékoli penalizace."""
 
 
 
 class Task(ExperimentFrame):
     def __init__(self, root):
-        #if not "diet_order" in root.status:
-            #alldiets = DIETS
-            #random.shuffle(alldiets)
-            #root.status["diet_order"] = alldiets
+        if not "menu_order" in root.status:
+            menus = [f for f in os.listdir(os.path.join(os.path.dirname(__file__), 'Menus')) if f.endswith('.png')]
+            random.shuffle(menus)
+            root.status["menu_order"] = menus
 
         super().__init__(root)        
+
+        if not "trial" in self.root.status or not self.root.status["trial"]:
+            self.root.status["trial"] = 1
 
         style = ttk.Style()
         style.configure('TNotebook', background='white', borderwidth=0)
@@ -79,14 +109,11 @@ class Task(ExperimentFrame):
               background=[('selected', 'white'), ('!selected', 'white')],
               font=[('selected', ('Helvetica', 15, 'bold')), ('!selected', ('Helvetica', 15))])
         n = ttk.Notebook(self, style='TNotebook')
-        self.moralization = Moralization(self)
-        self.menus = Menus(self)
+        self.moralization = Moralization(root)
+        self.menus = Menus(root)
         n.add(self.moralization, text='Hodnocení')
         n.add(self.menus, text='Jídelníčky')
         n.pack(expand=True, fill='both')
-
-        if not "trial" in self.root.status:
-            self.root.status["trial"] = 1
 
         self.newTrial()
 
@@ -103,7 +130,7 @@ class Moralization(InstructionsFrame):
         super().__init__(root, text = task, height = 3, width = 100)
 
         self.ratingFrame = Canvas(self, background = "white", highlightbackground = "white", highlightcolor = "white")
-        self.ratingFrame.grid(row=3, column=1, sticky="nsew")
+        self.ratingFrame.grid(row=3, column=1)
         self.ratingFrame.columnconfigure(0, weight=1)
         self.ratingFrame.columnconfigure(3, weight=1)
 
@@ -113,86 +140,109 @@ class Moralization(InstructionsFrame):
 
         # Energie (kJ)
         self.label_energy = ttk.Label(self.ratingFrame, text="Energie (kJ):", font="helvetica 15", background="white")
-        self.label_energy.grid(row=4, column=1, sticky="e", padx=10, pady=2)
-        self.entry_energy = ttk.Entry(self.ratingFrame, width=20, font="helvetica 15")
+        self.label_energy.grid(row=4, column=1, sticky="e", padx=10, pady=2)        
+        self.vcmdEnergy = (self.root.register(self.checkNutrition), '%P', "energy")
+        self.entry_energy = ttk.Entry(self.ratingFrame, width=20, font="helvetica 15", validatecommand=self.vcmdEnergy, validate = "key")
         self.entry_energy.grid(row=4, column=2, sticky="w", padx=10, pady=2)
 
         # Obsah bílkovin (B)
         self.label_protein = ttk.Label(self.ratingFrame, text="Obsah bílkovin (B):", font="helvetica 15", background="white")
         self.label_protein.grid(row=5, column=1, sticky="e", padx=10, pady=2)
-        self.entry_protein = ttk.Entry(self.ratingFrame, width=20, font="helvetica 15")
+        self.vcmdProtein = (self.root.register(self.checkNutrition), '%P', "protein")
+        self.entry_protein = ttk.Entry(self.ratingFrame, width=20, font="helvetica 15", validatecommand=self.vcmdProtein, validate = "key")
         self.entry_protein.grid(row=5, column=2, sticky="w", padx=10, pady=2)
 
         # Obsah tuků (T)
         self.label_fat = ttk.Label(self.ratingFrame, text="Obsah tuků (T):", font="helvetica 15", background="white")
         self.label_fat.grid(row=6, column=1, sticky="e", padx=10, pady=2)
-        self.entry_fat = ttk.Entry(self.ratingFrame, width=20, font="helvetica 15")
+        self.vcmdFat = (self.root.register(self.checkNutrition), '%P', "fat")
+        self.entry_fat = ttk.Entry(self.ratingFrame, width=20, font="helvetica 15", validatecommand=self.vcmdFat, validate = "key")
         self.entry_fat.grid(row=6, column=2, sticky="w", padx=10, pady=2)
 
         # Obsah cukrů (S)
         self.label_sugar = ttk.Label(self.ratingFrame, text="Obsah cukrů (S):", font="helvetica 15", background="white")
         self.label_sugar.grid(row=7, column=1, sticky="e", padx=10, pady=2)
-        self.entry_sugar = ttk.Entry(self.ratingFrame, width=20, font="helvetica 15")
+        self.vcmdSugar = (self.root.register(self.checkNutrition), '%P', "sugar")
+        self.entry_sugar = ttk.Entry(self.ratingFrame, width=20, font="helvetica 15", validatecommand=self.vcmdSugar, validate = "key")
         self.entry_sugar.grid(row=7, column=2, sticky="w", padx=10, pady=2)
 
-        # First set of measures in its own canvas
-        sep1 = ttk.Separator(self, orient="horizontal")
-        sep1.grid(row=7, column=0, columnspan=3, sticky="ew", pady=(20,0))
-        breakfast = ttk.Label(self, text="Snídaně", font="helvetica 15 bold", background="white")
-        breakfast.grid(row=8, column=0, sticky="ne", pady=(10, 0), padx=20)
-        canvas1 = Canvas(self, background="white", highlightbackground="white", highlightcolor="white")
-        canvas1.grid(row=8, column=1, sticky="nsew", pady=(10, 0))
-        taste1 = Measure(canvas1, tasteText, [i for i in range(1,8)], "Zcela nechutně", "Velmi chutně", labelPosition="next", shortText="taste1", questionPosition="next")
-        look1 = Measure(canvas1, lookText, [i for i in range(1,8)], "Zcela nevzhledné", "Velmi přitažlivé", labelPosition="next", shortText="look1", questionPosition="next")
-        nutrition1 = Measure(canvas1, nutritionText, [i for i in range(1,8)], "Zcela chudé na živiny", "Velmi bohaté na živiny", labelPosition="next", shortText="nutrition1", questionPosition="next")
-        taste1.grid(row=0, column=0, pady=2, sticky="ew")
-        look1.grid(row=1, column=0, pady=2, sticky="ew")
-        nutrition1.grid(row=2, column=0, pady=2, sticky="ew")
-
-        # Second set of measures in its own canvas
-        sep2 = ttk.Separator(self, orient="horizontal")
-        sep2.grid(row=9, column=0, columnspan=3, sticky="ew", pady=(20,0))
-        lunch = ttk.Label(self, text="Oběd", font="helvetica 15 bold", background="white")
-        lunch.grid(row=10, column=0, sticky="ne", pady=(10, 0), padx=20)
-        canvas2 = Canvas(self, background="white", highlightbackground="white", highlightcolor="white")
-        canvas2.grid(row=10, column=1, sticky="nsew", pady=(10, 0))
-        taste2 = Measure(canvas2, tasteText, [i for i in range(1,8)], "Zcela nechutně", "Velmi chutně", labelPosition="next", shortText="taste2", questionPosition="above")
-        look2 = Measure(canvas2, lookText, [i for i in range(1,8)], "Zcela nevzhledné", "Velmi přitažlivé", labelPosition="next", shortText="look2", questionPosition="above")
-        nutrition2 = Measure(canvas2, nutritionText, [i for i in range(1,8)], "Zcela chudé na živiny", "Velmi bohaté na živiny", labelPosition="next", shortText="nutrition2", questionPosition="above")
-        taste2.grid(row=0, column=0, pady=2, sticky="ew")
-        look2.grid(row=1, column=0, pady=2, sticky="ew")
-        nutrition2.grid(row=2, column=0, pady=2, sticky="ew")
-
-        # Third set of measures in its own canvas
-        sep3 = ttk.Separator(self, orient="horizontal")
-        sep3.grid(row=11, column=0, columnspan=3, sticky="ew", pady=(20,0))
-        dinner = ttk.Label(self, text="Večeře", font="helvetica 15 bold", background="white")
-        dinner.grid(row=12, column=0, sticky="ne", pady=(10, 0), padx=20)
-        canvas3 = Canvas(self, background="white", highlightbackground="white", highlightcolor="white")
-        canvas3.grid(row=12, column=1, sticky="nsew", pady=(10, 0))
-        taste3 = Measure(canvas3, tasteText, [i for i in range(1,8)], "Zcela nechutně", "Velmi chutně", labelPosition="next", shortText="taste3", questionPosition="above")
-        look3 = Measure(canvas3, lookText, [i for i in range(1,8)], "Zcela nevzhledné", "Velmi přitažlivé", labelPosition="next", shortText="look3", questionPosition="above")
-        nutrition3 = Measure(canvas3, nutritionText, [i for i in range(1,8)], "Zcela chudé na živiny", "Velmi bohaté na živiny", labelPosition="next", shortText="nutrition3", questionPosition="above")
-        taste3.grid(row=0, column=0, pady=2, sticky="ew")
-        look3.grid(row=1, column=0, pady=2, sticky="ew")
-        nutrition3.grid(row=2, column=0, pady=2, sticky="ew")
+        qs = [tasteText, lookText, nutritionText]
+        chars = ["taste", "look", "nutrition"]
+        widgets = {"canvases":[], "separators": [], "labels": [], "measures": {"taste":[], "look":[], "nutrition":[]}, "questions": {"taste":[], "look":[], "nutrition":[]}}
+        for i, food in enumerate(["Snídaně", "Oběd", "Večeře"]):
+            canvas = Canvas(self, background="white", highlightbackground="white", highlightcolor="white")
+            canvas.grid(row= + i + 4, column=0, columnspan=3, pady=(10, 0))
+            canvas.columnconfigure(2, weight=1)
+            widgets["canvases"].append(canvas)
+            widgets["separators"].append(ttk.Separator(canvas, orient="horizontal"))
+            widgets["separators"][i].grid(row=1, column=0, columnspan=3, sticky="ew", pady=(20,0))
+            widgets["labels"].append(ttk.Label(canvas, text=food, font="helvetica 15 bold", background="white"))
+            widgets["labels"][i].grid(row=2, column=0, columnspan=3, sticky="n", pady=(10, 0), padx=20)
+            for j, question in enumerate(qs):
+                widgets["questions"][chars[j]].append(ttk.Label(canvas, text=question, font="helvetica 15", background="white"))
+                widgets["questions"][chars[j]][i].grid(row= + j + 3, column=0, sticky="e", padx=10, pady=2)
+            widgets["measures"]["taste"].append(Measure(canvas, "", [i for i in range(1,8)], "Zcela nechutně", "Velmi chutně", labelPosition="next", shortText=f"taste{i+1}", questionPosition="next", center=True, function = self.rated))
+            widgets["measures"]["look"].append(Measure(canvas, "", [i for i in range(1,8)], "Zcela nevzhledné", "Velmi přitažlivé", labelPosition="next", shortText=f"look{i+1}", questionPosition="next", center=True, function = self.rated))
+            widgets["measures"]["nutrition"].append(Measure(canvas, "", [i for i in range(1,8)], "Zcela chudé na živiny", "Velmi bohaté na živiny", labelPosition="next", shortText=f"nutrition{i+1}", questionPosition="next", center=True, function = self.rated))
+            widgets["measures"]["taste"][i].grid(row=3, column=2, pady=2, sticky="ew")
+            widgets["measures"]["look"][i].grid(row=4, column=2, pady=2, sticky="ew")
+            widgets["measures"]["nutrition"][i].grid(row=5, column=2, pady=2, sticky="ew")            
+        self.widgets = widgets
+        for measures in self.widgets["measures"].values():
+            for measure in measures:
+                measure.disable()
 
         self.next.grid(row = 20, column=1, pady=10)
+        self.next["state"] = "disabled"
 
-        self.rowconfigure(0, weight=1)
+        self.rowconfigure(0, weight=2)
         self.rowconfigure(1, weight=1)
-        #self.rowconfigure(2, weight=1)
-        self.rowconfigure(3, weight=1)
-        self.rowconfigure(8, weight=1)
-        self.rowconfigure(9, weight=1)
-        self.rowconfigure(10, weight=1)
+        self.rowconfigure(2, weight=0)
+        self.rowconfigure(3, weight=0)
+        self.rowconfigure(4, weight=1)
+        self.rowconfigure(5, weight=1)
+        self.rowconfigure(6, weight=1)
+        # self.rowconfigure(8, weight=1)
+        # self.rowconfigure(9, weight=1)
+        # self.rowconfigure(10, weight=1)
         #self.rowconfigure(11, weight=1)
+        self.rowconfigure(19, weight=1)
         self.rowconfigure(20, weight=1)
         self.rowconfigure(21, weight=1)
         
         self.columnconfigure(0, weight=1)
         self.columnconfigure(1, weight=1)
         self.columnconfigure(2, weight=1)
+
+    def checkNutrition(self, value, what):
+        for entry in ["self.entry_energy", "self.entry_protein", "self.entry_fat", "self.entry_sugar"]:
+            if not what in entry:                
+                val = eval(entry).get()
+            else:
+                val = value
+            info = val.strip().replace(",", ".")
+            if not info.isdigit() or not info:
+                self.next["state"] = "disabled"
+                for measures in self.widgets["measures"].values():
+                    for measure in measures:
+                        measure.disable()
+                break
+        else:                        
+            all_rated = True            
+            for measures in self.widgets["measures"].values():                
+                for measure in measures:
+                    if not measure.answer.get():
+                        all_rated = False
+                    measure.enable()
+            if all_rated:
+                self.next["state"] = "normal"
+        return True
+    
+    def rated(self):
+        self.checkNutrition("", "XYZ")
+
+
+
 
 class Menus(InstructionsFrame):
     def __init__(self, root):
@@ -232,7 +282,7 @@ class Menus(InstructionsFrame):
         canvas.pack(side="left", fill="both", expand=True)
 
         # Load image
-        img_path = os.path.join(os.path.dirname(__file__), 'Dosp_vše_190513.png')
+        img_path = os.path.join(os.path.dirname(__file__), 'Menus', root.status["menu_order"][root.status["trial"] - 1])
 
         try:
             pil_img = Image.open(img_path)
@@ -251,18 +301,77 @@ class Menus(InstructionsFrame):
 
 
 
+class Ratings1(InstructionsFrame):
+    def __init__(self, root):
+        super().__init__(root, text = proceedText, proceed = True, savedata = True, height = 2, width = 80)
+
+        self.difficulty = Measure(self, difficultyQ1, [i for i in range(1,7)], difficultyL, difficultyR, labelPosition="next", shortText=f"difficultyFirst", questionPosition="above", center=True, function = self.rated)
+
+        self.satisfaction = Measure(self, satisfactionQ1, [i for i in range(1,7)], satisfactionL, satisfactionR, labelPosition="next", shortText=f"satisfactionFirst", questionPosition="above", center=True, function = self.rated)
+
+        self.difficulty.grid(column = 1, row = 2)
+        self.satisfaction.grid(column = 1, row = 3)
+
+        self.next.grid(column = 1, row = 5)
+
+        self.next["state"] = "disabled"
+
+        for i in range(1, 5):
+            self.rowconfigure(i, weight=1)
+        self.rowconfigure(0, weight=3)
+        self.rowconfigure(6, weight=3)
+
+    def rated(self):
+        if self.difficulty.answer.get() and self.satisfaction.answer.get():
+            self.next["state"] = "normal"
 
 
 
+class Choice(InstructionsFrame):
+    def __init__(self, root):
+        if root.status["trial"] == 1:
+            text = continuation.format("jedné diety")
+        else:
+            text = continuation.format("{} diet".format(root.status["trial"]))
+
+        super().__init__(root, text = text, proceed = False, savedata = True, height = 10, width = 80)
+
+        ttk.Style().configure("TButton", font = "helvetica 15")
+
+        self.buttonFrame = Canvas(self, background = "white", highlightbackground = "white", highlightcolor = "white")
+        self.buttonFrame.grid(row=2, column=1)
+
+        self.continueButton = ttk.Button(self.buttonFrame, text="Pokračovat", command=self.proceed)
+        self.continueButton.grid(column=0, row=2, sticky="w", padx=60)
+
+        self.endButton = ttk.Button(self.buttonFrame, text="Ukončit", command=self.end)
+        self.endButton.grid(column=2, row=2, sticky="e", padx=60)
+
+    def proceed(self):
+        self.nextFun()
+
+    def end(self):
+        self.root.count += 2
+        self.nextFun()
 
 
+class Ratings2(InstructionsFrame):
+    pass
 
+class BDMInstructions(InstructionsFrame):
+    pass
+
+class BDM(InstructionsFrame):
+    pass
+
+class BDMResult(InstructionsFrame):
+    pass
 
 
 
 
 controlTexts = [[Control1, Answers1, Feedback1], [Control2, Answers2, Feedback2]]
-MoralizationInstructions = (InstructionsAndUnderstanding, {"text": instructions, "update": ["condition"], "height": 22, "width": 80, "name": "Moralization Control Questions", "randomize": False, "controlTexts": controlTexts, "fillerheight": 260, "finalButton": "Pokračovat k úkolu"})
+MoralizationInstructions = (InstructionsAndUnderstanding, {"text": instructions, "update": ["condition"], "height": 22, "width": 100, "name": "Moralization Control Questions", "randomize": False, "controlTexts": controlTexts, "fillerheight": 260, "finalButton": "Pokračovat k úkolu"})
 
 
 
@@ -271,4 +380,4 @@ if __name__ == "__main__":
     from login import Login
     import os
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([Login, Task, Moralization, MoralizationInstructions])
+    GUI([Login, Choice, Task, Ratings1, MoralizationInstructions, Task])

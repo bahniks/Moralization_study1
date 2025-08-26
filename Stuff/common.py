@@ -92,7 +92,11 @@ class InstructionsFrame(ExperimentFrame):
  
         self.text.tag_configure("bold", font = "helvetica {} bold".format(font))
         self.text.tag_configure("italic", font = "helvetica {} italic".format(font))    
-        self.text.tag_configure("courier", font = "courier {}".format(font))       
+        self.text.tag_configure("courier", font = "courier {}".format(font))      
+        self.text.tag_configure("center", justify="center")               
+        self.text.tag_configure("blue", foreground = "blue")
+        self.text.tag_configure("red", foreground = "red")
+        self.text.tag_configure("green", foreground = "green")
 
         self.addStandardTags()
 
@@ -122,6 +126,10 @@ class InstructionsFrame(ExperimentFrame):
         self.addtags("<b>", "</b>", "bold")
         self.addtags("<i>", "</i>", "italic")
         self.addtags("<c>", "</c>", "courier")
+        self.addtags("<center>", "</center>", "center")
+        self.addtags("<blue>", "</blue>", "blue")
+        self.addtags("<red>", "</red>", "red")  
+        self.addtags("<green>", "</green>", "green")
 
     def addtags(self, starttag, endtag, tag):            
         i_index = "1.0"
@@ -297,7 +305,7 @@ class TextArea(Canvas):
 class Measure(Canvas):
     def __init__(self, root, text, values, left, right, shortText = "", function = None,
                  questionPosition = "next", labelPosition = "above", middle = "",
-                 funconce = False, filler = 0):
+                 funconce = False, filler = 0, center = False):
         super().__init__(root)
 
         self.root = root
@@ -319,20 +327,26 @@ class Measure(Canvas):
                 self.question.grid(column = 0, row = 0, columnspan = 4, pady = 5)
 
         if labelPosition != "none":
-            self.left = ttk.Label(self, text = "{:>15}".format(left), background = "white",
-                                  font = "helvetica 15")
-            self.right = ttk.Label(self, text = "{:<15}".format(right), background = "white",
-                                   font = "helvetica 15")
+            self.left = ttk.Label(self, text = "{:>15}".format(left), background = "white", font = "helvetica 15")
+            self.right = ttk.Label(self, text = "{:<15}".format(right), background = "white", font = "helvetica 15")
         if labelPosition == "above":
             self.left.grid(column = 1, row = 1, sticky = W)
             self.right.grid(column = 2, row = 1, sticky = E)
         elif labelPosition == "next":
             self.left.grid(column = 0, row = 2, sticky = E)
             self.right.grid(column = 3, row = 2, sticky = W)
+            self.root.update_idletasks()
+            if center:
+                width = max(self.left.winfo_width(), self.right.winfo_width())
+                self.leftFiller = Canvas(self, background = "white", width = width, height = 1,
+                                 highlightbackground = "white", highlightcolor = "white")
+                self.leftFiller.grid(row = 1, column = 0)
+                self.rightFiller = Canvas(self, background = "white", width = width, height = 1,
+                                 highlightbackground = "white", highlightcolor = "white")
+                self.rightFiller.grid(row = 1, column = 3)
 
         if middle:
-            self.middle = ttk.Label(self, text = middle, background = "white",
-                                    font = "helvetica 15")
+            self.middle = ttk.Label(self, text = middle, background = "white", font = "helvetica 15")
             self.middle.grid(column = 1, row = 1, columnspan = 2)
             self.question["font"] = "helvetica 15"
 
@@ -358,6 +372,15 @@ class Measure(Canvas):
         self.function = function            
         self.functionProcessed = False
         self.funconce = funconce
+
+    
+    def enable(self):
+        for radio in self.radios:
+            radio["state"] = "normal"
+
+    def disable(self): 
+        for radio in self.radios:
+            radio["state"] = "disabled"
 
 
     def func(self):

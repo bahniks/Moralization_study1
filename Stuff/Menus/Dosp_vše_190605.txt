@@ -1,0 +1,290 @@
+0 Bujon Bujon 
+ 1618kJ 
+ B 60,6 
+ T 15,9 
+ S  0,0  30,3    8,0    8,0  30,3    8,0    8,0 
+Alergen: 
+0BRK Banány Pol. hov ězí s t ěstov Kaše bramborová 
+ 4338kJ Veka balená 100g Kaše bramborová Banány 
+ B 24,5 Banány 
+ T 10,7 
+ S196,9   9,3    3,5   54,9   9,5    5,1   27,9   5,7    2,1   24,9 
+Alergen: 1 1,3,7,9 7
+0M Veka balená 100g Pol. hov ězí s t ěstov Pol. hov ězí s t ěstov 
+ 2168kJ Pyré 
+ B 15,6 
+ T  9,4 
+ S 88,9   8,0    3,4   25,2   3,8    3,0   10,8   3,8    3,0   10,8 
+Alergen: 1 1,3,9 1,3,9 
+1 Bábovi čka balená100 Pyré Pol. hov ězí s t ěstov Termix 90g Polévka ragú 
+ 6610kJ Jogurt ovocný 150 g Králík na zelenin ě Veka balená 100g 
+ B 38,1 Kaše bramborová Máslo porce 
+ T 52,4 Banány 
+ S230,6   9,5   27,2   47,4   0,0    0,1   21,9   8,2    4,9   39,5   4,0    3,2   15,2  16,5   17,0   39,8 
+Alergen: 1,3,7 1,3,7,9 7 1,7,9 
+10 Bábovi čka balená100 Pomeran č Pol. hov ězí s t ěstov Rohlík Polévka ragú 
+ 6887kJ Jogurt ovocný 150 g Králík na zelenin ě Máslo porce 2 ks 
+ B 38,2 Brambory va řené Veka balená 100g 
+ T 58,4 Banány 
+ S230,9   9,5   27,2   47,4   0,9    0,2    7,9   7,9    3,4   42,5   3,4    2,3   24,1  16,5   25,3   48,1 
+Alergen: 1,3,7 1,3,9 1 1,7,9 
+10/9 Veka balená 100g Pomeran č Pol. hov ězí s t ěstov Jablka Polévka ragú Rohlík 
+ 6849kJ Rama porce 2 ks Králík na zelenin ě Flora porce Rama porce 
+ B 49,0 Tvaroh Diavita Brambory va řené Veka balená 100g Mléko 1/4 
+ T 47,3 Jablka 
+ S238,8  20,6   16,7   31,7   0,9    0,2    7,9   7,9    3,4   42,5   0,5    0,8   16,6  15,5   17,4   33,1   3,5    8,9    8,9 
+Alergen: 1,7 1,3,9 1,7,9 1,7 
+11-1 Kolá č špaldový Rohlík Polévka drož ďová Rohlík Sýr kiri 80 g Sojová houska 
+10172kJ Jogurt ovocný 150 g Mléko 1/4 Hov. guláš kapucínsk Máslo porce 2 ks Šunka 40g 
+ B 89,8 Pomeran č Lu čina 62,5g Těstoviny Chléb 150g 
+ T 99,8 Mou čník Rajče
+ S279,8   6,2    2,2    9,9  10,9   11,7   13,1  39,2   35,5   61,5   3,4    2,3   24,1  18,8   41,5   44,0  11,3    6,5    7,1 
+Alergen: 1,3,7 1,7 1,12,3,9 1 1,12,7 1,12 
+11-2 Polévka drož ďová Rohlík Pe č.závin 100g Sojová houska 
+ 9129kJ Pe čený rybí karbanát Chléb 150g Sýr toustový 2 plátk 
+ B 82,4 Brambory mašt ěné Máslo porce 2 ks 
+ T 84,9 Salát hlávkový B Rajče
+ S258,0 Mou čník 
+ B T S  13,1   23,8   49,8   3,4    2,3   24,1  30,4   19,9   22,4  18,4   24,9   33,3 
+Alergen: 1,3,7 1,7 1,12,3,9 1 1,12,7 1,12,7 
+11ML-1 Bábovi čka balená100 Rohlík Polévka drož ďová Termix 90g Sýr kiri 80 g Rohlík 
+12858kJ Jogurt ovocný 150 g Lu čina 62,5g Hov. guláš kapucínsk Máslo porce 2 ks Pudink 125g 
+ B 76,1 Pyré Mléko 1/4 Kaše bramborová Veka balená 100g 
+ T119,7 Mou čník Banány 
+ S409,8   9,5   27,3   49,1  10,9   11,7   11,8  31,6   31,9   57,9   4,0    3,2   15,2  16,3   43,2   66,0   3,8    2,3  109,7 
+Alergen: 1,3,7 1,7 1,12,3,7,9 7 1,7 1,7 St ředa T: 4 D: 3 Jídelní lístek: Dosp ělá 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře05.06.2019 
+11ML-2 Polévka drož ďová Termix 90g Tvaroh ovocný Pudink 125g 
+12494kJ Králík na zelenin ě Máslo porce 2 ks Rohlík 
+ B 67,1 Kaše bramborová Veka balená 100g 
+ T106,0 Mou čník Banány 
+ S428,2  13,1   17,2   43,2   4,0    3,2   15,2  25,8   44,2   67,0   3,8    2,3   24,1 
+Alergen: 1,3,7 1,7 1,12,3,7,9 7 1,7 1,7 
+12 Bábovi čka balená100 Rohlík Pol. hov ězí s t ěstov Rohlík Polévka bramborová 
+ 7144kJ Pyré Máslo porce Králík na zelenin ěMáslo porce Máslo porce 
+ B 29,9 Mléko 1/4 Kaše bramborová Rajče Veka balená 100g 
+ T 65,2 Banány 
+ S240,6   4,2   25,3   47,1   3,5   10,6   10,7   6,3    3,0   37,7   4,4   10,8   13,3  11,4   15,5   38,3 
+Alergen: 1,3 1,7 1,3,7,9 1,7 1,7,9 
+12M Piškoty 120g Mléko 1/4 Pol. hov ězí s t ěstov Pyré Polévka bramborová 
+ 6024kJ Jogurt ovocný 150 g Králík na zelenin ě Veka balená 100g 
+ B 35,1 Kaše bramborová Máslo porce 
+ T 26,7 Pyré 
+ S255,7  18,7    8,2   28,4   0,0    0,0    0,1   6,3    3,0   37,7   0,0    0,1   21,9  10,1   15,4   37,2 
+Alergen: 1,3,7 7 1,3,7,9 1,7,9 
+13-1 Kolá č špaldový Rohlík Polévka drož ďová Rohlík Sýr kiri 80 g 
+ 7944kJ Jogurt ovocný 150 g Mléko 1/4 Hov. guláš kapucínsk Máslo porce 2 ks 
+ B 69,4 Pomeran č Těstoviny Chléb 150g 
+ T 74,7 Rajče
+ S224,7   6,2    2,2    9,9   3,4    2,4    2,4  37,6   26,3   89,2   3,4    2,3   24,1  18,8   41,5   44,0 
+Alergen: 1,3,7 1,7 1,12,3,9 1 1,12,7 
+13-2 Polévka drož ďová Rohlík Pe č.závin 100g 
+ 5967kJ Pe čený rybí karbanát Chléb 150g 
+ B 55,0 Brambory mašt ěné Máslo porce 2 ks 
+ T 41,3 Salát hlávkový B Rajče
+ S195,0  11,6   14,6   19,8   3,4    2,3   24,1  30,4   19,9   22,4 
+Alergen: 1,3,7 1,7 1,12,3,9 1 1,12,7 
+1NEM Bábovi čka balená100 Pyré Pol. hov ězí s t ěstov Termix 90g Pudink 125g 
+ 7607kJ Jogurt ovocný 150 g Králík na zelenin ě Veka balená 100g 
+ B 31,3 Kaše bramborová Banány 
+ T 38,9 
+ S325,1   9,5   27,2   47,4   0,0    0,1   21,9   8,2    4,9   39,5   4,0    3,2   15,2   9,7    3,5   26,3 
+Alergen: 1,3,7 1,3,7,9 7 1,7 
+2 Bábovi čka balená100 Pomeran č Pol. hov ězí s t ěstov Rohlík Sýr apetito plátkový 
+ 7120kJ Jogurt ovocný 150 g Králík na zelenin ě Máslo porce 
+ B 44,4 Brambory va řené Veka balená 100g 
+ T 67,5 Jablka 
+ S219,4   9,5   27,2   47,4   0,9    0,2    7,9   7,9    3,4   42,5   3,4    2,3   24,1  22,7   34,4   50,1 
+Alergen: 1,3,7 1,3,9 1 1,7 
+2NEM Bábovi čka balená100 Pomeran č Pol. hov ězí s t ěstov Rohlík Pudink 125g 
+ 7574kJ Jogurt ovocný 150 g Králík na zelenin ě Veka balená 100g 
+ B 31,4 Brambory va řené Banány 
+ T 36,6 
+ S325,3   9,5   27,2   47,4   0,9    0,2    7,9   7,9    3,4   42,5   3,4    2,3   24,1   9,7    3,5   26,3 
+Alergen: 1,3,7 1,3,9 1 1,7 
+3-1 Kolá č špaldový Pomeran č Polévka drož ďová Rohlík Sýr kiri 80 g 
+ 7414kJ Jogurt ovocný 150 g Hov. guláš kapucínsk Máslo porce 2 ks 
+ B 66,0 Těstoviny Chléb 150g 
+ T 72,3 Rajče
+ S202,9   5,3    2,0   22,3   0,9    0,2    7,9  37,6   26,3   89,2   3,4    2,3   24,1  18,8   41,5   44,0 
+Alergen: 1,3,7 1,12,3,9 1 1,12,7 St ředa T: 4 D: 3 Jídelní lístek: Dosp ělá 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře05.06.2019 
+3-2 Polévka drož ďová Rohlík Pe č.závin 100g 
+ 5437kJ Pe čený rybí karbanát Chléb 150g 
+ B 51,6 Brambory mašt ěné Máslo porce 2 ks 
+ T 39,0 Salát hlávkový B Rajče
+ S173,2  11,6   14,6   19,8   3,4    2,3   24,1  30,4   19,9   22,4 
+Alergen: 1,3,7 1,12,3,9 1 1,12,7 
+3G Kolá č špaldový Pomeran č Polévka drož ďová Rohlík Sýr kiri 80 g 
+ 6223kJ Jogurt smetan. 150g Králík na zelenin ě Máslo porce 2 ks 
+ B 39,6 Kaše bramborová Chléb 150g 
+ T 67,0 Banány 
+ S169,4   4,6   15,0   20,5   0,9    0,2    7,9  11,6    8,0   42,6   3,4    2,3   24,1  19,2   41,5   64,3 
+Alergen: 1,3,7 1,12,3,7,9 1 1,12,7 
+3NB Bábovi čka balená100 Mléko 1/4 Polévka drož ďová Rohlík Žervé s pažitkou 80 
+ 9769kJ Jogurt bžb Hov. guláš kapucínsk Kiwi Chléb 150g 
+ B 75,6 Banány Těstoviny Máslo porce 2 ks 
+ T 85,3 Pomeran č
+ S301,2  12,3   25,9   48,7   0,0    0,0    0,1  37,6   26,3   89,2   4,1    2,8    9,3  21,6   30,3   38,0 
+Alergen: 1,3,7 7 1,12,3,9 1 1,12,7 
+3PK-1 Kolá č špaldový Rohlík Polévka drož ďová Rohlík Sýr kiri 80 g Sojová houska 
+ 9744kJ Jogurt smetan. 150g Lu čina 62,5g Hov. guláš kapucínsk Máslo porce 2 ks Šunka 40g 
+ B 87,0 Jablka Těstoviny Chléb 150g 
+ T104,2 Rajče
+ S247,1   5,0   15,8   31,6  10,9   11,7   13,0  37,6   26,3   89,2   3,4    2,3   24,1  18,8   41,5   44,0  11,3    6,5    7,1 
+Alergen: 1,3,7 1,7 1,12,3,9 1 1,12,7 1,12 
+3PK-2 Polévka drož ďová Rohlík Pe č.závin 100g Sýr toustový 2 plátk 
+ 8701kJ Pe čený rybí karbanát Chléb 150g Sojová houska 
+ B 79,7 Brambory mašt ěné Máslo porce 2 ks 
+ T 89,2 Salát hlávkový B Rajče
+ S225,3  11,6   14,6   19,8   3,4    2,3   24,1  30,4   19,9   22,4  18,4   24,9   52,2 
+Alergen: 1,3,7 1,7 1,12,3,9 1 1,12,7 1,12,7 
+3S Bábovi čka balená100 Pyré Polévka drož ďová Termix 90g Polévka ragú 
+ 7122kJ Jogurt ovocný 150 g Králík na zelenin ě Máslo porce 2 ks 
+ B 41,5 Kaše bramborová Veka balená 100g 
+ T 63,7 Banány 
+ S231,4   9,5   27,2   47,4   0,0    0,1   21,9  11,6    8,0   42,6   4,0    3,2   15,2  16,5   25,3   48,1 
+Alergen: 1,3,7 1,12,3,7,9 7 1,7,9 
+4 Bábovi čka balená100 Pomeran č Pol. hov ězí s t ěstov Rohlík Sýr apetito plátkový 
+ 7120kJ Jogurt ovocný 150 g Králík na zelenin ě Máslo porce 
+ B 44,4 Brambory va řené Veka balená 100g 
+ T 67,5 Jablka 
+ S219,4   9,5   27,2   47,4   0,9    0,2    7,9   7,9    3,4   42,5   3,4    2,3   24,1  22,7   34,4   50,1 
+Alergen: 1,3,7 1,3,9 1 1,7 
+4ML Bábovi čka balená100 Pyré Pol. hov ězí s t ěstov Termix 90g Pudink 125g 
+ 7914kJ Jogurt ovocný 150 g Králík na zelenin ě Máslo porce 
+ B 31,4 Kaše bramborová Veka balená 100g 
+ T 47,1 Banány 
+ S325,2   9,5   27,2   47,4   0,0    0,1   21,9   8,2    4,9   39,5   4,0    3,2   15,2   9,8   11,8   34,6 
+Alergen: 1,3,7 1,3,7,9 7 1,7 
+4S Rohlík 2 ks Polévka nudlová Rohlík Ov.knedlíky s jablky 
+ 8136kJ Med porce 2 ks Rizoto mrkvové Pyré 
+ B 37,7 Pyré Banány 
+ T 11,8 
+ S406,4   7,0    4,8   26,6  15,9    2,5   25,3   3,4    2,3   24,1  11,4    2,2   24,0 
+Alergen: 1 1,3 1 1St ředa T: 4 D: 3 Jídelní lístek: Dosp ělá 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře05.06.2019 
+4S/9 Rohlík 2 ks Polévka nudlová Rohlík Mrkvové pyré 
+ 6199kJ Džem porce dia 2 ks Rizoto mrkvové Kaše bramborová vodo 
+ B 33,0 Pyré dia Pyré dia Pyré dia 
+ T 12,3 
+ S296,4   7,4    4,9   14,4  15,0    2,4   11,9   3,4    2,3   24,1   7,2    2,7   12,2 
+Alergen: 1 1,3 1 7
+5 Rohlík 2 ks Bujon Rohlík Sýr apetito plátkový 
+ 6622kJ Lu čina 62,5g Králík na zelenin ě Máslo porce 
+ B 74,8 Máslo porce Kaše bramborová Veka balená 100g 
+ T 68,1 
+ S161,3  14,4   22,3   22,4  34,7    9,8   44,5   3,4    2,3   24,1  22,2   33,6   85,0 
+Alergen: 1,7 1,7,9 1 1,7 
+9-150 Rohlík selský Pomeran č Králík na zelenin ěJablka Pe č.závin 100g Jablka 
+ 5149kJ Tvaroh Diavita Brambory va řené Chléb 70g 
+ B 66,5 Rajče
+ T 24,9 
+ S170,9  17,6    3,9   18,9   0,9    0,2    7,9  22,6   16,7   55,8   0,5    0,8   16,6  24,4    2,5    5,0   0,5    0,8   16,6 
+Alergen: 1,7 1,9 1,12 
+9-200 Rohlík selský Pomeran č Polévka drož ďová Jablka Pe č.závin 100g Chléb 50g 
+ 8738kJ Rama porce 2 ks Hov. guláš kapucínsk Chléb 100g Sýr toustový 2 plátk 
+ B 99,3 Tvaroh Diavita Knedlík houskový Flora porce 
+ T 75,9 Rajče
+ S239,2  17,7   16,9   31,9   0,9    0,2    7,9  35,8   24,7   98,1   0,5    0,8   16,6  26,6   10,9   13,4  17,7   22,5   30,9 
+Alergen: 1,7 1,12,3,9 1,12 1,12,7 
+9-250 Rohlík selský 2 ks Pomeran č Polévka drož ďová Jablka Pe č.závin 100g Chléb 50g 
+ 9529kJ Rama porce 2 ks Hov. guláš kapucínsk Flora porce Sýr toustový 2 plátk 
+ B104,4 Tvaroh Diavita Knedlík houskový Chléb 100g 
+ T 79,4 Rajče
+ S271,9  22,9   20,4   35,4   0,9    0,2    7,9  35,8   24,7   98,1   0,5    0,8   16,6  26,6   10,9   13,4  17,7   22,5   30,9 
+Alergen: 1,7 1,12,3,9 1,12 1,12,7 
+9-DYSF Instantní kaše porce Polévka drož ďová Chléb 50g 
+ 5451kJ Jogurt ovocný dia Králík na zelenin ě Flora porce 
+ B 78,3 Mléko 1/4 Brambory va řené Polévka ragú 
+ T 46,9 Pyré dia Bujon Pyré dia 
+ S132,9 Pyré dia 
+ B T S   6,9    2,2   11,7  60,4   30,8   40,3  11,1   13,9   23,4 
+Alergen: 7 1,12,3,9 1,12,7,9 
+9/BLP Chléb blp pe čený Pomeran č Bujon Jablka Sýr kiri 80 g Šunka 40g 
+10159kJ Tvaroh Diavita Králík na zelenin ě Flora porce 
+ B 98,7 Rama porce 2 ks Brambory va řené Chléb blp kuku řičný 
+ T 88,1 Rajče
+ S299,7  19,6   26,4   26,5   0,9    0,2    7,9  52,9   24,6   63,8   0,5    0,8   16,6  17,8   32,4   34,9   7,0    3,6    4,2 
+Alergen: 7 1,9 7
+9ML Chléb 70g Pyré dia Polévka drož ďová Jogurt ovocný dia Sýr kiri 80 g Chléb 50g 
+ 6623kJ Rama porce 2 ks Králík na zelenin ě Chléb 100g Mléko 1/4 
+ B 54,3 Tvaroh Diavita Kaše bramborová Flora porce Rama porce 
+ T 63,7 Pyré dia 
+ S188,4  17,7   14,1   29,1   0,4    0,1    9,6  11,6    8,0   42,6   6,5    2,1   14,1  14,5   32,4   41,9   3,7    7,1    7,1 
+Alergen: 1,12,7 1,12,3,7,9 7 1,12,7 1,12,7 
+9NB Chléb 70g Mléko 1/4 Polévka drož ďová Kiwi Žervé s pažitkou 80 Šunka 40g 
+ 8251kJ Lu čina 62,5g Hov. guláš kapucínsk Chléb 100g Chléb 50g 
+ B 80,1 Máslo porce 2 ks Těstoviny Máslo porce 2 ks 
+ T 87,4 Mandarinky Pomeran č
+ S202,7  13,1   26,8   32,0   0,0    0,0    0,1  37,6   26,3   89,2   0,7    0,4    7,0  18,0   29,8   37,5  10,7    4,1   26,1 
+Alergen: 1,12,7 7 1,12,3,9 1,12,7 1,12 St ředa T: 4 D: 3 Jídelní lístek: Dosp ělá 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře05.06.2019 
+9S Rohlík 2 ks Pomeran č Pol. hov ězí s t ěstov Jablka Sýr apetito plátkový Rohlík 
+ 7395kJ Rama porce 2 ks Králík na zelenin ě Flora porce Rama porce 
+ B 54,8 Tvaroh Diavita Brambory va řené Veka balená 100g Mléko 1/4 
+ T 65,4 Jablka 
+ S226,7  19,4   18,0   33,0   0,9    0,2    7,9   7,9    3,4   42,5   0,5    0,8   16,6  22,6   34,1   49,9   3,5    8,9    8,9 
+Alergen: 1,7 1,3,9 1,7 1,7 
+9SML Veka balená 100g Pyré dia Pol. hov ězí s t ěstov Jogurt ovocný dia Žervé s pažitkou 80 Rohlík 
+ 6813kJ Rama porce 2 ks Králík na zelenin ě Flora porce Rama porce 
+ B 57,2 Tvaroh Diavita Kaše bramborová Veka balená 100g Mléko 1/4 
+ T 56,1 Pyré dia 
+ S215,0  20,6   16,7   31,7   0,4    0,1    9,6   8,2    4,9   39,5   6,5    2,1   14,1  18,0   23,4   32,9   3,5    8,9    8,9 
+Alergen: 1,7 1,3,7,9 7 1,7 1,7 
+BLP Chléb blp pe čený Pomeran č Bujon Piškot BLP (soják) Sýr kiri 80 g 
+11495kJ Máslo porce 2 ks Králík na zelenin ě Máslo porce 2 ks 
+ B 90,7 Jogurt ovocný 150 g Brambory va řené Chléb blp kuku řičný 
+ T105,1 Rajče
+ S350,4  12,4   31,5   51,8   0,9    0,2    7,9  52,9   24,6   63,8   6,5    7,8   69,4  17,9   40,9   43,4 
+Alergen: 7 1,9 3,7 7
+BML Rohlík 2 ks Pomeran č Pol. hov ězí s t ěstov Rohlík Vejce na tvrdo 2 ks 
+ 6502kJ Rama porce 2 ks Pe čený rybí karbanát Chléb 150g 
+ B 52,9 Paštika 48g Brambory mašt ěné Flora porce 
+ T 59,5 Rajče
+ S189,8  16,0   25,4   25,7   0,9    0,2    7,9   7,9   10,4   49,5   3,4    2,3   24,1  24,7   21,3   23,8 
+Alergen: 1 1,3,9 1 1,12,3 
+OK Rohlík 2 ks Mléko 1/4 Pol. krupicová s bíl Veka balená 100g 
+10327kJ Máslo porce 2 ks Knedlíky s vejci Máslo porce 2 ks 
+ B 82,4 Žervé 50g Kompot jabkový Sýr plátkový 100g 
+ T103,6 Pyré Banány 
+ S293,6  13,0   28,7   29,7   0,0    0,0    0,1  33,9   38,6   60,4  35,4   36,2   59,0 
+Alergen: 1,7 7 1,12,3,9 1,7 
+S-T Rohlík 2 ks Rohlík Polévka bramborová Rohlík Kysel meru ňkový 
+ 8500kJ Pudink laktino Pomeran č Těstoviny s brokolic Pyré Veka balená 100g 
+ B 55,0 Salát raj čatový B Banány 
+ T 23,3 
+ S379,6  12,8    7,4   53,1   4,4    2,5   10,3  24,8    7,3   17,0   3,4    2,4   24,2   9,6    3,6   26,4 
+Alergen: 1,7 1 1,12,3,7,9 1 1,7 
+S30 Kolá č špaldový Bramborák Jablka Džem porce 3 ks 
+ 5019kJ Jablka Zelí dušené Chléb 150g 
+ B 21,9 Máslo porce 
+ T 27,5 Jablka 
+ S198,9   0,5    0,8   16,6   9,2   15,1   16,6   0,5    0,8   16,6  11,7   10,8   26,5 
+Alergen: 1,3,7 1,12,3,7 1,12,7 
+SP Rohlík 2 ks Polévka nudlová Rohlík Ov.knedlíky s jablky 
+ 7856kJ Med porce 2 ks Kr ůtí dušené Pyré 
+ B 50,9 Pyré Rýže 
+ T 14,1 Banány 
+ S372,3   7,0    4,8   26,6  29,0    4,8   27,6   3,4    2,3   24,1  11,4    2,2   24,0 
+Alergen: 1 1,3 1 1
+SPD Suchar 200g Polévka rýžová Banány Med porce 3 ks 
+ 9666kJ Med porce 2 ks Hov ězí duš. v mrkvi Pyré 
+ B 64,1 Pyré Knedlík žemlový jemn Veka balená 100g 
+ T 20,3 
+ S449,3  19,9    8,7   30,5  34,6    8,0   83,9   1,3    0,2   23,0   8,3    3,4   54,8 
+Alergen: 1 1,3,7 1St ředa T: 4 D: 3 Jídelní lístek: Dosp ělá 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře05.06.2019 
+VEG Kolá č špaldový Pomeran č Polévka drož ďová Rohlík Salát z paprik a raj
+ 8064kJ Jogurt ovocný 150 g Robi maso Máslo porce 2 ks 
+ B 63,5 Fazolka dušená Chléb 150g 
+ T 68,8 Brambory va řené Banány 
+ S245,6   5,3    2,0   22,3   0,9    0,2    7,9  40,1   43,7   82,8   3,4    2,3   24,1  13,7   20,6   43,4 
+Alergen: 1,3,7 1,12,3,9 1 1,12,7 
+VNM Rohlík 2 ks Bujon Rohlík Sýr kiri 80 g 
+ 8088kJ Máslo porce 2 ks Vep řová št ěpánská Mléko 1/4 Máslo porce 
+ B 90,2 Jogurt bílý 150g Knedlík houskový Rohlík 2 ks 
+ T 83,7 Mléko 1/4 Mléko 1/4 
+ S198,7  12,2   23,6   23,6  60,8   21,6   95,1   3,4    2,4    2,4  13,8   36,1   36,2 
+Alergen: 1,7 1,12,3 1,7 1,7 St ředa T: 4 D: 3 Jídelní lístek: Dosp ělá 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře05.06.2019 
