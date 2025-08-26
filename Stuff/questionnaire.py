@@ -25,8 +25,6 @@ Vaším úkolem je odpovídat co nejupřímněji podle toho, co nejlépe vystihu
 socialIntro = """Níže naleznete několik otázek týkajících se Vašeho vztahu k sociálním médiím (Facebook, Twitter, Instagram, TikTok apod.) a jejich používání. 
 U každé otázky vyberte tu variantu odpovědi, která vás nejlépe vystihuje."""
 
-pmsIntro = "Ohodnoďte tvrzení níže, jak je sami cítíte, od 1 (rozhodně nesouhlasím) do 5 (rozhodně souhlasím):"
-
 
 
 class Questionnaire(ExperimentFrame):
@@ -128,10 +126,6 @@ class Questionnaire(ExperimentFrame):
         for word in self.words:
             self.file.write(self.id + "\t" + word + "\t" + self.variables[word].get() + "\n")
 
-
-
-class PMS(InstructionsFrame):
-    pass
 
 
 NFC = (Questionnaire,

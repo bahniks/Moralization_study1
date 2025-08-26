@@ -17,15 +17,11 @@ from constants import BONUS, TESTING
 
 ################################################################################
 # TEXTS
-questintro = f"""
-Váš výsledek z finálního kvízu a Vaši výši odměny se dozvíte na konci celé studie. 
-
-V následující části studie budete odpovídat na otázky o sobě, Vašich postojích a názorech. Tato část by měla trvat asi 15 minut.
+questintro = f"""V následující části studie budete odpovídat na otázky o sobě, Vašich postojích a názorech. Tato část by měla trvat asi 10-15 minut.
 
 Každou otázku si pečlivě přečtěte. Snažte se však na otázky nemyslet příliš dlouho; první odpověď, která Vám přijde na mysl, je obvykle nejlepší.
 
-Mezi dotazníky bude jedna položka měřící Vaší pozornost, pokud odpovíte správně, dostanete dodatečných {BONUS} Kč.
-"""
+Za účelem ověření, zda otázkám věnujete pozornost, je mezi otázkami umístěno i několik kontrolních otázek. Pokud odpovíte na všechny kontrolní otázky správně, můžete získat dalších {BONUS} Kč."""
 
 hexacoinstructions = """Na následujících stránkách najdete řadu prohlášení o Vaší osobě.
 
@@ -200,8 +196,8 @@ class Likert(Canvas):
 
 class Hexaco(Quest):
     def __init__(self, root):
-        super().__init__(root, 11, "hexaco.txt", "Hexaco", instructions = hexacoinstructions, width = 85,
-                         left = "silně nesouhlasím", right = "silně souhlasím", checks = 1,
+        super().__init__(root, 9, "hexaco.txt", "Hexaco", instructions = hexacoinstructions, width = 85,
+                         left = "silně nesouhlasím", right = "silně souhlasím", checks = 3,
                          height = 3, options = 5, center = True)
 
 

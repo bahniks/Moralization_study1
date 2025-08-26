@@ -3,11 +3,14 @@
 from tkinter import *
 from tkinter import ttk
 from PIL import Image, ImageTk
+from time import perf_counter
+from math import floor
 
 import os
 import random
 
 from common import ExperimentFrame, InstructionsFrame, InstructionsAndUnderstanding, Measure
+from questionnaire import Questionnaire
 from gui import GUI
 from diets import DIETS
 
@@ -77,7 +80,10 @@ guiltQ2 = "Do jaké míry cítíte vinu za to, jak jste celý úkol zvládl(a)?"
 guiltL = "Necítím žádnou vinu"
 guiltR = "Cítím velkou vinu"
 
-continuation = """Dosud jste dokončili hodnocení {} a strávili na úkolu X minut.
+ratingsText = "Nyní zodpovězte na následující otázky ohledně právě dokončeného úkolu:"
+ratingsText2 = "Tvrzení níže ohodnottě na základě toho, nakolik s nimi souhlasíte."
+
+continuation = """Dosud jste dokončili hodnocení {} a strávili na úkolu {} minut.
 
 <b>Uveďte, zda chcete pokračovat hodnocení dalších jídel, nebo zda chcete úkol ukončit.</b>
 V úkolu je možné pokračovat nejdéle do uplynutí 20 minut od jeho začátku.
@@ -86,6 +92,10 @@ Pokud zvolíte „Pokračovat“, zobrazí se Vám další dieta k přepsání a
 Pokud zvolíte „Ukončit“, úkol skončí a přesunete se na další část studie.
 
 Je to zcela na Vás: můžete kdykoliv přestat bez jakékoli penalizace."""
+
+endtime = """Dosud jste dokončili hodnocení {} a strávili na úkolu {} minut.
+
+Jelikož již uplynulo více než 20 minut od začátku úkolu, hodnocení dalších jídel již není možné."""
 
 
 
@@ -99,7 +109,7 @@ class Task(ExperimentFrame):
         super().__init__(root)        
 
         if not "trial" in self.root.status or not self.root.status["trial"]:
-            self.root.status["trial"] = 1
+            self.root.status["trial"] = 0
 
         style = ttk.Style()
         style.configure('TNotebook', background='white', borderwidth=0)
@@ -109,25 +119,35 @@ class Task(ExperimentFrame):
               background=[('selected', 'white'), ('!selected', 'white')],
               font=[('selected', ('Helvetica', 15, 'bold')), ('!selected', ('Helvetica', 15))])
         n = ttk.Notebook(self, style='TNotebook')
-        self.moralization = Moralization(root)
-        self.menus = Menus(root)
+        
+        self.newTrial()
+
+        self.moralization = Moralization(root, self)
+        self.menus = Menus(root, self)
         n.add(self.moralization, text='Hodnocení')
         n.add(self.menus, text='Jídelníčky')
         n.pack(expand=True, fill='both')
 
-        self.newTrial()
+        
 
     def newTrial(self):
-        self.currentDiet = random.choice(DIETS)
-        self.moralization.changeText(task.format(self.currentDiet))
-        self.menus.changeText(menus_text.format(self.currentDiet))
-                
         self.root.status["trial"] += 1
+
+        self.currentDiet = random.choice(DIETS)
+
+        if self.root.status["trial"] == 1:
+            self.root.status["startTime"] = perf_counter()
+
+    def nextFun(self):
+        super().nextFun()
+        
 
 
 class Moralization(InstructionsFrame):
-    def __init__(self, root):
-        super().__init__(root, text = task, height = 3, width = 100)
+    def __init__(self, root, taskFrame):
+        super().__init__(root, text = task.format(taskFrame.currentDiet), height = 3, width = 100)
+
+        self.taskFrame = taskFrame
 
         self.ratingFrame = Canvas(self, background = "white", highlightbackground = "white", highlightcolor = "white")
         self.ratingFrame.grid(row=3, column=1)
@@ -220,8 +240,13 @@ class Moralization(InstructionsFrame):
                 val = eval(entry).get()
             else:
                 val = value
-            info = val.strip().replace(",", ".")
-            if not info.isdigit() or not info:
+            info = val.strip().replace(",", ".")      
+            try:
+                float(info)
+                notfloat = False 
+            except ValueError:
+                notfloat = True                   
+            if notfloat or not info:
                 self.next["state"] = "disabled"
                 for measures in self.widgets["measures"].values():
                     for measure in measures:
@@ -241,14 +266,17 @@ class Moralization(InstructionsFrame):
     def rated(self):
         self.checkNutrition("", "XYZ")
 
+    def nextFun(self):
+        self.taskFrame.nextFun()
+
 
 
 
 class Menus(InstructionsFrame):
-    def __init__(self, root):
-        super().__init__(root, text = menus_text, height = 5, width = 100)
+    def __init__(self, root, taskFrame):
+        super().__init__(root, text = menus_text.format(taskFrame.currentDiet), height = 5, width = 100, proceed=False)
 
-        self.next.grid(column = 1, row = 3)
+        self.taskFrame = taskFrame
 
         # Create a frame for the image and scrollbar
         img_frame = Frame(self)
@@ -305,9 +333,9 @@ class Ratings1(InstructionsFrame):
     def __init__(self, root):
         super().__init__(root, text = proceedText, proceed = True, savedata = True, height = 2, width = 80)
 
-        self.difficulty = Measure(self, difficultyQ1, [i for i in range(1,7)], difficultyL, difficultyR, labelPosition="next", shortText=f"difficultyFirst", questionPosition="above", center=True, function = self.rated)
+        self.difficulty = Measure(self, difficultyQ1, [i for i in range(1,8)], difficultyL, difficultyR, labelPosition="next", shortText=f"difficultyFirst", questionPosition="above", center=True, function = self.rated)
 
-        self.satisfaction = Measure(self, satisfactionQ1, [i for i in range(1,7)], satisfactionL, satisfactionR, labelPosition="next", shortText=f"satisfactionFirst", questionPosition="above", center=True, function = self.rated)
+        self.satisfaction = Measure(self, satisfactionQ1, [i for i in range(1,8)], satisfactionL, satisfactionR, labelPosition="next", shortText=f"satisfactionFirst", questionPosition="above", center=True, function = self.rated)
 
         self.difficulty.grid(column = 1, row = 2)
         self.satisfaction.grid(column = 1, row = 3)
@@ -329,10 +357,12 @@ class Ratings1(InstructionsFrame):
 
 class Choice(InstructionsFrame):
     def __init__(self, root):
+        elapsedTime = floor((perf_counter() - root.status["startTime"]) / 60)
+        baseText = continuation if elapsedTime < 20 else endtime
         if root.status["trial"] == 1:
-            text = continuation.format("jedné diety")
+            text = baseText.format("jedné diety", str(elapsedTime))
         else:
-            text = continuation.format("{} diet".format(root.status["trial"]))
+            text = baseText.format("{} diet".format(root.status["trial"]), str(elapsedTime))
 
         super().__init__(root, text = text, proceed = False, savedata = True, height = 10, width = 80)
 
@@ -341,22 +371,68 @@ class Choice(InstructionsFrame):
         self.buttonFrame = Canvas(self, background = "white", highlightbackground = "white", highlightcolor = "white")
         self.buttonFrame.grid(row=2, column=1)
 
-        self.continueButton = ttk.Button(self.buttonFrame, text="Pokračovat", command=self.proceed)
-        self.continueButton.grid(column=0, row=2, sticky="w", padx=60)
 
-        self.endButton = ttk.Button(self.buttonFrame, text="Ukončit", command=self.end)
-        self.endButton.grid(column=2, row=2, sticky="e", padx=60)
+        self.continueButton = ttk.Button(self.buttonFrame, text="Pokračovat", command=self.proceed)
+        if elapsedTime < 20:
+            self.continueButton.grid(column=0, row=2, sticky="w", padx=60)
+
+            self.endButton = ttk.Button(self.buttonFrame, text="Ukončit", command=self.end)
+            self.endButton.grid(column=2, row=2, sticky="e", padx=60)
+        else:
+            self.continueButton.grid(column=1, row=2, padx=60)            
 
     def proceed(self):
+        if self.root.status["trial"] != 1:
+            self.root.count -= 2
         self.nextFun()
 
     def end(self):
-        self.root.count += 2
+        if self.root.status["trial"] == 1:
+            self.root.count += 2
         self.nextFun()
 
 
-class Ratings2(InstructionsFrame):
-    pass
+labels = ["rozhodně nesouhlasím", "nesouhlasím", "spíše nesouhlasím", "neutrální", "spíše souhlasím", "souhlasím","rozhodně souhlasím"]
+
+class Ratings2(Questionnaire):
+    def __init__(self, root):
+        super().__init__(root, words = "ratings.txt", blocksize = 8, fontsize = 15, labelwidth=10, filetext = "Ratings2", labels = labels, wraplength = 370, fixedlines=2)
+
+        self.difficulty = Measure(self, difficultyQ2, [i for i in range(1,8)], difficultyL, difficultyR, labelPosition="next", shortText=f"difficultySecond", questionPosition="above", center=True, function = self.clicked)
+
+        self.satisfaction = Measure(self, satisfactionQ2, [i for i in range(1,8)], satisfactionL, satisfactionR, labelPosition="next", shortText=f"satisfactionSecond", questionPosition="above", center=True, function = self.clicked)
+
+        self.guilt = Measure(self, guiltQ2, [i for i in range(1,8)], guiltL, guiltR, labelPosition="next", shortText=f"guiltSecond", questionPosition="above", center=True, function = self.clicked)
+
+        self.instructions = ttk.Label(self, text = ratingsText, font = "helvetica 15 bold", background = "white")
+        self.instructions2 = ttk.Label(self, text = ratingsText2, font = "helvetica 15 bold", background = "white")
+        self.instructions.grid(column = 0, columnspan=3, row = 1)
+        self.instructions2.grid(column = 0, columnspan=3, row = 6)
+
+        self.difficulty.grid(column = 1, row = 2)
+        self.satisfaction.grid(column = 1, row = 3)
+        self.guilt.grid(column = 1, row = 4)
+
+        self.frame.grid(column = 1, row = 7, sticky = NSEW, pady = 10)
+
+        self.next.grid(column = 1, row = 8)
+
+        self.next["state"] = "disabled"
+
+        for i in range(0, 9):
+            self.rowconfigure(i, weight=1)
+        self.rowconfigure(0, weight=2)
+        self.rowconfigure(5, weight=3)
+        self.rowconfigure(9, weight=2)
+
+    def clicked(self):
+        super().clicked()
+        if not self.checkRatings():
+            self.next["state"] = "disabled" 
+
+    def checkRatings(self):
+        return self.difficulty.answer.get() and self.satisfaction.answer.get() and self.guilt.answer.get()
+
 
 class BDMInstructions(InstructionsFrame):
     pass
@@ -380,4 +456,4 @@ if __name__ == "__main__":
     from login import Login
     import os
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([Login, Choice, Task, Ratings1, MoralizationInstructions, Task])
+    GUI([Login, Task, Ratings1, Choice, Task, Choice, Ratings2, MoralizationInstructions])

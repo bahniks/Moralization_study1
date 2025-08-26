@@ -48,24 +48,21 @@ V případě, že máte otázky nebo narazíte na technický problém během úk
 Po přečtení stiskněte tlačítko “Pokračovat”."""
 
 
-ending = """Toto je konec experimentu.
-
+ending = """Děkujeme za Vaši účast ve výzkumu!
+{}
 Za účast na studii dostáváte {} Kč. 
-{} jste správně na kontrolní otázku v dotazníku. {} tedy dodatečných {} Kč. 
-V závěrečném kvízu jste dosáhl(a) {} správných odpovědí z 25. Na základě výsledků v závěrečném kvízu získáváte tedy navíc {} Kč.
 
-<b>Vaše odměna za tuto studii je dohromady {} Kč. Napište prosím tuto částku do příjmového dokladu na stole před Vámi.</b> 
+Celkově jste tedy získal(a) {} Kč. Tuto částku jsme zaokrouhlili na desítky korun směrem nahoru – prosíme, <b>zapište konečnou výši odměny {} Kč do příjmového dokladu, který máte před sebou na stole</b>.
 
-Studie založená na datech získaných v tomto experimentu bude volně dostupná na stránkách Centra laboratorního a experimentálního výzkumu FPH VŠE, krátce po vyhodnocení dat a publikaci výsledků. 
+Studie, která vychází z tohoto experimentu, bude po zpracování dat a publikaci výsledků volně dostupná na webových stránkách Centra laboratorního a experimentálního výzkumu FPH VŠE.
 
-Cílem studie bylo zjistit, jaký typ edukačního videa lidé preferují a jak jej hodnotí v různých parametrech oblíbenosti či náročnosti. Studie rovněž nabízela participantům různou velikost odměny - v závislosti do jaké podmínky byli náhodně zařazeni - za správné odpovědi, s cílem ověřit, jak preference participantů ovlivňuje velká či malá odměna.
+Abychom zajistili objektivitu výsledků, žádáme Vás, abyste nesdílel(a) žádné detaily o průběhu studie s dalšími možnými účastníky. I drobné informace by mohly ovlivnit jejich odpovědi a tím znehodnotit celý výzkum.
 
-<b>Žádáme Vás, abyste nesděloval(a) detaily této studie možným účastníkům, aby jejich volby a odpovědi nebyly ovlivněny a znehodnoceny.</b>
-  
-Můžete si vzít všechny svoje věci a vyplněný příjmový doklad, a aniž byste rušil(a) ostatní účastníky, odeberte se do vedlejší místnosti za výzkumným asistentem, od kterého obdržíte svoji odměnu. 
+Až budete mít vše vyplněno, vezměte si své osobní věci, příjmový doklad a záznamový arch, a v tichosti přejděte do vedlejší místnosti za výzkumným asistentem, který Vám předá odměnu.
 
-Toto je konec experimentu. Děkujeme za Vaši účast!
- 
+Tímto je experiment u konce.
+Děkujeme Vám ještě jednou za spolupráci a čas!
+
 Centrum laboratorního a experimentálního výzkumu FPH VŠE""" 
 
 ################################################################################
@@ -76,7 +73,8 @@ Centrum laboratorního a experimentálního výzkumu FPH VŠE"""
 
 class Ending(InstructionsFrame):
     def __init__(self, root):
-        root.texts["results"] = "\n" + "\n\n".join(root.status["results"]) + "\n"
+        root.texts["results"] = "\n" + "tady bude popis odměny" + "\n"
+        #root.texts["results"] = "\n" + "\n\n".join(root.status["results"]) + "\n"
 
         root.texts["reward"] = str(root.status["reward"])
         root.texts["rounded_reward"] = ceil(root.status["reward"] / 10) * 10
@@ -111,7 +109,7 @@ class Ending(InstructionsFrame):
 
 
 
-Initial = (InstructionsFrame, {"text": login, "proceed": False, "height": 17, "keys": ["g", "G"]})
+Initial = (InstructionsFrame, {"text": login, "proceed": False, "height": 25, "keys": ["g", "G"]})
 Intro = (InstructionsFrame, {"text": intro, "proceed": True, "height": 20})
 
 
