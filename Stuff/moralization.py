@@ -9,10 +9,11 @@ from math import floor
 import os
 import random
 
-from common import ExperimentFrame, InstructionsFrame, InstructionsAndUnderstanding, Measure
+from common import ExperimentFrame, InstructionsFrame, InstructionsAndUnderstanding, Measure, MultipleChoice
 from questionnaire import Questionnaire
 from gui import GUI
 from diets import DIETS
+from constants import MAX_BDM_PRIZE
 
 
 instructions = """Na následujících stránkách najdete stručné popisy jídel podávaných v nemocniční jídelně <b>Fakultní nemocnice Motol</b>. Cílem tohoto úkolu je pro Fakultní nemocnici Motol daná jídla ohodnotit.
@@ -97,6 +98,61 @@ endtime = """Dosud jste dokončili hodnocení {} a strávili na úkolu {} minut.
 
 Jelikož již uplynulo více než 20 minut od začátku úkolu, hodnocení dalších jídel již není možné."""
 
+
+BDMtext = """Nyní můžete uvést, kolik peněz vyžadujete jako bonus navíc, abyste na úkolu ještě 10 minut pracovali. Pomocí aukce pak bude určeno, zda na úkolu budete pracovat či ne a tedy zda požadovaný bonus navíc získáte či nikoliv.
+
+Vysvětleme si pravidla aukce:
+
+Níže uvidíte pole, kam zadáte nejnižší částku (v Kč), za kterou byste byli ochotni strávit dalších 10 minut stejným úkolem (bez možnosti dříve skončit), mezi 0 Kč a 100 Kč.
+
+Po odeslání této částky generátor náhodných čísel vylosuje náhodné číslo mezi 0 a 100.
+
+Pokud bude náhodné číslo větší či rovné (≥) Vámi minimálně požadované částce, obdržíte částku ve velikosti vylosovaného náhodného čísla jako bonus a budete 10 minut dále pracovat na úkolu. Například, uvedete-li 20 Kč a bude vylosováno 50 Kč, získáte bonus 50 Kč navíc a budete pokračovat v úkolu.
+
+Pokud je náhodné číslo menší než (<) Vámi minimálně požadovaná částka, nezískáte dodatečný bonus a na úkolu už pracovat nebudete. Například, uvedete-li 50 Kč a bude vylosováno 20 Kč, nezískáte nic navíc a budete pokračovat další částí studie.
+
+Tento proces zajišťuje, že nejvýhodnější je zadat skutečné minimum, za které byste na úkol reálně pracovali. Když uvedete moc vysokou požadovanou částku, je nízká pravděpodobnost, že bude vylosvané číslo stejné nebo vyšší a nezískáte tedy nic. Pakliže uvedete příliš nízkou částku, může se stát, že za úkol dostanete méně, než byste chtěli. Přeplacení ani podstřelení se tedy nevyplácí.
+
+Než uvedete nejnižší částku (v Kč), za kterou byste byli ochotni strávit dalších 10 minut stejným úkolem, zkontrolujeme si porozumění aukci."""
+
+
+BDMcontrol1 = "Co se stane, pokud zadáte částku 20 Kč a generátor vylosuje náhodné číslo 30 Kč?"
+BDManswers1 = ["Na úkolu už nebudete pracovat.", "Dostanete 30 Kč a budete pokračovat v úkolu, jak dlouho budete chtít.", 
+               "Dostanete 30 Kč a budete 10 minut pracovat na úkolu.", "Dostanete 20 Kč a budete 10 minut pracovat na úkolu."]
+BDMfeedback1 = ["Špatně. Dostanete 30 Kč navíc a budete 10 minut pracovat na úkolu.",
+                "Špatně. Dostanete 30 Kč navíc a budete 10 minut pracovat na úkolu.",
+                "Ano, správně.",
+                "Špatně. Dostanete 30 Kč navíc a budete 10 minut pracovat na úkolu."]
+
+
+BDMcontrol2 = "Proč není výhodné uvést vyšší částku, než za kterou byste byli ochotni úkol vykonat?"
+BDManswers2 = [
+    "Protože by to mohlo narušit studii.",
+    "Protože se může stát, že nebudete úkol vykonávat za částku, za kterou byste byli ochotni pracovat.",
+    "Protože je větší pravděpodobnost, že vyhraje někdo jiný.",
+    "Protože budete automaticky penalizováni."
+]
+BDMfeedback2 = [
+    "Špatně. Správná odpověď je, že se může stát, že nebudete úkol vykonávat za částku, za kterou byste byli ochotni pracovat.",
+    "Ano, správně.",
+    "Špatně. Správná odpověď je, že se může stát, že nebudete úkol vykonávat za částku, za kterou byste byli ochotni pracovat.",
+    "Špatně. Správná odpověď je, že se může stát, že nebudete úkol vykonávat za částku, za kterou byste byli ochotni pracovat."
+]
+
+BDMproceed = "Po dokončení stiskněte tlačítko “Pokračovat”."
+
+decisionText = "Nyní, prosíme, uveďte nejnižší částku (v Kč), za kterou byste byli ochotni strávit dalších 10 minut\nstejným úkolem (bez možnosti dříve skončit), mezi 0 Kč a 100 Kč (v celých korunách)."
+
+BDMresult = """Uvedli jste: {}
+Generátor náhodných čísel vylosoval: {}
+
+{}
+
+Po dokončení stiskněte tlačítko “Pokračovat”."""
+
+BDMwon = "Náhodné číslo je větší či rovné (≥) než Vámi minimálně požadovaná částka. Obdržíte tedy částku {} Kč a budete 10 minut pracovat na úkolu." 
+
+BDMlost = "Náhodné číslo je menší než (<) Vámi minimálně požadovaná částka. Nezískáte dodatečný bonus a na úkolu už pracovat nebudete."
 
 
 class Task(ExperimentFrame):
@@ -434,16 +490,136 @@ class Ratings2(Questionnaire):
         return self.difficulty.answer.get() and self.satisfaction.answer.get() and self.guilt.answer.get()
 
 
-class BDMInstructions(InstructionsFrame):
-    pass
+
 
 class BDM(InstructionsFrame):
-    pass
+    def __init__(self, root):
+        super().__init__(root, text = BDMtext, height = 25, font = 15, width = 105)
 
-class BDMResult(InstructionsFrame):
-    pass
+        self.name = "BDM"
+
+        # offer frame
+        self.offerVar = StringVar()
+        self.vcmd = (self.register(self.onValidate), '%P')
+        self.offerFrame = Canvas(self, background = "white", highlightbackground = "white", highlightcolor = "white")
+        self.filler1 = Canvas(self.offerFrame, background = "white", width = 1, height = 255,
+                                highlightbackground = "white", highlightcolor = "white")
+        self.filler1.grid(column = 1, row = 0, rowspan = 10, sticky = NS)
+        self.decisionTextLab = ttk.Label(self.offerFrame, text = decisionText, font = "helvetica 15 bold", background = "white")
+        self.decisionTextLab.grid(row = 1, column = 0, columnspan = 3, pady = 10)        
+        self.offerInnerFrame = Canvas(self.offerFrame, background = "white", highlightbackground = "white", highlightcolor = "white")
+        self.offerInnerFrame.grid(row = 2, column = 0, columnspan = 3, sticky = EW)
+        # self.offerTextLab = ttk.Label(self.offerInnerFrame, text = offerText, font = "helvetica 15", background = "white")
+        # self.offerTextLab.grid(row = 2, column = 1, padx = 6, sticky = E)
+        self.entry = ttk.Entry(self.offerInnerFrame, textvariable = self.offerVar, width = 10, justify = "right",
+                               font = "helvetica 15", validate = "key", validatecommand = self.vcmd)
+        self.entry.grid(row = 2, column = 2, sticky = E, padx = 5)
+        self.currencyLabel = ttk.Label(self.offerInnerFrame, text = "Kč", font = "helvetica 15", background = "white")
+        self.currencyLabel.grid(row = 2, column = 3, sticky = W)
+        self.offerInnerFrame.columnconfigure(0, weight = 1)
+        self.offerInnerFrame.columnconfigure(4, weight = 1)
+        
+        self.problem = ttk.Label(self.offerFrame, text = "", font = "helvetica 15", background = "white", foreground = "red")
+        self.problem.grid(row = 4, column = 0, columnspan = 3, pady = 10)
+
+        # control question frame
+        self.controlTexts = [[BDMcontrol1, BDManswers1, BDMfeedback1], [BDMcontrol2, BDManswers2, BDMfeedback2]]
+
+        self.controlFrame = Canvas(self, background = "white", highlightbackground = "white",
+                                 highlightcolor = "white")
+        self.filler2 = Canvas(self.controlFrame, background = "white", width = 1, height = 255,
+                                highlightbackground = "white", highlightcolor = "white")
+        self.filler2.grid(column = 1, row = 0, rowspan = 10, sticky = NS)
+                     
+        self.next.grid(row = 5, column = 1, sticky = N)
+   
+        self.rowconfigure(0, weight = 2)
+        self.rowconfigure(2, weight = 1)
+        self.rowconfigure(3, weight = 1)
+        self.rowconfigure(4, weight = 1)
+        self.rowconfigure(5, weight = 1)
+        self.rowconfigure(6, weight = 2)        
+
+        self.controlNum = 0
+        self.createQuestion()
 
 
+    def createQuestion(self):
+        self.next["state"] = "disabled"     
+        if self.controlNum < len(self.controlTexts):            
+            self.createControlQuestion()            
+            self.controlFrame.grid(row = 2, column = 1)
+        else:
+            self.file.write("\n")
+            self.controlFrame.grid_forget()
+            self.offerFrame.grid(row = 2, column = 1)
+
+    def createControlQuestion(self):
+        if self.controlNum:
+            self.controlQuestion.grid_forget()
+        texts = self.controlTexts[self.controlNum]
+        self.controlQuestion = MultipleChoice(self.controlFrame, text = texts[0], answers = texts[1], feedback = texts[2])
+        self.controlQuestion.grid(row = 0, column = 0)
+        self.controlNum += 1
+        self.controlstate = "answer"
+
+    def onValidate(self, P):
+        try:
+            if "," in P or "." in P:
+                raise ValueError()            
+            if "-" in P:
+                raise Exception("Nabídka musí být vyšší než 0 Kč.")
+            offer = int(P)
+            if offer < 0:
+                raise Exception("Nabídka musí být vyšší než 0 Kč.")
+            elif offer > MAX_BDM_PRIZE:
+                raise Exception("Nabídka nesmí být vyšší než {} Kč.".format(MAX_BDM_PRIZE))
+            else:
+                self.next["state"] = "!disabled"
+                self.problem["text"] = ""
+        except ValueError:
+            self.next["state"] = "disabled"
+            self.problem["text"] = "Do textového pole je potřeba uvést celé číslo."
+        except Exception as e:
+            self.next["state"] = "disabled"
+            self.problem["text"] = e
+        return True
+
+
+    def write(self):        
+        fee = random.randint(0, MAX_BDM_PRIZE)
+        offer = int(self.offerVar.get())
+        if offer < fee:
+            self.root.status["BDMwin"] = True
+            self.root.texts["bdmResults"] = BDMresult.format(offer, fee, BDMwon.format(fee))
+            # pridat text pro odmenu pro ending
+            # pridat pokracovani v uloze
+        else:
+            self.root.status["BDMwin"] = False
+            self.root.texts["bdmResults"] = BDMresult.format(offer, fee, BDMlost)
+
+        self.file.write("BDM\n")
+        self.file.write(self.id + "\t" + self.offerVar.get() + "\t" + str(fee) + "\n\n")
+
+
+
+    def nextFun(self):        
+        if (self.controlNum == len(self.controlTexts) and self.offerVar.get()):
+            self.write()
+            super().nextFun()   
+        else:
+            if self.controlstate == "answer":
+                self.controlQuestion.showFeedback()
+                self.controlstate = "feedback"
+            else:                
+                self.file.write(self.id + "\t" + str(self.controlNum) + "\t" + self.controlQuestion.answer.get() + "\n")
+                self.createQuestion()
+
+
+
+
+
+BDMResult = (InstructionsFrame, {"text": "{}", "update": ["bdmResults"], "height": 15, "width": 80, "proceed": True})
 
 
 controlTexts = [[Control1, Answers1, Feedback1], [Control2, Answers2, Feedback2]]
@@ -456,4 +632,4 @@ if __name__ == "__main__":
     from login import Login
     import os
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([Login, Task, Ratings1, Choice, Task, Choice, Ratings2, MoralizationInstructions])
+    GUI([BDM, BDMResult, Login, Task, Ratings1, Choice, Task, Choice, Ratings2, MoralizationInstructions])
