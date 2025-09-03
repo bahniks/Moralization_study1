@@ -13,7 +13,7 @@ from common import ExperimentFrame, InstructionsFrame, InstructionsAndUnderstand
 from questionnaire import Questionnaire
 from gui import GUI
 from diets import DIETS
-from constants import MAX_BDM_PRIZE
+from constants import MAX_BDM_PRIZE, TRIALBONUS
 
 
 instructions = """Na následujících stránkách najdete stručné popisy jídel podávaných v nemocniční jídelně <b>Fakultní nemocnice Motol</b>. Cílem tohoto úkolu je pro Fakultní nemocnici Motol daná jídla ohodnotit.
@@ -42,6 +42,8 @@ Tím, že se rozhodnete vytrvat co nejdéle, ukážete, že jste starostlivý a 
 task_moralization = """
 Vaše pečlivé hodnocení pokrmů pomůže nemocničním dietologům zvážit nutriční a estetické informace, aby mohli sestavit stravovací plány, které jsou z lékařského hlediska vhodné a zlepšují zdraví pacientů. Pokračováním v tomto úkolu pomůžete dobré věci, protože Vaše hodnocení přímo podporuje zdravější a bezpečnější stravování pro osoby v péči.
 """
+
+monetary_end = "Za hodnocení pokrmů jste obdržel navíc odměnu {} Kč."
 
 Control1 = "Co se stane, když se rozhodnete úkol ukončit dříve než za 20 minut?"
 Answers1 = ["Budete penalizováni a přijdete o celou odměnu.", "Musíte zaplatit poplatek a opustit laboratoř.", "Můžete úkol bez jakékoli penalizace ukončit a přesunout se na další část studie.", "Musíte počkat, než vyprší časomíra, jinak se studie zneplatní."]
@@ -85,7 +87,7 @@ ratingsText = "Nyní zodpovězte na následující otázky ohledně právě doko
 ratingsText2 = "Tvrzení níže ohodnottě na základě toho, nakolik s nimi souhlasíte."
 
 continuation = """Dosud jste dokončili hodnocení {} a strávili na úkolu {} minut.
-
+{}
 <b>Uveďte, zda chcete pokračovat hodnocení dalších jídel, nebo zda chcete úkol ukončit.</b>
 V úkolu je možné pokračovat nejdéle do uplynutí 20 minut od jeho začátku.
 
@@ -94,9 +96,34 @@ Pokud zvolíte „Ukončit“, úkol skončí a přesunete se na další část 
 
 Je to zcela na Vás: můžete kdykoliv přestat bez jakékoli penalizace."""
 
+reminder_neutral = ""
+
+reminder_monetary = """
+Za každý pokrm, který kompletně vyplníte po prvním pokrmu, získáte k základní odměně navíc bonusovou platbu ve výši 0,50 Kč. 
+"""
+
+reminder_person_moralization = """
+Tím, že se rozhodnete vytrvat co nejdéle, ukážete, že jste starostlivý a morální člověk, který udělá něco navíc, aby pomohl ostatním. Každé další ohodnocené jídlo prokazuje Vaše odhodlání dělat to, co je správné a pomáhat potřebné instituci.
+"""
+
+reminder_task_moralization = """
+Vaše pečlivé hodnocení pokrmů pomůže nemocničním dietologům zvážit nutriční a estetické informace, aby mohli sestavit stravovací plány, které jsou z lékařského hlediska vhodné a zlepšují zdraví pacientů. Pokračováním v tomto úkolu pomůžete dobré věci, protože Vaše hodnocení přímo podporuje zdravější a bezpečnější stravování pro osoby v péči.
+""" 
+
 endtime = """Dosud jste dokončili hodnocení {} a strávili na úkolu {} minut.
 
 Jelikož již uplynulo více než 20 minut od začátku úkolu, hodnocení dalších jídel již není možné."""
+
+
+continuation2 = """Dosud jste dokončili hodnocení {} a strávili na úkolu {} minut.
+
+V úkolu budete pokračovat, dokud neuplyne 10 minut.
+
+Klikněte na tlačítko „Pokračovat“."""
+
+endtime2 = """Dokončili jste hodnocení {} a strávili na úkolu {} minut.
+
+Jelikož již uplynulo více než 10 minut od začátku úkolu, úkol je ukončen."""
 
 
 BDMtext = """Nyní můžete uvést, kolik peněz vyžadujete jako bonus navíc, abyste na úkolu ještě 10 minut pracovali. Pomocí aukce pak bude určeno, zda na úkolu budete pracovat či ne a tedy zda požadovaný bonus navíc získáte či nikoliv.
@@ -153,6 +180,8 @@ Po dokončení stiskněte tlačítko “Pokračovat”."""
 BDMwon = "Náhodné číslo je větší či rovné (≥) než Vámi minimálně požadovaná částka. Obdržíte tedy částku {} Kč a budete 10 minut pracovat na úkolu." 
 
 BDMlost = "Náhodné číslo je menší než (<) Vámi minimálně požadovaná částka. Nezískáte dodatečný bonus a na úkolu už pracovat nebudete."
+
+bmdRewardText = "Za dodatečné plnění úkolu s jídelníčky dostáváte {} Kč."
 
 
 class Task(ExperimentFrame):
@@ -415,10 +444,11 @@ class Choice(InstructionsFrame):
     def __init__(self, root):
         elapsedTime = floor((perf_counter() - root.status["startTime"]) / 60)
         baseText = continuation if elapsedTime < 20 else endtime
+        reminderText = "" if elapsedTime > 20 else eval("reminder_" + root.status["condition"])
         if root.status["trial"] == 1:
-            text = baseText.format("jedné diety", str(elapsedTime))
+            text = baseText.format("jedné diety", str(elapsedTime), reminderText)
         else:
-            text = baseText.format("{} diet".format(root.status["trial"]), str(elapsedTime))
+            text = baseText.format("{} diet".format(root.status["trial"]), str(elapsedTime), reminderText)
 
         super().__init__(root, text = text, proceed = False, savedata = True, height = 10, width = 80)
 
@@ -435,7 +465,7 @@ class Choice(InstructionsFrame):
             self.endButton = ttk.Button(self.buttonFrame, text="Ukončit", command=self.end)
             self.endButton.grid(column=2, row=2, sticky="e", padx=60)
         else:
-            self.continueButton.grid(column=1, row=2, padx=60)            
+            self.continueButton.grid(column=1, row=2, padx=60, command = self.end)            
 
     def proceed(self):
         if self.root.status["trial"] != 1:
@@ -445,6 +475,9 @@ class Choice(InstructionsFrame):
     def end(self):
         if self.root.status["trial"] == 1:
             self.root.count += 2
+        if self.root.status["condition"] == "monetary":
+            self.root.status["reward"] += self.root.status["trial"] * TRIALBONUS
+            self.root.status["results"] += monetary_end.format(self.root.status["trial"] * TRIALBONUS)
         self.nextFun()
 
 
@@ -592,11 +625,12 @@ class BDM(InstructionsFrame):
         if offer < fee:
             self.root.status["BDMwin"] = True
             self.root.texts["bdmResults"] = BDMresult.format(offer, fee, BDMwon.format(fee))
-            # pridat text pro odmenu pro ending
-            # pridat pokracovani v uloze
+            self.root.status["reward"] += fee
+            self.root.status["results"] += bmdRewardText.format(fee)
         else:
             self.root.status["BDMwin"] = False
             self.root.texts["bdmResults"] = BDMresult.format(offer, fee, BDMlost)
+            self.root.count += 2
 
         self.file.write("BDM\n")
         self.file.write(self.id + "\t" + self.offerVar.get() + "\t" + str(fee) + "\n\n")
@@ -606,6 +640,8 @@ class BDM(InstructionsFrame):
     def nextFun(self):        
         if (self.controlNum == len(self.controlTexts) and self.offerVar.get()):
             self.write()
+            if self.root.status["BDMwin"]:
+                self.root.status["startTime"] = perf_counter()
             super().nextFun()   
         else:
             if self.controlstate == "answer":
@@ -616,6 +652,22 @@ class BDM(InstructionsFrame):
                 self.createQuestion()
 
 
+class TimeTask(InstructionsFrame):
+    def __init__(self, root):
+        elapsedTime = floor((perf_counter() - root.status["startTime"]) / 60)
+        if elapsedTime < 10:
+            baseText = continuation2
+            root.status["count"] -= 2
+        else:
+            baseText = endtime2
+        if root.status["trial"] == 1:
+            text = baseText.format("jedné diety", str(elapsedTime))
+        else:
+            text = baseText.format("{} diet".format(root.status["trial"]), str(elapsedTime))
+
+        super().__init__(root, text = text, proceed = True, height = 10, width = 80)
+
+  
 
 
 
@@ -632,4 +684,4 @@ if __name__ == "__main__":
     from login import Login
     import os
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([BDM, BDMResult, Login, Task, Ratings1, Choice, Task, Choice, Ratings2, MoralizationInstructions])
+    GUI([BDM, BDMResult, Task, TimeTask, Login, Task, Ratings1, Choice, Task, Choice, Ratings2, MoralizationInstructions])

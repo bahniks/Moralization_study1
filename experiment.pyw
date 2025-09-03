@@ -14,7 +14,7 @@ from comments import Comments
 from login import Login
 #from videointros import VideoIntro1, VideoIntro2, Sound, VideoIntro4, VideoIntro5, Selection, VideoIntro6
 #from videos import Videos, JOL, IMI1, Quiz1, Quiz2, IMI2, Quiz3, IMI3
-from moralization import MoralizationInstructions, Task, Ratings1, Choice, Ratings2, BDM
+from moralization import MoralizationInstructions, Task, Ratings1, Choice, Ratings2, BDM, BDMResult, TimeTask
 from quest import QuestInstructions, Hexaco, PMS
 #from questionnaire import NFC, Boredom, Social
 
@@ -32,8 +32,9 @@ frames = [Initial,
           Choice,
           Ratings2,
           BDM,
-          #BDMResult,
-          #Task,
+          BDMResult,
+          Task,
+          TimeTask,
           QuestInstructions,
           PMS,
           Hexaco, # dodelat zobrazeni bonusu za attention checky / upravit instrukce PMS aby byly stejne jako hexaco?
