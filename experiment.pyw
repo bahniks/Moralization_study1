@@ -24,7 +24,7 @@ from quest import QuestInstructions, Hexaco, PMS
 frames = [Initial,
           Login, 
           Intro,            
-          MoralizationInstructions, # pridat odmenu tem, kteri jsou v dane experimentalni podmince
+          MoralizationInstructions,
           Task, 
           Ratings1,
           Choice,
@@ -37,7 +37,7 @@ frames = [Initial,
           TimeTask,
           QuestInstructions,
           PMS,
-          Hexaco, # dodelat zobrazeni bonusu za attention checky / upravit instrukce PMS aby byly stejne jako hexaco?
+          Hexaco,
           Demographics,
           Comments,
           Ending

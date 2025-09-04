@@ -10,7 +10,7 @@ from time import sleep
 from common import InstructionsFrame
 from gui import GUI
 
-from constants import PARTICIPATION_FEE, URL
+from constants import PARTICIPATION_FEE, URL, BONUS
 from login import Login
 
 
@@ -20,28 +20,25 @@ login = """Vítejte na výzkumné studii pořádané Fakultou podnikohospodářs
 
 Za účast na studii obdržíte paušálně {} Kč. Kromě toho můžete vydělat další peníze v průběhu studie. 
 
-Studie bude trvat cca 50 minut.
+Studie bude trvat cca 30-60 minut.
 
-<b>Všechny informace uvedené v této studii jsou pravdivé</b>, nikdy nebudete klamáni či vystavováni zavádějícím informacím. Pakliže Vám cokoliv v průběhu studie nebude jasné a ověříte, že daná informace není uvedena v instrukcích, přihlašte se. Přijde k Vám výzkumný asistent a problém Vám vysvětlí.
+<b>Všechny informace uvedené v této studii jsou pravdivé</b>, nikdy nebudete klamáni či vystavováni zavádějícím informacím. Pakliže Vám cokoliv v průběhu studie nebude jasné a ověříte, že daná informace není uvedena v instrukcích, přihlašte se. Přijde k Vám výzkumný asistent a pomůže Vám.
 
-Děkujeme, že jste vypnuli své mobilní telefony, a že nebudete s nikým komunikovat v průběhu studie. Pokud s někým budete komunikovat, nebo pokud budete nějakým jiným způsobem narušovat průběh studie, budete požádáni, abyste opustili laboratoř, bez nároku na vyplacení peněz. <b>Používání telefonů či psaní poznámek je během studie zakázáno</b>, pokud budete používat telefon či si budete psát poznámky, budete požádáni, abyste opustili laboratoř bez nároku na vyplacení peněz. Prosíme, dodržujte tyto pravidla, aby průběh studie byl pro všechny zúčastněné příjemný.
+Děkujeme, že jste vypnuli své mobilní telefony, a že nebudete s nikým komunikovat v průběhu studie. Pokud s někým budete komunikovat, nebo pokud budete nějakým jiným způsobem narušovat průběh studie, budete požádáni, abyste opustili laboratoř, bez nároku na vyplacení peněz. <b>Používání telefonů či psaní poznámek je během studie zakázáno</b>, pokud budete používat telefon či si budete psát poznámky, budete požádáni, abyste opustili laboratoř bez nároku na vyplacení peněz. Prosíme, dodržujte tato pravidla, aby průběh studie byl pro všechny zúčastněné příjemný.
 
-Pokud jste již tak neučinili, přečtěte si informovaný souhlas a podepište ho. 
-
-Klikněte na tlačítko “Pokračovat” pro přihlášení do studie.""".format(PARTICIPATION_FEE)
+Pokud jste již tak neučinili, přečtěte si informovaný souhlas a podepište ho.""".format(PARTICIPATION_FEE)
 
 
-intro = """Tímto začíná naše studie, jejíž krátké shrnutí zde uvádíme:
+intro = f"""Tímto začíná naše studie, jejíž krátké shrnutí zde uvádíme:
 
 1) Hlavním úkolem je hodnocení nemocničních jídel.
-    a. Budete mít před sebou kartičky s popisem jídel z nemocniční jídelny FN Motol. 
+    a. Budou Vám prezentovány jídelníčky s popisem jídel z nemocniční jídelny FN Motol. 
     b. Vaším úkolem bude přepsat některé údaje a ohodnotit pokrmy. 
-    c. Po každém jídle si můžete zvolit, zda chcete pokračovat, nebo úkol ukončit. Za předčasné ukončení nejste nijak penalizováni.
-2) Po úkolu zodpovíte několik otázek o tom, jak se Vám úkol dělal. 
-3) Získáte možnost zopakovat hlavní úkol ještě jednou a získat dodatečnou odměnu.
-4) Na závěr vyplníte dotazník s několika demografickými údaji a dalšími otázkami, které odkryjí, jak smýšlíte o práci a světě kolem sebe. 
-    a. Součástí jsou také dvě kontrolní otázky pozornosti – pokud odpovíte správně, získáte dodatečnou odměnu.
-5) Vyplacení celkové odměny a rozloučení.
+    c. Po každém hodnoceném dnu si můžete zvolit, zda chcete pokračovat, nebo úkol ukončit. Za předčasné ukončení nejste nijak penalizováni.
+2) Budete odpovídat na otázky o tom, jak se Vám úkol dělal. 
+3) Na závěr vyplníte dotazník s několika demografickými údaji a dalšími otázkami, které odkryjí, jak smýšlíte o práci a světě kolem sebe. 
+    a. Součástí jsou také dvě kontrolní otázky pozornosti – pokud odpovíte správně, získáte dodatečnou odměnu {BONUS} Kč.
+4) Vyplacení celkové odměny a rozloučení.
 
 V případě, že máte otázky nebo narazíte na technický problém během úkolů, prosíme, zvedněte ruku a tiše vyčkejte příchodu výzkumného asistenta.
 
@@ -73,9 +70,7 @@ Centrum laboratorního a experimentálního výzkumu FPH VŠE"""
 
 class Ending(InstructionsFrame):
     def __init__(self, root):
-        root.texts["results"] = "\n" + "tady bude popis odměny" + "\n"
-        #root.texts["results"] = "\n" + "\n\n".join(root.status["results"]) + "\n"
-
+        root.texts["results"] = "\n" + "\n\n".join(root.status["results"]) + "\n"
         root.texts["reward"] = str(root.status["reward"])
         root.texts["rounded_reward"] = ceil(root.status["reward"] / 10) * 10
         root.texts["participation_fee"] = PARTICIPATION_FEE

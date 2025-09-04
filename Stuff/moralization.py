@@ -13,14 +13,17 @@ from common import ExperimentFrame, InstructionsFrame, InstructionsAndUnderstand
 from questionnaire import Questionnaire
 from gui import GUI
 from diets import DIETS
-from constants import MAX_BDM_PRIZE, TRIALBONUS
+from constants import MAX_BDM_PRIZE, TRIALBONUS, TESTING
 
+
+################################################################################
+# TEXTS
 
 instructions = """Na následujících stránkách najdete stručné popisy jídel podávaných v nemocniční jídelně <b>Fakultní nemocnice Motol</b>. Cílem tohoto úkolu je pro Fakultní nemocnici Motol daná jídla ohodnotit.
 
 Vaším úkolem je:
 (a) přepsat čtyři údaje o složení (energie, B - bílkoviny, T - tuky, S - sacharidy (cukry)) přesně tak, jak jsou uvedeny, a 
-(b) ohodnotit každý pokrm podle toho, jak chutný, vizuálně přitažlivý a nutričně bohatý Vám osobně připadá. 
+(b) ohodnotit každý pokrm podle toho, jak Vám osobně připadá chutný, vizuálně přitažlivý a nutričně bohatý.
 Po každém ohodnoceném pokrmu se můžete rozhodnout, zda budete pokračovat dalším pokrmem, nebo úkol zcela ukončíte a přesunete se k další části studie. Záleží pouze na Vás, zda budete v tomto úkolu pokračovat, nebo skončíte. Z předčasného ukončení nevyplývá žádná penalizace.
 <b>{}</b>
 Úkol bude trvat maximálně 20 minut.
@@ -182,6 +185,8 @@ BDMwon = "Náhodné číslo je větší či rovné (≥) než Vámi minimálně 
 BDMlost = "Náhodné číslo je menší než (<) Vámi minimálně požadovaná částka. Nezískáte dodatečný bonus a na úkolu už pracovat nebudete."
 
 bmdRewardText = "Za dodatečné plnění úkolu s jídelníčky dostáváte {} Kč."
+
+################################################################################
 
 
 class Task(ExperimentFrame):
@@ -450,7 +455,7 @@ class Choice(InstructionsFrame):
         else:
             text = baseText.format("{} diet".format(root.status["trial"]), str(elapsedTime), reminderText)
 
-        super().__init__(root, text = text, proceed = False, savedata = True, height = 10, width = 80)
+        super().__init__(root, text = text, proceed = False, savedata = True, height = 15, width = 80)
 
         ttk.Style().configure("TButton", font = "helvetica 15")
 
@@ -655,9 +660,10 @@ class BDM(InstructionsFrame):
 class TimeTask(InstructionsFrame):
     def __init__(self, root):
         elapsedTime = floor((perf_counter() - root.status["startTime"]) / 60)
-        if elapsedTime < 10:
+        limit = 10 if not TESTING else 1
+        if elapsedTime < limit:
             baseText = continuation2
-            root.status["count"] -= 2
+            root.count -= 2
         else:
             baseText = endtime2
         if root.status["trial"] == 1:

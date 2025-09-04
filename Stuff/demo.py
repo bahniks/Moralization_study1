@@ -45,6 +45,8 @@ class Demographics(InstructionsFrame):
                                     command = self.checkAllFilled)
         self.female = ttk.Radiobutton(self, text = "žena", variable = self.sex,
                                       value = "female", command = self.checkAllFilled)
+        self.otherSex = ttk.Radiobutton(self, text = "jiné", variable = self.sex,
+                                      value = "other", command = self.checkAllFilled)
 
         self.czech = ttk.Radiobutton(self, text = "český", variable = self.language,
                                      value = "czech", command = self.checkAllFilled)
@@ -84,6 +86,7 @@ class Demographics(InstructionsFrame):
 
         self.male.grid(column = 2, row = 1, pady = 7, padx = 7, sticky = W)
         self.female.grid(column = 3, row = 1, pady = 7, padx = 7, sticky = W)
+        self.otherSex.grid(column = 4, row = 1, pady = 7, padx = 45, sticky = W)
         self.czech.grid(column = 2, row = 3, pady = 7, padx = 7, sticky = W)
         self.slovak.grid(column = 3, row = 3, pady = 7, padx = 7, sticky = W)
         self.other.grid(column = 4, row = 3, pady = 7, padx = 45, sticky = W)

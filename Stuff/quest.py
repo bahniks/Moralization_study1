@@ -28,11 +28,13 @@ hexacoinstructions = """Na následujících stránkách najdete řadu prohláše
 Přečtěte si prosím každé prohlášení a rozhodněte se, do jaké míry s ním souhlasíte, nebo nesouhlasíte.
 """
 
+bonusGained = f"Protože jste odpověděl(a) správně na všechny kontrolní otázky, získáváte dalších {BONUS} Kč."
+bonusNotGained = f"Protože jste neodpověděl(a) správně na všechny kontrolní otázky, nezískáváte dalších {BONUS} Kč."
 
 attentiontext = "Chcete-li prokázat, že zadání věnujete pozornost, vyberte možnost "
 
 
-pmsIntro = "Ohodnoďte tvrzení níže, jak je sami cítíte, od 1 (rozhodně nesouhlasím) do 5 (rozhodně souhlasím):"
+pmsIntro = "Ohodnoťte tvrzení níže, jak je sami cítíte, od 1 (rozhodně nesouhlasím) do 5 (rozhodně souhlasím):"
 
 ################################################################################
 
@@ -117,6 +119,11 @@ class Quest(ExperimentFrame):
                 self.file.write("Attention checks\n")
                 wrong_checks = str(self.root.status["attention_checks"])
                 self.file.write(self.id + "\t" + self.name + "\t" + wrong_checks + "\n\n")
+                if wrong_checks:
+                    self.root.status["results"] += bonusNotGained
+                else:
+                    self.root.status["results"] += bonusGained
+                    self.root.status["reward"] += BONUS
             self.destroy()
             self.root.nextFrame()
         else:
@@ -175,15 +182,15 @@ class Likert(Canvas):
         if attentiontext in self.text:
             if not "attention_checks" in self.root.root.status:
                 self.root.root.status["attention_checks"] = 0
-                self.root.root.texts["attention1"] = "Neodpověděl(a)"
-                self.root.root.texts["attention2"] = "Nezískáváte"
-                self.root.root.status["bonus"] = 0
+                # self.root.root.texts["attention1"] = "Neodpověděl(a)"
+                # self.root.root.texts["attention2"] = "Nezískáváte"
+                # self.root.root.status["bonus"] = 0
             if self.answer.get() == self.text[-2]:
                 self.root.root.status["attention_checks"] += 1
-                if self.root.root.status["attention_checks"] == self.root.checksNumber:
-                    self.root.root.texts["attention1"] = "Odpověděl(a)"
-                    self.root.root.texts["attention2"] = "Získáváte"
-                    self.root.root.status["bonus"] = BONUS
+                # if self.root.root.status["attention_checks"] == self.root.checksNumber:
+                    # self.root.root.texts["attention1"] = "Odpověděl(a)"
+                    # self.root.root.texts["attention2"] = "Získáváte"
+                    # self.root.root.status["bonus"] = BONUS
         else:
             ans = "{}\t{}\t{}\n".format(self.short, self.answer.get(), self.text.replace("\t", " "))
             self.root.file.write(self.root.id + "\t" + ans)
@@ -205,7 +212,7 @@ class Hexaco(Quest):
 
 class PMS(Quest):
     def __init__(self, root):
-        super().__init__(root, 8, "pms.txt", "PMS", instructions = pmsIntro, width = 85,
+        super().__init__(root, 8, "pms.txt", "PMS", instructions = hexacoinstructions, width = 85,
                          left = "rozhodně nesouhlasím", right = "rozhodně souhlasím",
                          height = 3, options = 5, center = True)
 
