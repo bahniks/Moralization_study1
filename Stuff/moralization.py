@@ -13,7 +13,7 @@ from common import ExperimentFrame, InstructionsFrame, InstructionsAndUnderstand
 from questionnaire import Questionnaire
 from gui import GUI
 from diets import DIETS
-from constants import MAX_BDM_PRIZE, TRIALBONUS, TESTING
+from constants import MAX_BDM_PRIZE, MINUTEBONUS, TESTING
 
 
 ################################################################################
@@ -22,9 +22,9 @@ from constants import MAX_BDM_PRIZE, TRIALBONUS, TESTING
 instructions = """Na následujících stránkách najdete stručné popisy jídel podávaných v nemocniční jídelně <b>Fakultní nemocnice Motol</b>. Cílem tohoto úkolu je pro Fakultní nemocnici Motol daná jídla ohodnotit.
 
 Vaším úkolem je:
-(a) přepsat čtyři údaje o složení (energie, B - bílkoviny, T - tuky, S - sacharidy (cukry)) přesně tak, jak jsou uvedeny, a 
-(b) ohodnotit každý pokrm podle toho, jak Vám osobně připadá chutný, vizuálně přitažlivý a nutričně bohatý.
-Po každém ohodnoceném pokrmu se můžete rozhodnout, zda budete pokračovat dalším pokrmem, nebo úkol zcela ukončíte a přesunete se k další části studie. Záleží pouze na Vás, zda budete v tomto úkolu pokračovat, nebo skončíte. Z předčasného ukončení nevyplývá žádná penalizace.
+(a) přepsat čtyři údaje o složení (energie, B - bílkoviny, T - tuky, S - sacharidy (cukry)) přesně tak, jak jsou uvedeny pro vybraný jídelníček, a 
+(b) po přečtení podávaného pokrmu ohodnotit každé jídlo (snídani, oběd, večeři) ve vybraném jídelníčku podle toho, jak Vám osobně připadá chutné, vizuálně přitažlivé a nutričně bohaté.
+Po každém ohodnoceném jídelníčku se můžete rozhodnout, zda budete pokračovat dalším jídelníčkem, nebo úkol zcela ukončíte a přesunete se k další části studie. Záleží pouze na Vás, zda budete v tomto úkolu pokračovat, nebo skončíte. Z předčasného ukončení nevyplývá žádná penalizace.
 <b>{}</b>
 Úkol bude trvat maximálně 20 minut.
 
@@ -34,34 +34,33 @@ Po přečtení instrukcí zodpovězte kontrolní otázky níže."""
 
 neutral = ""
 
-monetary = """
-Za každý pokrm, který kompletně vyplníte po prvním pokrmu, získáte k základní odměně navíc bonusovou platbu ve výši 0,50 Kč. 
+monetary = f"""
+Za každou minutu, kterou na úkolu strávíte, získáte k základní odměně navíc bonusovou platbu ve výši {MINUTEBONUS} Kč.
 """
 
 person_moralization = """
-Tím, že se rozhodnete vytrvat co nejdéle, ukážete, že jste starostlivý a morální člověk, který udělá něco navíc, aby pomohl ostatním. Každé další ohodnocené jídlo prokazuje Vaše odhodlání dělat to, co je správné a pomáhat potřebné instituci.
+Tím, že se rozhodnete vytrvat co nejdéle, ukážete, že jste starostlivý a morální člověk, který udělá něco navíc, aby pomohl ostatním. Každý další ohodnocený jídelníček prokazuje Vaše odhodlání dělat to, co je správné a pomáhat potřebné instituci.
 """
 
 task_moralization = """
-Vaše pečlivé hodnocení pokrmů pomůže nemocničním dietologům zvážit nutriční a estetické informace, aby mohli sestavit stravovací plány, které jsou z lékařského hlediska vhodné a zlepšují zdraví pacientů. Pokračováním v tomto úkolu pomůžete dobré věci, protože Vaše hodnocení přímo podporuje zdravější a bezpečnější stravování pro osoby v péči.
+Vaše pečlivé hodnocení jídelníčků pomůže nemocničním dietologům zvážit nutriční a estetické informace, aby mohli sestavit stravovací plány, které jsou z lékařského hlediska vhodné a zlepšují zdraví pacientů. Pokračováním v tomto úkolu pomůžete dobré věci, protože Vaše hodnocení přímo podporuje zdravější a bezpečnější stravování pro osoby v péči.
 """
 
-monetary_end = "Za hodnocení pokrmů jste obdržel navíc odměnu {} Kč."
+monetary_end = "Za hodnocení jídelníčků jste obdržel navíc odměnu {} Kč."
 
 Control1 = "Co se stane, když se rozhodnete úkol ukončit dříve než za 20 minut?"
 Answers1 = ["Budete penalizováni a přijdete o celou odměnu.", "Musíte zaplatit poplatek a opustit laboratoř.", "Můžete úkol bez jakékoli penalizace ukončit a přesunout se na další část studie.", "Musíte počkat, než vyprší časomíra, jinak se studie zneplatní."]
 Feedback1 = ["Špatně. Můžete úkol bez jakékoli penalizace ukončit a přesunout se na další část studie.", "Špatně. Můžete úkol bez jakékoli penalizace ukončit a přesunout se na další část studie.", "Ano, správně.", "Špatně. Můžete úkol bez jakékoli penalizace ukončit a přesunout se na další část studie."]
 
-Control2 = "Které kroky musíte u každého pokrmu provést, než se rozhodnete pokračovat nebo skončit?"
+Control2 = "Které kroky musíte u každého jídelníčku provést, než se rozhodnete pokračovat nebo skončit?"
 Answers2 = ["Vyfotit jídlo a nahrát fotografii do systému.", "Přesně přepsat údaje o energii, bílkovinách, tucích a cukrech a pak subjektivně ohodnotit\nchutnost, vzhled a nutriční bohatost.", "Přepsat celý text kartičky včetně alergenních látek a poznámek kuchaře.", "Přepisovat celý jídelní lístek do aplikace."]
-Feedback2 = ["Špatně. Máte přesně přepsat údaje o energii, bílkovinách, tucích a cukrech a pak subjektivně ohodnotit chutnost, vzhled a nutriční bohatost.", "Ano, správně.", "Špatně. Máte přesně přepsat údaje o energii, bílkovinách, tucích a cukrech a pak subjektivně ohodnotit chutnost, vzhled a nutriční bohatost.", "Špatně. Máte přesně přepsat údaje o energii, bílkovinách, tucích a cukrech a pak subjektivně ohodnotit chutnost, vzhled a nutriční bohatost."]
+Feedback2 = ["Špatně. Máte přesně přepsat údaje o energii, bílkovinách, tucích a cukrech a pak subjektivně ohodnotit chutnost, vzhled a nutriční bohatost jednotlivých jídel.", "Ano, správně.", "Špatně. Máte přesně přepsat údaje o energii, bílkovinách, tucích a cukrech a pak subjektivně ohodnotit chutnost, vzhled a nutriční bohatost jednotlivých jídel.", "Špatně. Máte přesně přepsat údaje o energii, bílkovinách, tucích a cukrech a pak subjektivně ohodnotit chutnost, vzhled a nutriční bohatost jednotlivých jídel."]
 
 
-
-task = "V záložce Jídelníčky v menu nahoře je seznam všech diet a jejich složení. Prosíme, nejdříve <b>najděte v seznamu dietu označenou jako {} a vyplňte údaje o jejím složení</b>. Následně jídlo ohodnoťte."
+task = "V záložce Jídelníčky v menu nahoře je seznam všech diet a jejich složení. Prosíme, nejdříve <b>najděte v seznamu dietu označenou jako {} a vyplňte údaje o jejím složení</b>. Následně jídla podávané osobám s danou dietou ohodnoťte."
 
 tasteText = "Jak chutně toto jídlo působí?"
-lookText = "Jak bude jídlo nejspíše vizuálně přitažlivě?"
+lookText = "Jak bude jídlo nejspíše vizuálně přitažlivé?"
 nutritionText = "Jak nutričně bohaté se Vám toto jídlo zdá?"
 
 
@@ -86,36 +85,36 @@ guiltQ2 = "Do jaké míry cítíte vinu za to, jak jste celý úkol zvládl(a)?"
 guiltL = "Necítím žádnou vinu"
 guiltR = "Cítím velkou vinu"
 
-ratingsText = "Nyní zodpovězte na následující otázky ohledně právě dokončeného úkolu:"
-ratingsText2 = "Tvrzení níže ohodnottě na základě toho, nakolik s nimi souhlasíte."
+ratingsText = "Nyní odpovězte na následující otázky ohledně právě dokončeného úkolu:"
+ratingsText2 = "Tvrzení níže ohodnoťte na základě toho, nakolik s nimi souhlasíte."
 
 continuation = """Dosud jste dokončili hodnocení {} a strávili na úkolu {} minut.
 {}
-<b>Uveďte, zda chcete pokračovat hodnocení dalších jídel, nebo zda chcete úkol ukončit.</b>
+<b>Uveďte, zda chcete pokračovat hodnocení dalších jídelníčků, nebo zda chcete úkol ukončit.</b>
 V úkolu je možné pokračovat nejdéle do uplynutí 20 minut od jeho začátku.
 
-Pokud zvolíte „Pokračovat“, zobrazí se Vám další dieta k přepsání a ohodnocení. 
+Pokud zvolíte „Pokračovat“, zobrazí se Vám další jídelníček k přepsání nutričních hodnot a ohodnocení jídel. 
 Pokud zvolíte „Ukončit“, úkol skončí a přesunete se na další část studie.
 
 Je to zcela na Vás: můžete kdykoliv přestat bez jakékoli penalizace."""
 
 reminder_neutral = ""
 
-reminder_monetary = """
-Za každý pokrm, který kompletně vyplníte po prvním pokrmu, získáte k základní odměně navíc bonusovou platbu ve výši 0,50 Kč. 
+reminder_monetary = f"""
+Za každou minutu, kterou na úkolu strávíte, získáte k základní odměně navíc bonusovou platbu ve výši {MINUTEBONUS} Kč. 
 """
 
 reminder_person_moralization = """
-Tím, že se rozhodnete vytrvat co nejdéle, ukážete, že jste starostlivý a morální člověk, který udělá něco navíc, aby pomohl ostatním. Každé další ohodnocené jídlo prokazuje Vaše odhodlání dělat to, co je správné a pomáhat potřebné instituci.
+Tím, že se rozhodnete vytrvat co nejdéle, ukážete, že jste starostlivý a morální člověk, který udělá něco navíc, aby pomohl ostatním. Každý další ohodnocený jídelníček prokazuje Vaše odhodlání dělat to, co je správné a pomáhat potřebné instituci.
 """
 
 reminder_task_moralization = """
-Vaše pečlivé hodnocení pokrmů pomůže nemocničním dietologům zvážit nutriční a estetické informace, aby mohli sestavit stravovací plány, které jsou z lékařského hlediska vhodné a zlepšují zdraví pacientů. Pokračováním v tomto úkolu pomůžete dobré věci, protože Vaše hodnocení přímo podporuje zdravější a bezpečnější stravování pro osoby v péči.
+Vaše pečlivé hodnocení jídelníčků pomůže nemocničním dietologům zvážit nutriční a estetické informace, aby mohli sestavit stravovací plány, které jsou z lékařského hlediska vhodné a zlepšují zdraví pacientů. Pokračováním v tomto úkolu pomůžete dobré věci, protože Vaše hodnocení přímo podporuje zdravější a bezpečnější stravování pro osoby v péči.
 """ 
 
 endtime = """Dosud jste dokončili hodnocení {} a strávili na úkolu {} minut.
 
-Jelikož již uplynulo více než 20 minut od začátku úkolu, hodnocení dalších jídel již není možné."""
+Jelikož již uplynulo více než 20 minut od začátku úkolu, hodnocení dalších jídelníčků již není možné."""
 
 
 continuation2 = """Dosud jste dokončili hodnocení {} a strávili na úkolu {} minut.
@@ -141,7 +140,7 @@ Pokud bude náhodné číslo větší či rovné (≥) Vámi minimálně požado
 
 Pokud je náhodné číslo menší než (<) Vámi minimálně požadovaná částka, nezískáte dodatečný bonus a na úkolu už pracovat nebudete. Například, uvedete-li 50 Kč a bude vylosováno 20 Kč, nezískáte nic navíc a budete pokračovat další částí studie.
 
-Tento proces zajišťuje, že nejvýhodnější je zadat skutečné minimum, za které byste na úkol reálně pracovali. Když uvedete moc vysokou požadovanou částku, je nízká pravděpodobnost, že bude vylosvané číslo stejné nebo vyšší a nezískáte tedy nic. Pakliže uvedete příliš nízkou částku, může se stát, že za úkol dostanete méně, než byste chtěli. Přeplacení ani podstřelení se tedy nevyplácí.
+Tento proces zajišťuje, že nejvýhodnější je zadat skutečné minimum, za které byste na úkolu reálně pracovali. Když uvedete moc vysokou požadovanou částku, je nízká pravděpodobnost, že bude vylosované číslo stejné nebo vyšší a nezískáte tedy nic. Pakliže uvedete příliš nízkou částku, může se stát, že za úkol dostanete méně, než byste chtěli. Přeplacení ani podstřelení se tedy nevyplácí.
 
 Než uvedete nejnižší částku (v Kč), za kterou byste byli ochotni strávit dalších 10 minut stejným úkolem, zkontrolujeme si porozumění aukci."""
 
@@ -186,6 +185,8 @@ BDMlost = "Náhodné číslo je menší než (<) Vámi minimálně požadovaná 
 
 bmdRewardText = "Za dodatečné plnění úkolu s jídelníčky dostáváte {} Kč."
 
+labels = ["rozhodně nesouhlasím", "nesouhlasím", "spíše nesouhlasím", "neutrální", "spíše souhlasím", "souhlasím","rozhodně souhlasím"]
+
 ################################################################################
 
 
@@ -218,7 +219,10 @@ class Task(ExperimentFrame):
         n.add(self.menus, text='Jídelníčky')
         n.pack(expand=True, fill='both')
 
-        
+    def write(self):
+        self.file.write("Task\n")
+        self.file.write(self.id + "\t" + str(self.root.status["trial"]) + "\t" + self.root.status["menu_order"][self.root.status["trial"] - 1] + "\t" + self.currentDiet + "\t" + self.root.status["condition"])
+        self.moralization.write()
 
     def newTrial(self):
         self.root.status["trial"] += 1
@@ -359,6 +363,12 @@ class Moralization(InstructionsFrame):
     def nextFun(self):
         self.taskFrame.nextFun()
 
+    def write(self):
+        self.file.write("\t" + self.entry_energy.get().strip().replace(",", ".") + "\t" + self.entry_protein.get().strip().replace(",", ".") + "\t" + self.entry_fat.get().strip().replace(",", ".") + "\t" + self.entry_sugar.get().strip().replace(",", "."))
+        for measures in self.widgets["measures"].values():
+            for measure in measures:
+                self.file.write("\t" + str(measure.answer.get())) # saves first taste for all three foods, then look, then nutrition
+        self.file.write("\n")
 
 
 
@@ -443,17 +453,20 @@ class Ratings1(InstructionsFrame):
         if self.difficulty.answer.get() and self.satisfaction.answer.get():
             self.next["state"] = "normal"
 
+    def write(self):
+        self.file.write("Ratings1\n")
+        self.file.write(self.id + "\t" + str(self.difficulty.answer.get()) + "\t" + str(self.satisfaction.answer.get()) + "\n")
 
 
 class Choice(InstructionsFrame):
     def __init__(self, root):
-        elapsedTime = floor((perf_counter() - root.status["startTime"]) / 60)
-        baseText = continuation if elapsedTime < 20 else endtime
-        reminderText = "" if elapsedTime > 20 else eval("reminder_" + root.status["condition"])
+        self.elapsedTime = floor((perf_counter() - root.status["startTime"]) / 60)
+        baseText = continuation if self.elapsedTime < 20 else endtime
+        reminderText = "" if self.elapsedTime > 20 else eval("reminder_" + root.status["condition"])
         if root.status["trial"] == 1:
-            text = baseText.format("jedné diety", str(elapsedTime), reminderText)
+            text = baseText.format("jednoho jídelníčku", str(self.elapsedTime), reminderText)
         else:
-            text = baseText.format("{} diet".format(root.status["trial"]), str(elapsedTime), reminderText)
+            text = baseText.format("{} jídelníčků".format(root.status["trial"]), str(self.elapsedTime), reminderText)
 
         super().__init__(root, text = text, proceed = False, savedata = True, height = 15, width = 80)
 
@@ -462,9 +475,8 @@ class Choice(InstructionsFrame):
         self.buttonFrame = Canvas(self, background = "white", highlightbackground = "white", highlightcolor = "white")
         self.buttonFrame.grid(row=2, column=1)
 
-
         self.continueButton = ttk.Button(self.buttonFrame, text="Pokračovat", command=self.proceed)
-        if elapsedTime < 20:
+        if self.elapsedTime < 20:
             self.continueButton.grid(column=0, row=2, sticky="w", padx=60)
 
             self.endButton = ttk.Button(self.buttonFrame, text="Ukončit", command=self.end)
@@ -473,20 +485,24 @@ class Choice(InstructionsFrame):
             self.continueButton.grid(column=1, row=2, padx=60, command = self.end)            
 
     def proceed(self):
+        self.response = "continue"
         if self.root.status["trial"] != 1:
             self.root.count -= 2
         self.nextFun()
 
     def end(self):
+        self.response = "end"
         if self.root.status["trial"] == 1:
             self.root.count += 2
         if self.root.status["condition"] == "monetary":
-            self.root.status["reward"] += self.root.status["trial"] * TRIALBONUS
-            self.root.status["results"] += monetary_end.format(self.root.status["trial"] * TRIALBONUS)
+            self.root.status["reward"] += self.elapsedTime * MINUTEBONUS
+            self.root.status["results"] += [monetary_end.format(self.elapsedTime * MINUTEBONUS)]
         self.nextFun()
 
+    def write(self):
+        self.file.write("Choice\n")
+        self.file.write(self.id + "\t" + str(self.root.status["trial"]) + "\t" + self.response + "\t" + str(self.elapsedTime) + "\n")
 
-labels = ["rozhodně nesouhlasím", "nesouhlasím", "spíše nesouhlasím", "neutrální", "spíše souhlasím", "souhlasím","rozhodně souhlasím"]
 
 class Ratings2(Questionnaire):
     def __init__(self, root):
@@ -526,6 +542,12 @@ class Ratings2(Questionnaire):
 
     def checkRatings(self):
         return self.difficulty.answer.get() and self.satisfaction.answer.get() and self.guilt.answer.get()
+    
+    def write(self):        
+        self.file.write(self.id + "\t" + str(self.difficulty.answer.get()) + "\t" + str(self.satisfaction.answer.get()) + "\t" + str(self.guilt.answer.get()))
+        for word in self.words:
+            self.file.write("\t" + self.variables[word].get())
+        self.file.write("\n")
 
 
 
@@ -623,7 +645,6 @@ class BDM(InstructionsFrame):
             self.problem["text"] = e
         return True
 
-
     def write(self):        
         fee = random.randint(0, MAX_BDM_PRIZE)
         offer = int(self.offerVar.get())
@@ -631,16 +652,13 @@ class BDM(InstructionsFrame):
             self.root.status["BDMwin"] = True
             self.root.texts["bdmResults"] = BDMresult.format(offer, fee, BDMwon.format(fee))
             self.root.status["reward"] += fee
-            self.root.status["results"] += bmdRewardText.format(fee)
+            self.root.status["results"] += [bmdRewardText.format(fee)]
         else:
             self.root.status["BDMwin"] = False
             self.root.texts["bdmResults"] = BDMresult.format(offer, fee, BDMlost)
-            self.root.count += 2
 
         self.file.write("BDM\n")
         self.file.write(self.id + "\t" + self.offerVar.get() + "\t" + str(fee) + "\n\n")
-
-
 
     def nextFun(self):        
         if (self.controlNum == len(self.controlTexts) and self.offerVar.get()):
@@ -667,17 +685,19 @@ class TimeTask(InstructionsFrame):
         else:
             baseText = endtime2
         if root.status["trial"] == 1:
-            text = baseText.format("jedné diety", str(elapsedTime))
+            text = baseText.format("jednoho jídelníčku", str(elapsedTime))
         else:
-            text = baseText.format("{} diet".format(root.status["trial"]), str(elapsedTime))
+            text = baseText.format("{} jídelníčků".format(root.status["trial"]), str(elapsedTime))
 
         super().__init__(root, text = text, proceed = True, height = 10, width = 80)
 
   
+class BDMResult(InstructionsFrame):
+    def __init__(self, root):
+        super().__init__(root, text = "{}", update = ["bdmResults"], height = 15, width = 80, proceed = True)
 
-
-
-BDMResult = (InstructionsFrame, {"text": "{}", "update": ["bdmResults"], "height": 15, "width": 80, "proceed": True})
+        if not self.root.status["BDMwin"]:
+            self.root.count += 2
 
 
 controlTexts = [[Control1, Answers1, Feedback1], [Control2, Answers2, Feedback2]]

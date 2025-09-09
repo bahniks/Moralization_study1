@@ -120,9 +120,9 @@ class Quest(ExperimentFrame):
                 wrong_checks = str(self.root.status["attention_checks"])
                 self.file.write(self.id + "\t" + self.name + "\t" + wrong_checks + "\n\n")
                 if wrong_checks:
-                    self.root.status["results"] += bonusNotGained
+                    self.root.status["results"] += [bonusNotGained]
                 else:
-                    self.root.status["results"] += bonusGained
+                    self.root.status["results"] += [bonusGained]
                     self.root.status["reward"] += BONUS
             self.destroy()
             self.root.nextFrame()

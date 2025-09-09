@@ -36,7 +36,7 @@ intro = f"""Tímto začíná naše studie, jejíž krátké shrnutí zde uvádí
     b. Vaším úkolem bude přepsat některé údaje a ohodnotit pokrmy. 
     c. Po každém hodnoceném dnu si můžete zvolit, zda chcete pokračovat, nebo úkol ukončit. Za předčasné ukončení nejste nijak penalizováni.
 2) Budete odpovídat na otázky o tom, jak se Vám úkol dělal. 
-3) Na závěr vyplníte dotazník s několika demografickými údaji a dalšími otázkami, které odkryjí, jak smýšlíte o práci a světě kolem sebe. 
+3) Na závěr vyplníte dotazník s několika demografickými údaji a dalšími otázkami zaměřenými na to, jak smýšlíte o práci a světě kolem sebe. 
     a. Součástí jsou také dvě kontrolní otázky pozornosti – pokud odpovíte správně, získáte dodatečnou odměnu {BONUS} Kč.
 4) Vyplacení celkové odměny a rozloučení.
 
