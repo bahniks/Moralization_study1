@@ -46,7 +46,7 @@ task_moralization = """
 Vaše pečlivé hodnocení jídelníčků pomůže nemocničním dietologům zvážit nutriční a estetické informace, aby mohli sestavit stravovací plány, které jsou z lékařského hlediska vhodné a zlepšují zdraví pacientů. Pokračováním v tomto úkolu pomůžete dobré věci, protože Vaše hodnocení přímo podporuje zdravější a bezpečnější stravování pro osoby v péči.
 """
 
-monetary_end = "Za hodnocení jídelníčků jste obdržel navíc odměnu {} Kč."
+monetary_end = "Za hodnocení jídelníčků jste obdržel(a) navíc odměnu {} Kč."
 
 Control1 = "Co se stane, když se rozhodnete úkol ukončit dříve než za 20 minut?"
 Answers1 = ["Budete penalizováni a přijdete o celou odměnu.", "Musíte zaplatit poplatek a opustit laboratoř.", "Můžete úkol bez jakékoli penalizace ukončit a přesunout se na další část studie.", "Musíte počkat, než vyprší časomíra, jinak se studie zneplatní."]
