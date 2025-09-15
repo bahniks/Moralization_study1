@@ -1,0 +1,263 @@
+0 Mléko 1/1 Bujón s vejcem Mléko 1/1 Bujón s vejcem 
+ 3260kJ 
+ B 90,1 
+ T 35,0 
+ S 24,6   8,3    3,8   15,8  36,7   13,7   14,0   8,3    3,8   15,8  36,7   13,7   14,0 
+Alergen: 7 3 7 3
+0BRK Piškoty 120g Mléko 1/1 Bujón s vejcem Kaše bramborová 
+ 5903kJ Kaše bramborová Pyré 
+ B 67,2 Pyré 
+ T 27,7 
+ S214,3  13,4    6,2   95,3   8,3    3,8   15,8  41,1   15,7   37,5   4,4    2,0   23,8 
+Alergen: 1,3 7 3,7 7
+0M Veka balená 100g Mléko 1/1 Bujón s vejcem Bujón s vejcem 
+ 4367kJ Banány 
+ B 91,1 
+ T 34,7 
+ S 86,7   9,3    3,5   26,3   8,3    3,8   15,8  36,7   13,7   14,0  36,7   13,7   14,0 
+Alergen: 1 7 3 3
+1 Ostravá ček Mléko 1/1 Bujón s vejcem Pyré Kaše z oves. vlo ček 
+ 9675kJ Piškoty 120g Ku řecí p řírodní říze Kompot jahodový 
+ B106,2 Kaše bramborová mašt 
+ T 68,8 Kompot jabkový 
+ S305,6  18,6   13,9  103,0   8,3    3,8   15,8  60,4   27,9   59,6   0,0    0,1   21,9  19,0   23,1   42,3 
+Alergen: 1,3,7 7 1,3,7 1,7 
+10 Kaiserka Rohlík Rybí filé na kmín ěKolá č Kaše z oves. vlo ček 
+ 8793kJ Džem porce Mléko 1/1 Kaše bramborová mašt Pomeran č Kompot jahodový 
+ B 64,0 Máslo porce Kompot jabkový 
+ T 57,1 
+ S319,9  12,2   10,3   10,4  11,7    6,2   18,2  17,0   13,3   45,0   4,1    4,2   12,0  19,0   23,1   42,3 
+Alergen: 1,12,7 1,7 4,7 1,3,7 1,7 
+11-1 Rohlík sýrový 2 ks Rohlík Polévka bramborová Kolá č špaldový Mou čník-ve čeře Paštika 48g 
+10394kJ Sýr porce lu čina Mléko 1/1 Hov. pe č. cikánská Pomeran č Sýr almette Chléb 70g 
+ B 83,8 Máslo porce 2 ks Těstoviny Houska 2 ks 
+ T 96,1 Mou čník Máslo porce 
+ S307,8  11,4   26,5   26,7  11,7    6,2   18,2  35,5   34,8   60,8   0,9    0,2    7,9  10,1   20,1   20,1  14,2    8,4   39,2 
+Alergen: 1,7 1,7 1,12,3,9 1,3,7 1,12,7 1,12 
+11-2 Polévka bramborová Kolá č špaldový Chléb pln ěný Paštika 48g 
+ 9068kJ Gnocchi se špenátem Pomeran č Ovoce Chléb 70g 
+ B 74,8 Mou čník 
+ T 72,4 
+ S292,5  36,1   30,3   56,3   0,9    0,2    7,9   0,5    0,8   16,6  14,2    8,4   39,2 
+Alergen: 1,7 1,7 1,3,7,9 1,3,7 1,12 
+11ML-1 Kaiserka Rohlík Polévka bramborová Kolá č špaldový Mou čník-ve čeře Paštika 48g 
+10758kJ Sýr porce lu čina Mléko 1/1 Hov. pe č. cikánská Pyré Sýr almette Chléb 70g 
+ B 88,4 Máslo porce 2 ks Těstoviny Chléb 150g 
+ T 87,8 Mou čník Máslo porce 
+ S344,6  14,5   22,5   22,7  11,7    6,2   18,2  35,5   34,8   60,8   0,0    0,1   21,9  12,4   15,8   15,9  14,2    8,4   39,2 
+Alergen: 1,12,7 1,7 1,12,3,9 1,3,7 1,12,7 1,12 
+11ML-2 Kolá č špaldový 
+10758kJ Pyré 
+ B 88,4 
+ T 87,8 
+ S344,6   0,0    0,1   21,9 
+Alergen: 1,12,7 1,7 1,12,3,9 1,3,7 1,12,7 1,12 Úterý T: 2 D: 2 Jídelní lístek: Dětská 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře21.05.2019 
+12 Rohlík sýrový Rohlík Pol. dr ůbková s rýží Kolá č Kaše z oves. vlo ček 
+ 7488kJ Flora porce Mléko 1/1 Ku řecí p řírodní říze Pomeran č Kompot jahodový 
+ B 61,2 Kaše bramborová mašt 
+ T 51,9 Kompot jabkový 
+ S257,5   4,4   11,0   11,0  11,7    6,2   18,2  28,2   16,2   47,9   4,1    4,2   12,0  12,8   14,3   33,5 
+Alergen: 1,7 1,7 1,7,9 1,3,7 1,7 
+12M Ostravá ček Mléko 1/1 Pol. dr ůbková s rýží Kolá č Kaše z oves. vlo ček 
+ 8731kJ Piškoty 120g Ku řecí p řírodní říze Pyré Kompot jahodový 
+ B 71,0 Kaše bramborová mašt 
+ T 52,3 Kompot jabkový 
+ S321,9  18,6   13,9  103,0   8,3    3,8   15,8  28,2   16,2   47,9   3,1    4,1   26,0  12,8   14,3   33,5 
+Alergen: 1,3,7 7 1,7,9 1,3,7 1,7 
+13-1 Rohlík sýrový 2 ks Rohlík Polévka bramborová Kolá č špaldový Mou čník-ve čeře
+ 7660kJ Flora porce Mléko 1/1 Hov. pe č. cikánská Pomeran č Sýr almette 
+ B 65,5 Těstoviny Houska 2 ks 
+ T 57,7 
+ S250,3   8,8   14,0   14,0  11,7    6,2   18,2  34,0   25,5   88,4   0,9    0,2    7,9  10,0   11,8   66,3 
+Alergen: 1,7 1,7 1,12,3,9 1,3,7 1,12,7 
+13-2 Polévka bramborová Kolá č špaldový Chléb pln ěný 
+ 6641kJ Gnocchi se špenátem Pomeran č Ovoce 
+ B 56,5 
+ T 42,2 
+ S235,2  34,5   21,0  128,2   0,9    0,2    7,9   0,5    0,8   16,6 
+Alergen: 1,7 1,7 1,7,9 1,3,7 
+13M-1 Rohlík sýrový Rohlík Polévka bramborová Kolá č špaldový Mou čník-ve čeře
+ 6199kJ Flora porce Mléko 1/1 Hov. pe č. cikánská Pomeran č Sýr almette 
+ B 56,3 Těstoviny Houska 
+ T 50,2 
+ S191,9   4,4   11,0   11,0  11,7    6,2   18,2  33,5   24,0   86,9   0,9    0,2    7,9   5,7    8,9   36,1 
+Alergen: 1,7 1,7 1,12,3,9 1,3,7 1,12,7 
+13M-2 Polévka bramborová Kolá č špaldový Chléb pln ěný 
+ 5839kJ Gnocchi se špenátem Pomeran č Ovoce 
+ B 51,6 
+ T 37,6 
+ S204,0  34,1   19,5  126,6   0,9    0,2    7,9   0,5    0,8   16,6 
+Alergen: 1,7 1,7 1,7,9 1,3,7 
+13ML-1 Kaiserka Rohlík Polévka bramborová Kolá č špaldový Mou čník-ve čeře
+ 8213kJ Sýr porce lu čina Mléko 1/1 Hov. pe č. cikánská Pyré Sýr almette 
+ B 72,4 Flora porce Těstoviny Chléb 150g 
+ T 53,4 
+ S287,1  14,4   14,0   14,0  11,7    6,2   18,2  34,0   25,5   88,4   0,0    0,1   21,9  12,3    7,6   73,6 
+Alergen: 1,12,7 1,7 1,12,3,9 1,3,7 1,12,7 
+13NB-1 Rohlík sýrový 2 ks Rohlík Pol. dr ůbková s rýží Kolá č Sýr almette 
+ 8946kJ Flora porce Mléko 1/1 Hov. pe č. cikánská Banány Máslo porce 
+ B 74,9 Těstoviny Mou čník-ve čeře
+ T 68,6 Houska 2 ks 
+ S293,7   8,8   14,0   14,0  11,7    6,2   18,2  39,8   24,1   87,0   4,5    4,3   27,0  10,1   20,1   74,6 
+Alergen: 1,7 1,7 1,12,3,9 1,3,7 1,12,7 
+13NB-2 Pol. dr ůbková s rýží Kolá č Mlé čná rýže 
+ 9945kJ Gnocchi se špenátem Banány Máslo porce 
+ B 82,0 Houska 2 ks 
+ T 63,5 Pomeran č
+ S356,8  40,4   19,6  126,8   4,5    4,3   27,0  16,6   19,5   27,2 
+Alergen: 1,7 1,7 1,7,9 1,3,7 1,12,7 Úterý T: 2 D: 2 Jídelní lístek: Dětská 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře21.05.2019 
+1NEM Ostravá ček Mléko 1/1 Bujón s vejcem Pyré Kaše z oves. vlo ček 
+ 9546kJ Piškoty 120g Ku řecí p řírodní říze Kompot jahodový 
+ B106,2 Kaše bramborová 
+ T 65,3 Kompot jabkový 
+ S305,6  18,6   13,9  103,0   8,3    3,8   15,8  60,4   24,4   56,1   0,0    0,1   21,9  19,0   23,1   42,3 
+Alergen: 1,3,7 7 1,3,7 1,7 
+2 Rohlík sýrový 2 ks Rohlík Pol. dr ůbková s rýží Kolá č Pomazánka sýrová šu 
+ 9294kJ Flora porce Mléko 1/1 Ku řecí p řírodní říze Pomeran č Mou čník-ve čeře
+ B 91,0 Kaše bramborová mašt Veka balená 100g 
+ T 77,5 Kompot jabkový 
+ S278,4   8,8   14,0   14,0  11,7    6,2   18,2  31,9   18,0   49,8   4,1    4,2   12,0  34,4   35,0   86,4 
+Alergen: 1,7 1,7 1,7,9 1,3,7 1,7 
+2NEM Kaiserka Rohlík Pol. dr ůbková s rýží Kolá č Pomazánka sýrová šu 
+ 9126kJ Sýr porce lu čina Mléko 1/1 Ku řecí p řírodní říze Pomeran č Mou čník-ve čeře
+ B 96,6 Kaše bramborová Veka balená 100g 
+ T 66,0 Kompot jabkový 
+ S289,5  14,4    6,0    6,0  11,7    6,2   18,2  31,9   14,5   46,3   4,1    4,2   12,0  34,4   35,0   86,4 
+Alergen: 1,12,7 1,7 1,7,9 1,3,7 1,7 
+3-1 Rohlík sýrový 2 ks Polévka bramborová Mou čník-ve čeře
+ 6458kJ Flora porce Hov. pe č. cikánská Sýr almette 
+ B 52,8 Těstoviny Houska 2 ks 
+ T 51,4 
+ S208,8   8,8   14,0   14,0  34,0   25,5   88,4  10,0   11,8   66,3 
+Alergen: 1,7 1,12,3,9 1,12,7 
+3-2 Polévka bramborová Chléb pln ěný 
+ 5439kJ Gnocchi se špenátem Ovoce 
+ B 43,9 
+ T 35,9 
+ S193,6  34,5   21,0  128,2   0,5    0,8   16,6 
+Alergen: 1,7 1,7,9 
+3PK-1 Rohlík sýrový 2 ks Rohlík Polévka bramborová Kolá č špaldový Mou čník-ve čeře
+ 7999kJ Sýr porce lu čina Mléko 1/1 Hov. pe č. cikánská Ovoce Sýr almette 
+ B 67,4 Flora porce Těstoviny Houska 2 ks 
+ T 62,3 
+ S258,4  11,2   18,0   18,0  11,7    6,2   18,2  34,0   25,5   88,4   0,5    0,8   16,6  10,0   11,8   66,3 
+Alergen: 1,7 1,7 1,12,3,9 1,3,7 1,12,7 
+3PK-2 Polévka bramborová Kolá č špaldový Chléb pln ěný 
+ 6980kJ Gnocchi se špenátem Ovoce Ovoce 
+ B 58,4 
+ T 46,8 
+ S243,2  34,5   21,0  128,2   0,5    0,8   16,6   0,5    0,8   16,6 
+Alergen: 1,7 1,7 1,7,9 1,3,7 
+4 Rohlík sýrový 2 ks Rohlík Pol. dr ůbková s rýží Kolá č Pomazánka sýrová šu 
+ 8800kJ Flora porce Ku řecí p řírodní říze Pomeran č Mou čník-ve čeře
+ B 82,7 Kaše bramborová mašt Veka balená 100g 
+ T 73,7 Kompot jabkový 
+ S266,4   8,8   14,0   14,0   3,4    2,3   24,1  31,9   18,0   49,8   4,1    4,2   12,0  34,4   35,0   86,4 
+Alergen: 1,7 1 1,7,9 1,3,7 1,7 
+4ML Kaiserka Rohlík Pol. dr ůbková s rýží Kolá č Pomazánka sýrová šu 
+ 9251kJ Sýr porce lu čina Ku řecí p řírodní říze Pyré Mou čník-ve čeře
+ B 87,3 Flora porce Kaše bramborová mašt Veka balená 100g 
+ T 73,6 Kompot jabkový 
+ S291,6  14,4   14,0   14,0   3,4    2,3   24,1  31,9   18,0   49,8   3,1    4,1   26,0  34,4   35,0   86,4 
+Alergen: 1,12,7 1 1,7,9 1,3,7 1,7 Úterý T: 2 D: 2 Jídelní lístek: Dětská 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře21.05.2019 
+4S Rohlík 2 ks Polévka žemlová Rohlík Žemlovka s jablky B 
+ 7810kJ Džem porce 2 ks Sedlina bílková Pyré Banány 
+ B 51,1 Banány Kaše bramborová vodo 
+ T 32,9 
+ S326,6   8,3    5,0   27,8  27,2   20,5   62,1   3,4    2,4   24,2  12,2    5,0   27,7 
+Alergen: 1 1,3,7,9 1 1,3,7 
+5 Rohlík sýrový 2 ks Rohlík Bujón s masem Kolá č Pomazánka sýrová šu 
+ 9854kJ Flora porce Mléko 1/1 Ku řecí p řírodní říze Pyré Mou čník-ve čeře
+ B112,1 Kaše bramborová mašt Veka balená 100g 
+ T 81,5 Kompot jabkový 
+ S283,4   8,8   14,0   14,0  11,7    6,2   18,2  53,9   22,2   53,9   3,1    4,1   26,0  34,4   35,0   86,4 
+Alergen: 1,7 1,7 1,7 1,3,7 1,7 
+9-150 Chléb 50g Pomeran č Ku řecí p řírodní říze Pomeran č Sýr almette Pomeran č
+ 3999kJ Sýr porce lu čina Brambory va řené Chléb 100g 
+ B 41,2 Salát raj čatový B Okurka salátová 
+ T 18,6 
+ S141,7   6,0    4,5    4,5   0,9    0,2    7,9  24,7   12,4   17,1   0,9    0,2    7,9   7,6    1,1    2,4   0,9    0,2    7,9 
+Alergen: 1,12,7 1,12 1,12,7 
+9/BLP Chléb blp pe čený Mléko 1/1 Bujón s masem Pomeran č Sýr almette Džem porce dia 
+10167kJ Sýr porce lu čina Hov ězí guláš Chléb blp kuku řičný Máslo porce 
+ B 91,3 Flora porce Bezlepkové knedlíky Okurka salátová Pomeran č
+ T 70,4 Mléko 1/1 Salát raj čatový B 
+ S347,7  17,7   28,8   40,8   8,3    3,8   15,8  52,8   27,9   32,7   0,9    0,2    7,9  10,4    1,1    2,4   1,1    8,5   16,2 
+Alergen: 7 7 1,12,3 7 7
+9D Rohlík sýrový 2 ks Rohlík Polévka bramborová Chléb 50g Sýr almette Paštika 48g 
+ 9662kJ Sýr porce lu čina Pomeran č Hov. pe č. cikánská Máslo porce Chléb 150g Chléb 100g 
+ B 83,5 Flora porce Těstoviny Mléko 1/4 Okurka salátová Pomeran č
+ T 68,8 Salát raj čatový B 
+ S318,8  11,2   18,0   18,0   4,4    2,5   10,3  35,6   28,9   33,6   3,7    8,8    8,9  11,2    1,7    2,9  17,3    8,9   16,7 
+Alergen: 1,7 1 1,12,3,9 1,12,7 1,12,7 1,12 
+9ML Kaiserka Rohlík Polévka bramborová Chléb 50g Sýr almette Paštika 48g 
+ 9390kJ Sýr porce lu čina Pyré dia Hov. pe č. cikánská Máslo porce Chléb 100g Chléb 100g 
+ B 82,5 Flora porce Těstoviny Mléko 1/4 Pomeran č Pyré dia 
+ T 64,2 Salát raj čatový B 
+ S318,0  14,4   14,0   14,0   3,8    2,4   11,9  35,6   28,9   33,6   3,7    8,8    8,9   8,2    1,3    9,0  16,7    8,8   18,3 
+Alergen: 1,12,7 1 1,12,3,9 1,12,7 1,12,7 1,12 
+9S Rohlík sýrový 2 ks Rohlík Pol. dr ůbková s rýží Rohlík Pomazánka sýrová šu Máslo porce 
+ 9320kJ Sýr porce lu čina Pomeran č Ku řecí p řírodní říze Pomeran č Veka balená 100g Džem porce dia 
+ B 91,7 Flora porce Kaše bramborová mašt Rajče Rohlík 
+ T 84,3 Salát raj čatový B Pomeran č
+ S258,3  11,2   18,0   18,0   4,4    2,5   10,3  33,3   21,2   25,9   4,4    2,5   10,3  33,9   29,2   31,7   4,5   10,8   18,6 
+Alergen: 1,7 1 1,12,7,9 1 1,7 1,7 
+BLP Chléb blp pe čený Mléko 1/1 Bujón s masem Piškot BLP (soják) Sýr almette 
+10835kJ Sýr porce lu čina Hov ězí guláš Pomeran č Chléb blp kuku řičný 
+ B 95,6 Flora porce Bezlepkové knedlíky Rajče
+ T 66,5 Mléko 1/1 
+ S393,3  17,7   28,8   40,8   8,3    3,8   15,8  51,2   24,6  111,1   7,5    8,0   15,8  11,0    1,3    3,8 
+Alergen: 7 7 1,3 3,7 7
+BML Kaiserka Rohlík Polévka bramborová Rohlík Mou čník-ve čeře
+ 8729kJ Vejce na tvrdo Hov. pe č. cikánská Pomeran č Pe č.závin 100g 
+ B 88,6 Flora porce Těstoviny Rama porce 
+ T 66,1 Houska 2 ks 
+ S273,2  18,4   15,7   15,7   3,4    2,3   24,1  34,0   25,5   88,4   4,4    2,5   10,3  28,4   19,9   74,4 
+Alergen: 1,12,3 1 1,12,3,9 1 1,12 Úterý T: 2 D: 2 Jídelní lístek: Dětská 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře21.05.2019 
+OK Rohlík sýrový 2 ks Rohlík Polévka rýžová Rohlík Kaše z oves. vlo ček 
+ 8809kJ Sýr porce lu čina Omá čka smetanová Pyré Kompot jabkový 
+ B 63,4 Flora porce Vejce na tvrdo 
+ T 67,5 Mléko 1/1 Kaše bramborová 
+ S299,0  19,5   21,9   33,9   3,4    2,3   24,1  20,0   25,6   60,2   3,4    2,4   24,2  17,0   15,3   47,0 
+Alergen: 1,7 1 1,3,7 1 1,7 
+S-T Kaiserka Rohlík Polévka bramborová Rohlík Kaše z oves. vlo ček 
+ 8547kJ Tvaroh s cibulkou Džem porce Gnocchi se špenátem Pyré Kompot jahodový 
+ B 64,7 Pomeran č
+ T 21,3 
+ S380,6  19,9    4,7    7,2   4,4    2,6   10,3  17,9    2,4  111,3   3,4    2,4   24,2  19,0    9,2   28,4 
+Alergen: 1,12,7 1 1,7,9 1 1,7 
+SP Veka balená 100g Banány Polévka žemlová Rohlík Žemlovka s jablky B 
+ 7857kJ Džem porce 2 ks Hov ězí dušené Pyré Banány 
+ B 51,6 Kaše bramborová vodo 
+ T 16,4 Kompot meru ňkový 
+ S363,3   8,2    3,4   26,3   1,3    0,2   23,0  26,5    5,4   28,1   3,4    2,4   24,2  12,2    5,0   27,7 
+Alergen: 1 1,7,9 1 1,3,7 
+SPD Suchar 200g Banány Polévka žemlová Pyré Žemlovka s jablky B 
+ 9366kJ Džem porce 2 ks Hov ězí dušené Banány 
+ B 59,9 Kaše bramborová vodo 
+ T 19,4 Kompot meru ňkový 
+ S436,3  20,0    8,7   31,6   1,3    0,2   23,0  26,5    5,4   28,1   0,0    0,1   21,9  12,2    5,0   27,7 
+Alergen: 1 1,7,9 1,3,7 
+VEG Rohlík sýrový 2 ks Rohlík Polévka bramborová Kolá č špaldový Mou čník-ve čeře
+ 8519kJ Sýr porce lu čina Mléko 1/1 Gnocchi se špenátem Pomeran č Sýr almette 
+ B 48,0 Flora porce Mou čník Houska 2 ks 
+ T 61,9 
+ S311,1  11,2   18,0   18,0  11,7    6,2   18,2  14,1   25,7   51,7   0,9    0,2    7,9  10,0   11,8   66,3 
+Alergen: 1,7 1,7 1,3,7,9 1,3,7 1,12,7 
+VNM Rohlík sýrový 2 ks Rohlík Bujón s masem Rohlík Pomazánka sýrová šu 
+ 9252kJ Sýr porce lu čina Mléko 1/1 Hov ězí dušené Mléko 1/4 Veka balená 100g 
+ B124,1 Flora porce Rýže 
+ T 70,5 Mléko 1/1 
+ S260,4  19,5   21,9   33,9  11,7    6,2   18,2  56,4   11,1   90,0   3,4    2,4    2,4  33,0   29,0   80,4 
+Alergen: 1,7 1,7 1 1,7 1,7 
+ZO Piškoty 60 g Ostravá ček Polévka bramborová Jogurt ovocný 150 g Kaše z oves. vlo ček Mléko ochucené 
+10659kJ Káva chicory Tatra mléko Hov. pe č. cikánská Mléko 1/4 Kompot jahodový 
+ B 96,3 Mléko 1/1 Těstoviny 
+ T 77,9 Pyré 
+ S351,9   7,7    3,3   24,4  21,5   20,6   42,4  34,0   25,5   88,4   5,3    2,0    2,1  19,0   23,1   42,3   8,8    3,3   26,5 
+Alergen: 1,3,7 7 1,12,3,9 7 1,7 7Úterý T: 2 D: 2 Jídelní lístek: Dětská 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře21.05.2019 

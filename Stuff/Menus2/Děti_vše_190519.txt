@@ -1,0 +1,263 @@
+0 Mléko 1/1 Bujón s vejcem Mléko 1/1 Bujón s vejcem 
+ 3260kJ 
+ B 90,1 
+ T 35,0 
+ S 24,6   8,3    3,8   15,8  36,7   13,7   14,0   8,3    3,8   15,8  36,7   13,7   14,0 
+Alergen: 7 3 7 3
+0BRK Piškoty 120g Mléko 1/1 Bujón s vejcem Kaše bramborová 
+ 5903kJ Kaše bramborová Pyré 
+ B 67,2 Pyré 
+ T 27,7 
+ S214,3  13,4    6,2   95,3   8,3    3,8   15,8  41,1   15,7   37,5   4,4    2,0   23,8 
+Alergen: 1,3 7 3,7 7
+0M Veka balená 100g Mléko 1/1 Bujón s vejcem Bujón s vejcem 
+ 4300kJ Pyré 
+ B 89,8 
+ T 34,6 
+ S 85,8   8,0    3,4   25,2   8,3    3,8   15,8  36,7   13,7   14,0  36,7   13,7   14,0 
+Alergen: 1 7 3 3
+1 Pudink 125g Mléko 1/1 Bujón s vejcem Pyré Kaše rýžová 
+10912kJ Piškoty 120g Hov. pe č. myslivecká Banány 
+ B104,8 Kaše bramborová 
+ T 57,1 
+ S404,7  13,8    6,2   95,3   8,3    3,8   15,8  59,5   24,6   59,3   0,0    0,1   21,9  23,3   22,4   45,2 
+Alergen: 1,3,7 7 1,3,7,9 7
+10 Váno čka 100g Rohlík Hov. pe č. myslivecká Rohlík Kaše rýžová 
+ 9729kJ Máslo porce Mléko 1/1 Knedlík houskový Jablka Banány 
+ B 76,1 Džem porce 
+ T 61,2 
+ S355,6   8,2   16,6   28,0  11,7    6,2   18,2  29,1   12,9   86,4   3,9    3,1   18,9  23,3   22,4   45,2 
+Alergen: 1,3,7 1,7 1,12,3,9 1 7
+11-1 Croasant čoko Rohlík Polévka hov ězí s mas Rohlík Žervé s pažitkou Obložený chlebí ček s 
+12244kJ Pudink 125g Sýr trojuhelník Mamin čino ku ře Jablka Máslo porce 
+ B116,9 Máslo porce Těstoviny Chléb 150g 
+ T105,0 Mléko 1/1 Rohlík o řechový Jablka 
+ S362,9   0,5    0,4  107,8  11,8   14,4   26,4  67,1   49,9  112,8   3,9    3,1   18,9  21,0   22,6   38,4  12,6   14,4   35,8 
+Alergen: 1,3,7 1,7 1,3,9 1 1,12,7 1,12,3,7 
+11-2 Polévka hov ězí s mas Rohlík Šunka 80g Obložený chlebí ček s 
+ 9990kJ Brokolice se sýr. om Jablka Máslo porce 
+ B 81,4 Brambory va řené Rohlík 2 ks 
+ T 76,1 Rohlík o řechový Jablka 
+ S327,2  31,1   22,8   61,9   3,9    3,1   18,9  21,5   20,9   36,7  12,6   14,4   35,8 
+Alergen: 1,3,7 1,7 1,3,7,9 1 1,7 1,12,3,7 
+11ML-1 Croasant čoko Rohlík Polévka hov ězí s mas Rohlík Žervé s pažitkou Obložený chlebí ček s 
+12399kJ Pudink 125g Sýr trojuhelník Mamin čino ku ře Pyré Máslo porce 
+ B117,3 Máslo porce Těstoviny Chléb 150g 
+ T103,7 Mléko 1/1 Rohlík o řechový Banány 
+ S375,9   0,5    0,4  107,8  11,8   14,4   26,4  67,1   49,9  112,8   3,4    2,4   24,2  21,9   22,1   44,8  12,6   14,4   35,8 
+Alergen: 1,3,7 1,7 1,3,9 1 1,12,7 1,12,3,7 
+11ML-2 Rohlík 
+12399kJ Pyré 
+ B117,3 
+ T103,7 
+ S375,9   3,4    2,4   24,2 
+Alergen: 1,3,7 1,7 1,3,9 1 1,12,7 1,12,3,7 Ned ěle T: 1 D: 7 Jídelní lístek: Dětská 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře19.05.2019 
+12 Croasant čoko Rohlík Polévka hašé Rohlík Šunka 40g 
+ 8308kJ Pudink 125g Máslo porce Hov. pe č. myslivecká Jablka Máslo porce 
+ B 62,0 Mléko 1/1 Knedlík houskový Chléb 100g 
+ T 46,3 Banány 
+ S317,4   0,4    0,2  107,6  11,8   14,4   26,4  30,1   15,4   74,2   3,9    3,1   18,9  15,7   13,1   35,9 
+Alergen: 1,3,7 1,7 1,12,3,9 1 1,12,7 
+12M Croasant čoko Piškoty 120g Polévka hašé Rohlík Kaše rýžová 
+10561kJ Pudink 125g Mléko 1/1 Hov. pe č. myslivecká Pyré Banány 
+ B 74,8 Kaše bramborová 
+ T 49,2 
+ S430,4   0,4    0,2  107,6  21,7   10,0   22,0  26,0   14,2   48,8   3,4    2,4   24,2  23,3   22,4   45,2 
+Alergen: 1,3,7 1,3,7 1,3,7,9 1 7
+13-1 Croasant čoko Rohlík Polévka hov ězí s mas Rohlík Žervé s pažitkou 
+11115kJ Pudink 125g Máslo porce Mamin čino ku ře Jablka Máslo porce 
+ B104,3 Mléko 1/1 Těstoviny Chléb 150g 
+ T 90,6 Jablka 
+ S341,5   0,5    0,4  107,8  11,8   14,4   26,4  67,1   49,9  112,8   3,9    3,1   18,9  21,0   22,6   38,4 
+Alergen: 1,3,7 1,7 1,3,9 1 1,12,7 
+13-2 Polévka hov ězí s mas Rohlík Šunka 80g 
+ 8861kJ Brokolice se sýr. om Jablka Máslo porce 
+ B 68,8 Brambory va řené Rohlík 2 ks 
+ T 61,7 Jablka 
+ S305,8  31,1   22,8   61,9   3,9    3,1   18,9  21,5   20,9   36,7 
+Alergen: 1,3,7 1,7 1,3,7,9 1 1,7 
+13M-1 Croasant čoko Rohlík Polévka hov ězí s mas Rohlík Žervé s pažitkou 
+10626kJ Pudink 125g Máslo porce Mamin čino ku ře Jablka Máslo porce 
+ B100,6 Mléko 1/1 Těstoviny Chléb 100g 
+ T 89,8 Jablka 
+ S318,9   0,4    0,2  107,6  11,8   14,4   26,4  67,1   49,9  112,8   3,9    3,1   18,9  17,4   22,1   37,9 
+Alergen: 1,3,7 1,7 1,3,9 1 1,12,7 
+13M-2 Polévka hov ězí s mas Rohlík Šunka 40g 
+ 8059kJ Brokolice se sýr. om Jablka Máslo porce 
+ B 58,3 Brambory va řené Rohlík 
+ T 55,6 Jablka 
+ S282,9  31,1   22,8   61,9   3,9    3,1   18,9  11,0   15,0   30,7 
+Alergen: 1,3,7 1,7 1,3,7,9 1 1,7 
+13ML-1 Croasant čoko Rohlík Polévka hov ězí s mas Rohlík Žervé s pažitkou 
+11270kJ Pudink 125g Máslo porce Mamin čino ku ře Pyré Máslo porce 
+ B104,7 Mléko 1/1 Těstoviny Chléb 150g 
+ T 89,3 Banány 
+ S354,5   0,5    0,4  107,8  11,8   14,4   26,4  67,1   49,9  112,8   3,4    2,4   24,2  21,9   22,1   44,8 
+Alergen: 1,3,7 1,7 1,3,9 1 1,12,7 
+13NB-1 Váno čka 100g Rohlík Polévka hov ězí s mas Rohlík Žervé s pažitkou 
+12499kJ Pudink 125g Mléko 1/1 Mamin čino ku ře Pomeran č Máslo porce 
+ B113,5 Máslo porce Těstoviny Chléb 150g 
+ T 97,2 Banány 
+ S399,2   8,4   16,6   16,6  11,7    6,2   18,2  67,1   49,9  112,8   4,4    2,5   10,3  21,9   22,1   44,8 
+Alergen: 1,3,7 1,7 1,3,9 1 1,12,7 
+13NB-2 Polévka hov ězí s mas Rohlík Šunka 80g 
+10245kJ Brokolice se sýr. om Pomeran č Máslo porce 
+ B 78,0 Brambory va řené Rohlík 2 ks 
+ T 68,4 Banány 
+ S363,5  31,1   22,8   61,9   4,4    2,5   10,3  22,3   20,3   43,1 
+Alergen: 1,3,7 1,7 1,3,7,9 1 1,7 Ned ěle T: 1 D: 7 Jídelní lístek: Dětská 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře19.05.2019 
+1NEM Pudink 125g Mléko 1/1 Bujón s vejcem Pyré Kaše rýžová 
+10912kJ Piškoty 120g Hov. pe č. myslivecká Banány 
+ B104,8 Kaše bramborová 
+ T 57,1 
+ S404,7  13,8    6,2   95,3   8,3    3,8   15,8  59,5   24,6   59,3   0,0    0,1   21,9  23,3   22,4   45,2 
+Alergen: 1,3,7 7 1,3,7,9 7
+2 Váno čka 100g Rohlík Polévka hašé Rohlík Šunka 80g 
+ 8887kJ Džem porce Mléko 1/1 Hov. pe č. myslivecká Jablka Máslo porce 
+ B 80,8 Máslo porce Knedlík houskový Rohlík 2 ks 
+ T 65,6 Jablka 
+ S292,1   8,2   16,6   16,7  11,7    6,2   18,2  35,5   18,7   92,2   3,9    3,1   18,9  21,5   20,9   36,7 
+Alergen: 1,3,7 1,7 1,12,3,9 1 1,7 
+2NEM Váno čka 100g Rohlík Polévka hašé Rohlík Šunka 80g 
+ 8273kJ Džem porce Mléko 1/1 Hov. pe č. myslivecká Jablka Rohlík 2 ks 
+ B 80,6 Knedlík houskový Jablka 
+ T 49,1 
+ S291,9   8,1    8,3   19,8  11,7    6,2   18,2  35,5   18,7   92,2   3,9    3,1   18,9  21,4   12,7   28,4 
+Alergen: 1,3 1,7 1,12,3,9 1 1
+3-1 Croasant čoko Polévka hov ězí s mas Žervé s pažitkou 
+ 8929kJ Pudink 125g Mamin čino ku ře Máslo porce 
+ B 88,6 Těstoviny Chléb 150g 
+ T 73,0 Jablka 
+ S270,0   0,5    0,4  107,8  67,1   49,9  112,8  21,0   22,6   38,4 
+Alergen: 1,3,7 1,3,9 1,12,7 
+3-2 Polévka hov ězí s mas Šunka 80g 
+ 6675kJ Brokolice se sýr. om Máslo porce 
+ B 53,1 Brambory va řené Rohlík 2 ks 
+ T 44,1 Jablka 
+ S234,3  31,1   22,8   61,9  21,5   20,9   36,7 
+Alergen: 1,3,7 1,3,7,9 1,7 
+3PK-1 Croasant čoko Rohlík Polévka hov ězí s mas Rohlík Žervé s pažitkou 
+11115kJ Pudink 125g Máslo porce Mamin čino ku ře Ovoce Máslo porce 
+ B104,3 Mléko 1/1 Těstoviny Chléb 150g 
+ T 90,6 Jablka 
+ S341,5   0,5    0,4  107,8  11,8   14,4   26,4  67,1   49,9  112,8   3,9    3,1   18,9  21,0   22,6   38,4 
+Alergen: 1,3,7 1,7 1,3,9 1 1,12,7 
+3PK-2 Polévka hov ězí s mas Rohlík Šunka 80g 
+ 8861kJ Brokolice se sýr. om Ovoce Máslo porce 
+ B 68,8 Brambory va řené Rohlík 2 ks 
+ T 61,7 Jablka 
+ S305,8  31,1   22,8   61,9   3,9    3,1   18,9  21,5   20,9   36,7 
+Alergen: 1,3,7 1,7 1,3,7,9 1 1,7 
+4 Váno čka 100g Rohlík Polévka hašé Rohlík Šunka 80g 
+ 8393kJ Džem porce Hov. pe č. myslivecká Jablka Máslo porce 
+ B 72,5 Máslo porce Knedlík houskový Rohlík 2 ks 
+ T 61,7 Jablka 
+ S280,1   8,2   16,6   16,7   3,4    2,3   24,1  35,5   18,7   92,2   3,9    3,1   18,9  21,5   20,9   36,7 
+Alergen: 1,3,7 1 1,12,3,9 1 1,7 
+4ML Váno čka 100g Rohlík Polévka hašé Rohlík Šunka 80g 
+ 8548kJ Džem porce Hov. pe č. myslivecká Pyré Máslo porce 
+ B 72,9 Máslo porce Knedlík houskový Rohlík 2 ks 
+ T 60,5 Banány 
+ S293,1   8,2   16,6   16,7   3,4    2,3   24,1  35,5   18,7   92,2   3,4    2,4   24,2  22,3   20,3   43,1 
+Alergen: 1,3,7 1 1,12,3,9 1 1,7 Ned ěle T: 1 D: 7 Jídelní lístek: Dětská 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře19.05.2019 
+4S Rohlík 2 ks Polévka rýžová Rohlík Svítek krupicový 
+ 8653kJ Med porce 2 ks Těstoviny s bílky Banány Pyré 
+ B 53,1 Pyré 
+ T 27,8 
+ S387,7   7,0    4,8   26,6  24,2    9,3   93,4   4,7    2,5   25,3  17,1   11,2   33,0 
+Alergen: 1 1,3,7 1 1,3 
+5 Váno čka 100g Rohlík Bujón s rýží Rohlík Šunka 80g 
+ 9629kJ Džem porce Mléko 1/1 Hov. pe č. myslivecká Pyré Máslo porce 
+ B106,2 Máslo porce Knedlík houskový Rohlík 2 ks 
+ T 66,6 Banány 
+ S309,7   8,2   16,6   16,7  11,7    6,2   18,2  60,6   21,1   94,5   3,4    2,4   24,2  22,3   20,3   43,1 
+Alergen: 1,3,7 1,7 1,12,3,9 1 1,7 
+9-150 Chléb 50g Jablka Mamin čino ku ře Jablka Žervé s pažitkou Rajče
+ 7559kJ Jogurt bílý 150g Těstoviny Chléb 100g 
+ B 89,7 Salát okurkový Jablka 
+ T 65,8 
+ S199,4   8,8    2,9    9,7   0,5    0,8   16,6  61,7   47,2   51,5   0,5    0,8   16,6  17,3   13,9   29,6   0,9    0,2    2,7 
+Alergen: 1,12,7 1,12,3 1,12,7 
+9/BLP Chléb blp pe čený Rohlík Bujón s rýží Máslo porce Žervé s pažitkou Obložený chlebí ček s 
+14053kJ Jogurt bílý 150g Jablka Mamin čino ku ře Mléko 1/4 Máslo porce Rajče
+ B140,6 Máslo porce Těstoviny BLP Chléb blp kuku řičný 
+ T118,2 Mléko 1/1 Salát okurkový Jablka 
+ S421,6  20,6   27,5   39,5   3,9    3,1   18,9  83,9   52,9   57,2   0,1    8,3    8,3  20,2   22,1   37,9  11,9    4,4    6,9 
+Alergen: 7 1 1,12 7 7 1,3,7 
+9D Chléb 150g Rohlík Polévka hov ězí s mas Chléb blp kuku řičný Žervé s pažitkou Obložený chlebí ček s 
+12718kJ Jogurt bílý 150g Jablka Mamin čino ku ře Máslo porce Máslo porce Rajče
+ B129,4 Máslo porce Těstoviny Mléko 1/4 Chléb 100g 
+ T111,5 Salát okurkový Jablka 
+ S361,2  16,2   12,2   12,3   3,9    3,1   18,9  68,2   50,1   54,5  10,2    9,3    9,4  17,4   22,1   37,9  13,5   14,6   17,1 
+Alergen: 1,12,7 1 1,12,3,9 7 1,12,7 1,12,3,7 
+9ML Chléb 150g Rohlík Polévka hov ězí s mas Máslo porce Žervé s pažitkou Obložený chlebí ček s 
+12402kJ Jogurt bílý 150g Pyré dia Mamin čino ku ře Chléb blp kuku řičný Máslo porce Rajče
+ B129,2 Máslo porce Těstoviny Mléko 1/4 Chléb 100g 
+ T110,1 Salát okurkový Pyré dia 
+ S348,7  16,2   12,2   12,3   3,8    2,4   11,9  68,2   50,1   54,5  10,2    9,3    9,4  17,3   21,4   30,9  13,5   14,6   17,1 
+Alergen: 1,12,7 1 1,12,3,9 7 1,12,7 1,12,3,7 
+9S Rohlík 2 ks Rohlík Polévka hašé Rohlík Šunka 80g Obložený chlebí ček s 
+ 9367kJ Jogurt bílý 150g Hov. pe č. myslivecká Jablka Máslo porce Rajče
+ B 90,5 Máslo porce Knedlík houskový Rohlík 2 ks 
+ T 76,2 Salát hlávkový B Jablka 
+ S283,7  12,1   15,3   15,4   3,4    2,3   24,1  36,1   19,8   20,4   3,9    3,1   18,9  21,5   20,9   36,7  13,5   14,6   17,1 
+Alergen: 1,7 1 1,12,3,9 1 1,7 1,12,3,7 
+BLP Chléb blp pe čený Máslo porce Bujón s rýží Piškot BLP (soják) Žervé s pažitkou 
+14780kJ Džem porce Mléko 1/1 Mamin čino ku ře Jablka Máslo porce 
+ B135,0 Máslo porce Těstoviny BLP Chléb blp kuku řičný 
+ T120,8 Mléko 1/1 Salát okurkový Jablka 
+ S466,0  15,5   25,1   37,1   8,4   12,1   24,1  83,9   52,9   62,2   7,0    8,6   24,4  20,2   22,1   37,9 
+Alergen: 7 7 1,12 3,7 7
+BML Croasant čoko Rohlík Polévka hašé Rohlík Šunka 80g 
+ 8843kJ Džem porce Mamin čino ku ře Jablka Rama porce 
+ B100,1 Rama porce Těstoviny Chléb 150g 
+ T 81,4 Jablka 
+ S233,0   0,1    0,4    1,5   3,6    8,9    8,9  67,1   52,8  115,7   3,9    3,1   18,9  25,5   16,1   31,9 
+Alergen: 1,3,7 1 1,3 1 1,12 Ned ěle T: 1 D: 7 Jídelní lístek: Dětská 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře19.05.2019 
+OK Rohlík 2 ks Polévka mrkvová s nu Rohlík Jogurt bílý 200 
+ 9634kJ Sýr trojuhelník Žemlovka s tvarohem Pyré Máslo porce 2 ks 
+ B 72,6 Máslo porce 2 ks Rohlík 2 ks 
+ T 85,1 Mléko 1/1 Banány 
+ S300,0  15,3   25,0   37,0  38,7   33,0  148,2   3,4    2,4   24,2  15,3   24,6   47,4 
+Alergen: 1,7 1,3,7 1 1,7 
+S-T Chléb 150g Rohlík Polévka vlo čková Rohlík Svítek krupicový 
+ 9650kJ Jogurt bílý bez tuku Jablka Vegetariánská pochou Pyré Jablka 
+ B 66,7 Džem porce Kuskus 
+ T 41,9 
+ S395,7  16,6    1,8   13,2   3,9    3,1   18,9  25,2   22,6   79,4   3,4    2,4   24,2  17,6   11,9   27,7 
+Alergen: 1,12,7 1 1,3,6,7,9 1 1,3 
+SP Rohlík 2 ks Pyré Polévka rýžová Rohlík Svítek krupicový 
+ 8261kJ Sýr trojuhelník - nt Těstoviny s kr.masem Banány Pyré 
+ B 65,7 
+ T 26,3 
+ S355,4   9,7    6,0    6,2   0,0    0,1   21,9  34,1    6,4   90,3   4,7    2,5   25,3  17,1   11,2   33,0 
+Alergen: 1,7 1,3,7 1 1,3 
+SPD Suchar 200g Pyré Polévka rýžová Banány Svítek krupicový 
+10328kJ Med porce 2 ks Těstoviny s kr.masem Pyré 
+ B 72,5 
+ T 26,6 
+ S468,2  19,9    8,6   40,8   0,0    0,1   21,9  34,1    6,4   90,3   1,3    0,2   23,0  17,1   11,2   33,0 
+Alergen: 1 1,3,7 1,3 
+VEG Croasant čoko Rohlík Polévka vlo čková Rohlík Žervé s pažitkou 
+ 9337kJ Pudink 125g Máslo porce Brokolice se sýr. om Jablka Máslo porce 
+ B 65,0 Mléko 1/1 Brambory va řené Chléb 150g 
+ T 64,3 Rohlík o řechový Jablka 
+ S329,7   0,5    0,4  107,8  11,8   14,4   26,4  27,7   23,6   62,8   3,9    3,1   18,9  21,0   22,6   38,4 
+Alergen: 1,3,7 1,7 1,3,7,9 1 1,12,7 
+VNM Rohlík 2 ks Rohlík Bujón s rýží Rohlík Šunka 80g 
+10337kJ Lu čina 62,5g Mléko 1/1 Ku ře pe čené A Mléko 1/4 Máslo porce 
+ B139,7 Máslo porce Rýže Rohlík 2 ks 
+ T 95,5 Mléko 1/1 
+ S255,5  22,7   26,1   38,1  11,7    6,2   18,2  80,8   40,7  119,6   3,4    2,4    2,4  21,0   20,1   63,7 
+Alergen: 1,7 1,7 1 1,7 1,7 
+ZO Piškoty 60 g Pudink 125g Bujón s vejcem Jogurt ovocný 150 g Kaše rýžová Mléko ochucené 
+12646kJ Káva chicory Tatra mléko Hov. pe č. myslivecká Mléko 1/1 Banány 
+ B129,6 Mléko 1/1 Kaše bramborová 
+ T 72,4 Pyré 
+ S447,8   7,7    3,3   24,4  16,7   12,9   34,7  59,5   24,6   59,3  13,6    5,8   17,8  23,3   22,4   45,2   8,8    3,3   26,5 
+Alergen: 1,3,7 7 1,3,7,9 7 7 7Ned ěle T: 1 D: 7 Jídelní lístek: Dětská 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře19.05.2019 

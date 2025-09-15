@@ -1,0 +1,274 @@
+0 Mléko 1/1 Bujón s vejcem Mléko 1/4 Bujón s vejcem 
+ 2769kJ 
+ B 81,8 
+ T 31,2 
+ S 12,6   8,3    3,8   15,8  36,7   13,7   14,0   0,0    0,0    0,1  36,7   13,7   14,0 
+Alergen: 7 3 7 3
+0BRK Piškoty 120g Mléko 1/1 Bujón s vejcem Kaše bramborová 
+ 5903kJ Kaše bramborová Pyré 
+ B 67,2 Pyré 
+ T 27,7 
+ S214,3  13,4    6,2   95,3   8,3    3,8   15,8  41,1   15,7   37,5   4,4    2,0   23,8 
+Alergen: 1,3 7 3,7 7
+0M Pyré Mléko 1/1 Bujón s vejcem Bujón s vejcem 
+ 4300kJ Veka balená 100g 
+ B 89,8 
+ T 34,6 
+ S 85,8   8,0    3,4   54,8   8,3    3,8   15,8  36,7   13,7   14,0  36,7   13,7   14,0 
+Alergen: 1 7 3 3
+1 Jogurt ovocný 150 g Mléko 1/1 Bujón s vejcem Pyré Kaše krupicová 
+10883kJ Piškoty 120g Ku ře pe čené A Kompot meru ňkový 
+ B132,4 Kaše bramborová mašt 
+ T 78,1 Kompot jabkový 
+ S331,1  18,7    8,2   97,3   8,3    3,8   15,8  82,5   50,6   82,3   0,0    0,1   21,9  23,0   15,4   38,1 
+Alergen: 1,3,7 7 1,3,7 1,7 
+10 Šáte ček 2 ks Rohlík Ku ře pe čené A Rohlík Tvaroh ov.šlehaný 
+11417kJ Máslo porce Rýže Jablka Veka balená 100g 
+ B102,9 Mléko 1/1 Kompot jabkový Máslo porce 
+ T 89,0 Jablka 
+ S368,1   8,4   19,0  108,4  11,8   14,4   26,4  49,6   32,7   64,5   3,9    3,1   18,9  29,2   19,6   35,4 
+Alergen: 1,3 1,7 1 1 1,7 
+11-1 Kobliha 2 ks Rohlík Pol. zelen. s vejci Rohlík Obložený talí ř - hot Vejce na tvrdo 
+13715kJ Jogurt ovocný 150 g Máslo porce Vep ř. pe č. selská Jablka Houska 2 ks Chléb 70g 
+ B112,4 Mléko 1/1 Knedlík houskový Máslo porce Máslo porce 
+ T134,1 Zelí dušené Jablka 
+ S390,0 Mou čník 
+ B T S  10,1   28,4   48,6  11,8   14,4   26,4  37,3   32,6   58,6   3,9    3,1   18,9  37,8   40,8   56,6  11,6   14,7   14,8 
+Alergen: 1,3,7 1,7 1,12,3,9 1 1,12,7 1,12,3,7 
+11-2 Pol. zelen. s vejci Rohlík Kaše krupicová Vejce na tvrdo 
+13731kJ Rizoto s masem a zel Jablka Kompot meru ňkový Chléb 70g 
+ B 94,0 Salát okurkový Máslo porce 
+ T119,3 Mou čník 
+ S443,6  33,7   43,2   69,2   3,9    3,1   18,9  23,0   15,4   38,1  11,6   14,7   14,8 
+Alergen: 1,3,7 1,7 1,12,3,7,9 1 1,7 1,12,3,7 
+11ML-1 Kobliha 2 ks Rohlík Pol. zelen. s vejci Pyré Obložený talí ř - hot Vejce na tvrdo 
+13870kJ Jogurt ovocný 150 g Máslo porce Vep ř. pe č. selská Rohlík Houska 2 ks Chléb 70g 
+ B112,8 Mléko 1/1 Knedlík houskový Máslo porce Máslo porce 
+ T132,8 Zelí dušené Banány 
+ S403,0 Mou čník 
+ B T S  10,1   28,4   48,6  11,8   14,4   26,4  37,3   32,6   58,6   3,4    2,4   24,2  38,6   40,2   63,0  11,6   14,7   14,8 
+Alergen: 1,3,7 1,7 1,12,3,9 1 1,12,7 1,12,3,7 
+11ML-2 Pyré 
+13870kJ Rohlík 
+ B112,8 
+ T132,8 
+ S403,0   3,4    2,4   24,2 
+Alergen: 1,3,7 1,7 1,12,3,9 1 1,12,7 1,12,3,7 St ředa T: 1 D: 3 Jídelní lístek: D ětská 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře15.05.2019 
+12 Kobliha Rohlík Polévka zeleninová Rohlík Obložený talí ř
+ 9503kJ Máslo porce No čky krupicové Jablka Chléb 100g 
+ B101,7 Mléko 1/1 Ku ře pe čené A Máslo porce 
+ T 81,9 Rýže Jablka 
+ S270,2 Kompot jabkový 
+ B T S   2,4   13,2   46,2  11,8   14,4   26,4  49,7   33,2   64,9   3,9    3,1   18,9  33,9   18,0   33,8 
+Alergen: 1,3,7 1,7 1,3,9 1 1,12,3,7 
+12M Kobliha Mléko 1/1 Polévka zeleninová Pyré Kaše krupicová 
+10097kJ Jogurt ovocný 150 g No čky krupicové Kompot meru ňkový 
+ B 91,7 Piškoty 120g Ku ře pe čené A 
+ T 71,6 Kaše bramborová mašt 
+ S340,1 Kompot jabkový 
+ B T S  21,1   21,4  110,5   8,3    3,8   15,8  48,3   37,7   69,4   0,0    0,1   21,9  14,0    8,6   31,2 
+Alergen: 1,3,7 7 1,3,7,9 1,7 
+13-1 Kobliha 2 ks Rohlík Pol. zelen. s vejci Rohlík Obložený talí ř - hot 
+11102kJ Máslo porce Vep ř. pe č. selská Jablka Houska 2 ks 
+ B 94,0 Mléko 1/1 Knedlík houskový Máslo porce 
+ T108,2 Zelí dušené Jablka 
+ S312,6   4,8   26,4   92,4  11,8   14,4   26,4  35,7   23,4   33,6   3,9    3,1   18,9  37,8   40,8   56,6 
+Alergen: 1,3,7 1,7 1,12,3,9 1 1,12,7 
+13-2 Pol. zelen. s vejci Rohlík Kaše krupicová 
+11118kJ Rizoto s masem a zel Jablka Kompot meru ňkový 
+ B 75,6 Salát okurkový 
+ T 93,3 
+ S366,2  32,1   34,0   43,2   3,9    3,1   18,9  23,0   15,4   38,1 
+Alergen: 1,3,7 1,7 1,12,3,7,9 1 1,7 
+13M-1 Kobliha Rohlík Pol. zelen. s vejci Rohlík Obložený talí ř - hot 
+ 9641kJ Máslo porce Vep ř. pe č. selská Jablka Chléb 100g 
+ B 90,3 Mléko 1/1 Knedlík houskový Máslo porce 
+ T 90,2 Zelí dušené Jablka 
+ S269,1   2,4   13,2   46,2  11,8   14,4   26,4  35,7   23,4   33,6   3,9    3,1   18,9  36,5   36,0   51,8 
+Alergen: 1,3,7 1,7 1,12,3,9 1 1,12,7 
+13M-2 Pol. zelen. s vejci Rohlík Kaše krupicová 
+10027kJ Rizoto s masem a zel Jablka Kompot meru ňkový 
+ B 73,2 Salát okurkový 
+ T 80,1 
+ S333,2  32,1   34,0   43,2   3,9    3,1   18,9  23,0   15,4   38,1 
+Alergen: 1,3,7 1,7 1,12,3,7,9 1 1,7 
+13ML-1 Kobliha 2 ks Rohlík Pol. zelen. s vejci Pyré Obložený talí ř - hot 
+11257kJ Máslo porce Vep ř. pe č. selská Rohlík Houska 2 ks 
+ B 94,4 Mléko 1/1 Knedlík houskový Máslo porce 
+ T106,9 Zelí dušené Banány 
+ S325,6   4,8   26,4   92,4  11,8   14,4   26,4  35,7   23,4   33,6   3,4    2,4   24,2  38,6   40,2   63,0 
+Alergen: 1,3,7 1,7 1,12,3,9 1 1,12,7 
+13NB-1 Šáte ček 2 ks Rohlík Pol. zelen. s vejci Rohlík Paštika 100g 
+10385kJ Máslo porce Vep ř. pe č. selská Kiwi Máslo porce 
+ B 88,5 Mléko 1/1 Knedlík houskový Houska 2 ks 
+ T 89,9 Zelí dušené Pomeran č
+ S315,5   8,4   19,0  108,4  11,8   14,4   26,4  35,7   23,4   33,6   4,1    2,8    9,3  28,5   30,3   38,0 
+Alergen: 1,3 1,7 1,12,3,9 1 1,12,7 
+13NB-2 Pol. zelen. s vejci Rohlík Kaše krupicová 
+10937kJ Rizoto s masem a zel Kiwi Kompot meru ňkový 
+ B 78,3 
+ T 85,4 
+ S371,0  31,0   33,8  129,9   4,1    2,8    9,3  23,0   15,4   38,1 
+Alergen: 1,3 1,7 1,3,7,9 1 1,7 St ředa T: 1 D: 3 Jídelní lístek: D ětská 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře15.05.2019 
+1NEM Jogurt ovocný 150 g Mléko 1/1 Bujón s vejcem Pyré Kaše krupicová 
+10274kJ Piškoty 120g Ku ře pe čené A Kompot meru ňkový 
+ B125,7 Kaše bramborová 
+ T 63,8 Kompot jabkový 
+ S333,7  18,7    8,2   97,3   8,3    3,8   15,8  82,5   47,1   78,8   0,0    0,1   21,9  16,3    4,5   27,2 
+Alergen: 1,3,7 7 1,3,7 1,7 
+2 Šáte ček 2 ks Rohlík Polévka zeleninová Rohlík Obložený talí ř
+11560kJ Máslo porce No čky krupicové Jablka Rohlík 2 ks 
+ B111,8 Mléko 1/1 Ku ře pe čené A Máslo porce 
+ T 92,5 Rýže Jablka 
+ S358,4 Kompot jabkový 
+ B T S   8,4   19,0  108,4  11,8   14,4   26,4  54,2   34,2   65,9   3,9    3,1   18,9  33,5   21,6   37,4 
+Alergen: 1,3 1,7 1,3,9 1 1,3,7 
+2NEM Šáte ček 2 ks Rohlík Polévka zeleninová Rohlík Obložený talí ř
+10946kJ Mléko 1/1 No čky krupicové Rohlík 2 ks 
+ B111,6 Ku ře pe čené A Jablka 
+ T 76,0 Rýže 
+ S358,2 Kompot jabkový 
+Jablka 
+ B T S   8,4   19,0  108,4  11,7    6,2   18,2  54,7   35,0   50,8   3,4    2,3   24,1  33,4   13,4   29,1 
+Alergen: 1,3 1,7 1,3,9 1 1,3,7 
+3-1 Kobliha 2 ks Pol. zelen. s vejci Obložený talí ř - hot 
+ 8916kJ Vep ř. pe č. selská Houska 2 ks 
+ B 78,3 Knedlík houskový Máslo porce 
+ T 90,6 Zelí dušené Jablka 
+ S241,1   4,8   26,4   92,4  35,7   23,4   33,6  37,8   40,8   56,6 
+Alergen: 1,3,7 1,12,3,9 1,12,7 
+3-2 Pol. zelen. s vejci Kaše krupicová 
+ 8932kJ Rizoto s masem a zel Kompot meru ňkový 
+ B 59,9 Salát okurkový 
+ T 75,8 
+ S294,8  32,1   34,0   43,2  23,0   15,4   38,1 
+Alergen: 1,3,7 1,12,3,7,9 1,7 
+3PK-1 Kobliha 2 ks Rohlík Pol. zelen. s vejci Rohlík Obložený talí ř - hot 
+10828kJ Jogurt ovocný 150 g Vep ř. pe č. selská Ovoce Houska 2 ks 
+ B 97,3 Mléko 1/1 Knedlík houskový Máslo porce 
+ T 91,6 Salát okurkový Jablka 
+ S331,8   4,8   26,4   92,4  17,0    8,2   20,2  33,9   13,1   22,4   3,9    3,1   18,9  37,8   40,8   56,6 
+Alergen: 1,3,7 1,7 1,12,3,9 1 1,12,7 
+3PK-2 Pol. zelen. s vejci Rohlík Kaše krupicová 
+11318kJ Rizoto s masem a zel Ovoce Kompot meru ňkový 
+ B 80,8 Salát okurkový 
+ T 87,1 
+ S386,4  32,1   34,0   43,2   3,9    3,1   18,9  23,0   15,4   38,1 
+Alergen: 1,3,7 1,7 1,12,3,7,9 1 1,7 
+4 Šáte ček 2 ks Rohlík Polévka zeleninová Rohlík Obložený talí ř
+11066kJ Máslo porce No čky krupicové Jablka Rohlík 2 ks 
+ B103,5 Ku ře pe čené A Máslo porce 
+ T 88,6 Rýže Jablka 
+ S346,4 Kompot jabkový 
+ B T S   8,4   19,0  108,4   3,5   10,6   10,7  54,2   34,2   65,9   3,9    3,1   18,9  33,5   21,6   37,4 
+Alergen: 1,3 1,7 1,3,9 1 1,3,7 St ředa T: 1 D: 3 Jídelní lístek: D ětská 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře15.05.2019 
+4ML Šáte ček 2 ks Rohlík Polévka zeleninová Pyré Obložený talí ř
+10587kJ Máslo porce No čky krupicové Rohlík Rohlík 2 ks 
+ B100,1 Ku ře pe čené A Máslo porce 
+ T 91,5 Kaše bramborová mašt Banány 
+ S315,2 Kompot jabkový 
+ B T S   8,4   19,0  108,4   3,5   10,6   10,7  50,4   38,4   70,1   3,4    2,4   24,2  34,4   21,0   43,8 
+Alergen: 1,3 1,7 1,3,7,9 1 1,3,7 
+4S Pyré Polévka nudlová Rohlík Ov.knedlíky s jablky 
+ 8244kJ Veka balená 100g Rizoto mrkvové Banány Pyré 
+ B 38,9 Med porce 2 ks 
+ T 10,4 
+ S414,1   8,2    3,4   35,7  14,6    2,3  122,3   4,7    2,5   25,3  11,4    2,2   24,0 
+Alergen: 1 1,3 1 1
+5 Šáte ček 2 ks Rohlík Bujón s rýží Pyré Obložený talí ř
+12267kJ Máslo porce Ku ře pe čené A Rohlík Rohlík 2 ks 
+ B139,0 Mléko 1/1 Rýže Máslo porce 
+ T 97,8 Kompot jabkový Banány 
+ S363,8   8,4   19,0  108,4  11,8   14,4   26,4  81,1   40,9   72,6   3,4    2,4   24,2  34,4   21,0   43,8 
+Alergen: 1,3 1,7 1 1 1,3,7 
+9-150 Chléb 50g Jablka Vep ř. pe č. selská Jablka Obložený talí ř Rajče
+ 5210kJ Jogurt bílý 150g Brambory va řené Chléb 100g 
+ B 69,5 Zelí dušené Jablka 
+ T 22,9 
+ S170,7   8,8    2,9    9,7   0,5    0,8   16,6  24,9    8,4   12,2   0,5    0,8   16,6  33,9    9,8   25,5   0,9    0,2    2,7 
+Alergen: 1,12,7 1,12 1,12,3,7 
+9/BLP Jogurt bílý 150g Máslo porce Bujón s rýží Chléb blp kuku řičný Obložený talí ř Vejce na tvrdo 
+13560kJ Chléb blp pe čený Mléko 1/1 Vep ř. pe č. selská Jablka Chléb blp kuku řičný Máslo porce 
+ B139,7 Máslo porce Bezlepkové knedlíky Máslo porce Rajče
+ T 86,9 Mléko 1/1 Zelí kysané Jablka 
+ S459,0  20,6   27,5   39,5   8,4   12,1   24,1  56,0   13,3   14,5  10,6    1,9   17,6  36,8   18,0   33,8   7,4   14,2   16,7 
+Alergen: 7 7 1,12,3 3,7 3,7 
+9D Váno čka dia 100g Jogurt bílý 150g Pol. zelen. s vejci Chléb 50g Obložený talí ř - hot Vejce na tvrdo 
+11011kJ Rohlík Vep ř. pe č. selská Máslo porce Chléb 100g Chléb 70g 
+ B104,4 Máslo porce Knedlík houskový Mléko 1/4 Máslo porce Máslo porce 
+ T100,1 Jablka Zelí dušené Jablka Rajče
+ S311,3   8,0    8,3   68,0   9,2   13,8   29,5  34,4   18,3   22,0   3,7    8,8    8,9  36,5   36,0   51,8  12,5   14,9   17,4 
+Alergen: 1,3 1,7 1,12,3,9 1,12,7 1,12,7 1,12,3,7 
+9ML Váno čka dia 100g Pyré dia Pol. zelen. s vejci Chléb 50g Obložený talí ř - hot Vejce na tvrdo 
+10388kJ Jogurt bílý 150g Vep ř. pe č. selská Máslo porce Chléb 100g Chléb 70g 
+ B104,1 Rohlík Knedlík houskový Mléko 1/4 Pyré dia Rajče
+ T 90,4 Máslo porce Zelí dušené Máslo porce 
+ S298,7   8,0    8,3   68,0   9,1   13,1   13,2  34,4   18,3   22,0   3,7    8,8    8,9  36,4   35,3   35,4  12,4    6,7    9,2 
+Alergen: 1,3 1,7 1,12,3,9 1,12,7 1,12,7 1,12,3 
+9S Váno čka dia 100g Jablka Polévka zeleninová Rohlík Obložený talí ř Vejce pln ěná 
+12017kJ Jogurt bílý 150g No čky krupicové Jablka Máslo porce Rohlík 
+ B139,3 Rohlík Ku ře pe čené A Rohlík 2 ks Rajče
+ T 97,9 Máslo porce Rýže Jablka 
+ S341,7 Salát hlávkový B 
+ B T S   8,0    8,3   68,0   9,2   13,8   13,9  54,4   35,1   35,6   3,9    3,1   18,9  33,5   21,6   37,4  30,2   15,9   18,4 
+Alergen: 1,3 1,7 1,12,3,9 1 1,3,7 1,3,7 
+BLP Chléb blp pe čený Máslo porce Bujón s rýží Piškot BLP (soják) Obložený talí ř
+12372kJ Máslo porce Mléko 1/1 Vep ř. pe č. selská Jablka Chléb blp kuku řičný 
+ B123,5 Mléko 1/1 Bezlepkové knedlíky Máslo porce 
+ T 77,1 Zelí kysané Jablka 
+ S428,1  15,4   25,1   37,1   8,4   12,1   24,1  56,0   13,3   14,5   7,0    8,6   24,4  36,8   18,0   33,8 
+Alergen: 7 7 1,12,3 3,7 3,7 St ředa T: 1 D: 3 Jídelní lístek: D ětská 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře15.05.2019 
+BML Šáte ček 2 ks Rohlík Pol. zelen. s vejci Rohlík Paštika 100g 
+10079kJ Rama porce Vep ř. pe č. selská Jablka Houska 2 ks 
+ B 79,4 Knedlík houskový Rama porce 
+ T 83,6 Zelí dušené Jablka 
+ S320,7   8,4   19,0  108,4   3,5    8,8    8,9  35,7   23,4   33,6   3,9    3,1   18,9  28,0   29,1   44,9 
+Alergen: 1,3 1 1,12,3,9 1 1,12 
+OK Rohlík 2 ks Rohlík Sedlina vaje čná Pyré Sýr duko 
+ 9340kJ Žervé 50g Kaše bramborová mašt Rohlík Veka balená 100g 
+ B 64,7 Máslo porce 2 ks Kompot jabkový Máslo porce 2 ks 
+ T 96,6 Mléko 1/1 Banány 
+ S266,3  21,3   32,5   44,5   3,4    2,3   24,1  12,9   15,7   47,4   3,4    2,4   24,2  23,6   43,6   66,4 
+Alergen: 1,7 1 1,3,7 1 1,7 
+S-T Rohlík 2 ks Rohlík Pol. zele. s krupicí Pyré Jogurt bžb 
+ 8586kJ Pudink laktino Jablka Rizoto zeleninové Rohlík Jogurt bílý bez tuku 
+ B 53,1 Salát okurkový Rohlík 2 ks 
+ T 22,2 Jablka 
+ S392,0  12,8    7,4   53,1   3,9    3,1   18,9  16,7    3,3   12,6   3,4    2,4   24,2  16,3    5,9   21,7 
+Alergen: 1,7 1 1,12,3,7,9 1 1,7 
+SP Rohlík 2 ks Pyré Polévka nudlová Rohlík Ov.knedlíky s jablky 
+ 7856kJ Med porce 2 ks Kr ůtí dušené Banány Pyré 
+ B 50,9 Rýže 
+ T 14,1 
+ S372,3   7,0    4,7   36,9   0,0    0,1   21,9  27,7    4,6   83,5   4,7    2,5   25,3  11,4    2,2   24,0 
+Alergen: 1 1,3 1 1
+SPD Suchar 200g Pyré Polévka nudlová Banány Ov.knedlíky s jablky 
+ 9473kJ Med porce 2 ks Kr ůtí dušené Pyré 
+ B 60,4 Rýže 
+ T 15,6 
+ S453,1  19,9    8,6   40,8   0,0    0,1   21,9  27,7    4,6   83,5   1,3    0,2   23,0  11,4    2,2   24,0 
+Alergen: 1 1,3 1
+VEG Kobliha 2 ks Rohlík Polévka zeleninová Rohlík Sýr duko 
+11588kJ Máslo porce No čky krupicové Jablka Máslo porce 
+ B 67,3 Mléko 1/1 Rizoto zeleninové Houska 2 ks 
+ T111,2 Salát okurkový Ovoce 
+ S361,3 Mou čník 
+ B T S   4,8   26,4   92,4  11,8   14,4   26,4  23,5   28,8   54,8   3,9    3,1   18,9  23,2   38,5   54,3 
+Alergen: 1,3,7 1,7 1,12,3,7,9 1 1,12,7 
+VNM Rohlík 2 ks Rohlík Bujón s rýží Rohlík Sýr duko 
+ 9689kJ Vejce na tvrdo Mléko 1/1 Hov ězí dušené Mléko 1/4 Veka balená 100g 
+ B116,8 Máslo porce 2 ks Rýže Máslo porce 
+ T 85,8 Mléko 1/1 
+ S261,0  21,7   30,8   42,8  11,7    6,2   18,2  57,6   11,3   90,2   3,4    2,4    2,4  22,2   35,2   35,3 
+Alergen: 1,3,7 1,7 1 1,7 1,7 
+ZO Piškoty 60 g Pyré Pol. zelen. s vejci Jogurt ovocný 150 g Kaše krupicová Mléko ochucené 
+10905kJ Káva chicory Jogurt ovocný 150 g Ku ře pe čené A Mléko 1/4 Kompot meru ňkový 
+ B115,2 Tatra mléko Kaše bramborová mašt 
+ T 82,0 Mléko 1/1 
+ S339,5   7,7    3,3   24,4  21,6   14,9   26,9  48,8   43,1   77,8   5,3    2,0    2,1  23,0   15,4   38,1   8,8    3,3   26,5 
+Alergen: 1,3,7 7 1,3,7,9 7 1,7 7St ředa T: 1 D: 3 Jídelní lístek: D ětská 
+Dieta Snídan ě Přesnídávka Ob ěd Sva čina Ve čeře 2.Ve čeře15.05.2019 

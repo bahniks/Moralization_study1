@@ -3,7 +3,7 @@ from pdf2image import convert_from_path
 from PIL import Image
 import os
 
-menus_dir = os.path.join(os.path.dirname(__file__), 'Menus')
+menus_dir = os.path.join(os.path.dirname(__file__), 'Menus2')
 poppler_path = r'D:\Poppler\poppler-25.07.0\Library\bin'  # Update if needed
 
 try:

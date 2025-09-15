@@ -12,7 +12,7 @@ import random
 from common import ExperimentFrame, InstructionsFrame, InstructionsAndUnderstanding, Measure, MultipleChoice
 from questionnaire import Questionnaire
 from gui import GUI
-from diets import DIETS
+from diets import DIETS, DIETS_KIDS
 from constants import MAX_BDM_PRIZE, MINUTEBONUS, TESTING
 
 
@@ -194,8 +194,11 @@ class Task(ExperimentFrame):
     def __init__(self, root):
         if not "menu_order" in root.status:
             menus = [f for f in os.listdir(os.path.join(os.path.dirname(__file__), 'Menus')) if f.endswith('.png')]
+            kidsMenus = [f for f in os.listdir(os.path.join(os.path.dirname(__file__), 'Menus2')) if f.endswith('.png')]
             random.shuffle(menus)
-            root.status["menu_order"] = menus
+            random.shuffle(kidsMenus)
+            root.status["menu_length"] = len(menus)
+            root.status["menu_order"] = menus + kidsMenus
 
         super().__init__(root)        
 
@@ -227,7 +230,10 @@ class Task(ExperimentFrame):
     def newTrial(self):
         self.root.status["trial"] += 1
 
-        self.currentDiet = random.choice(DIETS)
+        if self.root.status["trial"] <= self.root.status["menu_length"]:
+            self.currentDiet = random.choice(DIETS)
+        else:
+            self.currentDiet = random.choice(DIETS_KIDS)
 
         if self.root.status["trial"] == 1:
             self.root.status["startTime"] = perf_counter()
@@ -455,12 +461,13 @@ class Ratings1(InstructionsFrame):
 
     def write(self):
         self.file.write("Ratings1\n")
-        self.file.write(self.id + "\t" + str(self.difficulty.answer.get()) + "\t" + str(self.satisfaction.answer.get()) + "\n")
+        self.file.write(self.id + "\t" + str(self.difficulty.answer.get()) + "\t" + str(self.satisfaction.answer.get()) + "\n\n")
 
 
 class Choice(InstructionsFrame):
     def __init__(self, root):
-        self.elapsedTime = floor((perf_counter() - root.status["startTime"]) / 60)
+        self.elapsedTime_s = perf_counter() - root.status["startTime"]
+        self.elapsedTime = floor(self.elapsedTime_s / 60)
         baseText = continuation if self.elapsedTime < 20 else endtime
         reminderText = "" if self.elapsedTime > 20 else eval("reminder_" + root.status["condition"])
         if root.status["trial"] == 1:
@@ -501,7 +508,7 @@ class Choice(InstructionsFrame):
 
     def write(self):
         self.file.write("Choice\n")
-        self.file.write(self.id + "\t" + str(self.root.status["trial"]) + "\t" + self.response + "\t" + str(self.elapsedTime) + "\n")
+        self.file.write(self.id + "\t" + str(self.root.status["trial"]) + "\t" + self.response + "\t" + str(self.elapsedTime_s) + "\n\n")
 
 
 class Ratings2(Questionnaire):
@@ -601,6 +608,7 @@ class BDM(InstructionsFrame):
         self.rowconfigure(6, weight = 2)        
 
         self.controlNum = 0
+        self.file.write("BDM Control Questions\n")
         self.createQuestion()
 
 
