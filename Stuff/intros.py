@@ -62,6 +62,9 @@ Děkujeme Vám ještě jednou za spolupráci a čas!
 
 Centrum laboratorního a experimentálního výzkumu FPH VŠE""" 
 
+# add contact info, update the website name
+
+
 ################################################################################
 
 
