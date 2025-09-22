@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk
-from time import time, sleep
+from time import time, sleep, perf_counter
 
 import os
 import sys
@@ -265,12 +265,55 @@ class Question(Canvas):
             self.cond.config(state = "disabled")
 
 
+class TextFrame(ExperimentFrame):
+    def __init__(self, root, text, width = 80, qlines = 2, alines = 5, name = "", timeDisabled_s = 0, requiredLength = 0):
+        super().__init__(root)
+
+        self.timeDisabled_s = timeDisabled_s
+        self.requiredLength = requiredLength
+
+        self.file.write(name + "\n")
+        self.textarea = TextArea(self, text, width, qlines, alines, on_text_change = lambda e: self.checkEnabling())
+        self.textarea.grid(row = 1, column = 1)
+
+        ttk.Style().configure("TButton", font = "helvetica 15")
+        self.next = ttk.Button(self, text = "Pokračovat", command = self.nextFun)
+        self.next.grid(column = 1, row = 2) 
+
+        self.columnconfigure(0, weight = 1)
+        self.columnconfigure(2, weight = 1)
+        self.rowconfigure(0, weight = 1)
+        self.rowconfigure(2, weight = 1)
+        self.rowconfigure(3, weight = 1)
+
+        self.time0 = perf_counter()
+
+        if timeDisabled_s or requiredLength:            
+            self.next.config(state = "disabled")
+            self.after(timeDisabled_s * 1000, self.checkEnabling)
+
+    def write(self):
+        self.file.write(self.id + "\t")
+        self.textarea.write()
+        
+    def checkEnabling(self):
+        if len(self.textarea.check()) >= self.requiredLength and perf_counter() - self.time0 >= self.timeDisabled_s:
+            self.next.config(state = "normal")
+        else:
+            self.next.config(state = "disabled")
+
+    
+
+
+
 class TextArea(Canvas):
-    def __init__(self, root, text, width = 80, qlines = 2, alines = 5):
+    def __init__(self, root, text, width = 80, qlines = 2, alines = 5, on_text_change = None):
         super().__init__(root)
         self["background"] = "white"
         self["highlightbackground"] = "white"
         self["highlightcolor"] = "white"
+
+        self.on_text_change = on_text_change if on_text_change else lambda x: None
 
         self.root = root
 
@@ -284,7 +327,9 @@ class TextArea(Canvas):
         self.label.grid(column = 0, row = 0)
 
         self.field = Text(self, width = int(width*1.2), wrap = "word", font = "helvetica 15",
-                          height = alines, relief = "solid")
+                  height = alines, relief = "solid")
+        self.field.bind("<KeyRelease>", self.on_text_change)
+
         self.field.grid(column = 0, row = 1, pady = 6)
 
         self.columnconfigure(0, weight = 1)
