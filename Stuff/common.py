@@ -9,6 +9,7 @@ import urllib.request
 import urllib.parse
 
 from constants import TESTING, URL
+import re
 
 
 class ExperimentFrame(Canvas):
@@ -58,9 +59,6 @@ class ExperimentFrame(Canvas):
                 return            
             sleep(pause)               
         return
-
-
-
 
 
 class InstructionsFrame(ExperimentFrame):
@@ -122,6 +120,7 @@ class InstructionsFrame(ExperimentFrame):
         self.rowconfigure(2, weight = 3)
         self.rowconfigure(3, weight = 3)
 
+    # Overload addStandardTags to handle <color: xxx>...</color>
     def addStandardTags(self):
         self.addtags("<b>", "</b>", "bold")
         self.addtags("<i>", "</i>", "italic")
@@ -130,17 +129,35 @@ class InstructionsFrame(ExperimentFrame):
         self.addtags("<blue>", "</blue>", "blue")
         self.addtags("<red>", "</red>", "red")  
         self.addtags("<green>", "</green>", "green")
+        # Handle all <color: xxx>...</color> tags
+        text_content = self.text.get("1.0", "end")
+        for match in re.finditer(r"<color:\s*([^>]+)\s*>", text_content):
+            color = match.group(1).strip()
+            starttag = f"<color: {color}>"
+            self.addtags(starttag, "</color>", f"color_{color}")
 
     def addtags(self, starttag, endtag, tag):            
         i_index = "1.0"
         while True:
-            i_index = self.text.search(starttag, i_index)
+            i_index = self.text.search(starttag, i_index, regexp=False)
             if not i_index:
                 break
-            e_index = self.text.search(endtag, i_index)
-            self.text.tag_add(tag, i_index, e_index)
-            self.text.delete(e_index, e_index + "+{}c".format(len(endtag)))
-            self.text.delete(i_index, i_index + "+{}c".format(len(starttag)))
+            e_index = self.text.search(endtag, i_index, regexp=False)
+            if not e_index:
+                break
+            # Handle <color: xxx>...</color>
+            if starttag.startswith("<color:"):
+                # Extract color name
+                color_name = starttag[7:-1].strip()
+                tag_name = f"color_{color_name}"
+                # Add tag if not already present
+                if not tag_name in self.text.tag_names():
+                    self.text.tag_configure(tag_name, foreground=color_name)
+                self.text.tag_add(tag_name, i_index, e_index)
+            else:
+                self.text.tag_add(tag, i_index, e_index)
+            self.text.delete(e_index, f"{e_index}+{len(endtag)}c")
+            self.text.delete(i_index, f"{i_index}+{len(starttag)}c")
             i_index = e_index
 
     def changeText(self, newtext, tags = True):
@@ -303,9 +320,6 @@ class TextFrame(ExperimentFrame):
             self.next.config(state = "disabled")
 
     
-
-
-
 class TextArea(Canvas):
     def __init__(self, root, text, width = 80, qlines = 2, alines = 5, on_text_change = None):
         super().__init__(root)
@@ -333,7 +347,6 @@ class TextArea(Canvas):
         self.field.grid(column = 0, row = 1, pady = 6)
 
         self.columnconfigure(0, weight = 1)
-
 
     def check(self):
         return self.field.get("1.0", "end").strip()
@@ -395,8 +408,7 @@ class Measure(Canvas):
             self.middle.grid(column = 1, row = 1, columnspan = 2)
             self.question["font"] = "helvetica 15"
 
-        self.scale = Canvas(self, background = "white", highlightbackground = "white",
-                            highlightcolor = "white")
+        self.scale = Canvas(self, background = "white", highlightbackground = "white", highlightcolor = "white")
         self.scale.grid(column = 1, row = 2, sticky = EW, columnspan = 2, padx = 40)
 
         self.radios = []

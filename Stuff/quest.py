@@ -21,7 +21,7 @@ questintro = f"""V následující části studie budete odpovídat na otázky o 
 
 Každou otázku si pečlivě přečtěte. Snažte se však na otázky nemyslet příliš dlouho; první odpověď, která Vám přijde na mysl, je obvykle nejlepší.
 
-Za účelem ověření, zda otázkám věnujete pozornost, je mezi otázkami umístěno i několik kontrolních otázek. Pokud odpovíte na všechny kontrolní otázky správně, můžete získat dalších {BONUS} Kč."""
+Za účelem ověření, zda otázkám věnujete pozornost, jsou umístěny dvě kontrolní otázky. Pokud odpovíte na všechny kontrolní otázky správně, můžete získat dalších {BONUS} Kč."""
 
 hexacoinstructions = """Na následujících stránkách najdete řadu prohlášení o Vaší osobě.
 
@@ -141,8 +141,7 @@ class Quest(ExperimentFrame):
 
 
 class Likert(Canvas):
-    def __init__(self, root, text, options = 5, shortText = "",
-                 left = "strongly disagree", right = "strongly agree"):
+    def __init__(self, root, text, options = 5, shortText = "", left = "strongly disagree", right = "strongly agree"):
         super().__init__(root)
 
         self.root = root
@@ -182,15 +181,8 @@ class Likert(Canvas):
         if attentiontext in self.text:
             if not "attention_checks" in self.root.root.status:
                 self.root.root.status["attention_checks"] = 0
-                # self.root.root.texts["attention1"] = "Neodpověděl(a)"
-                # self.root.root.texts["attention2"] = "Nezískáváte"
-                # self.root.root.status["bonus"] = 0
             if self.answer.get() == self.text[-2]:
                 self.root.root.status["attention_checks"] += 1
-                # if self.root.root.status["attention_checks"] == self.root.checksNumber:
-                    # self.root.root.texts["attention1"] = "Odpověděl(a)"
-                    # self.root.root.texts["attention2"] = "Získáváte"
-                    # self.root.root.status["bonus"] = BONUS
         else:
             ans = "{}\t{}\t{}\n".format(self.short, self.answer.get(), self.text.replace("\t", " "))
             self.root.file.write(self.root.id + "\t" + ans)

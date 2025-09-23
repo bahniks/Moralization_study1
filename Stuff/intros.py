@@ -32,12 +32,12 @@ Pokud jste již tak neučinili, přečtěte si informovaný souhlas a podepište
 intro = f"""Tímto začíná naše studie, jejíž krátké shrnutí zde uvádíme:
 
 1) Hlavním úkolem je hodnocení nemocničních jídel.
-    a. Budou Vám prezentovány jídelníčky s popisem jídel z nemocniční jídelny FN Motol. 
+    a. Budou Vám prezentovány denní jídelníčky s popisem jídel z nemocniční jídelny FN Motol. 
     b. Vaším úkolem bude přepsat některé údaje a ohodnotit pokrmy. 
     c. Po každém hodnoceném dnu si můžete zvolit, zda chcete pokračovat, nebo úkol ukončit. Za předčasné ukončení nejste nijak penalizováni.
 2) Budete odpovídat na otázky o tom, jak se Vám úkol dělal. 
 3) Na závěr vyplníte dotazník s několika demografickými údaji a dalšími otázkami zaměřenými na to, jak smýšlíte o práci a světě kolem sebe. 
-    a. Součástí jsou také dvě kontrolní otázky pozornosti – pokud odpovíte správně, získáte dodatečnou odměnu {BONUS} Kč.
+    a. Součástí jsou také dvě kontrolní otázky pozornosti – pokud odpovíte na obě správně, získáte dodatečnou odměnu {BONUS} Kč.
 4) Vyplacení celkové odměny a rozloučení.
 
 V případě, že máte otázky nebo narazíte na technický problém během úkolů, prosíme, zvedněte ruku a tiše vyčkejte příchodu výzkumného asistenta.

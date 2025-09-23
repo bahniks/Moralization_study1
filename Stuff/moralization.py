@@ -28,8 +28,6 @@ Po každém ohodnoceném jídelníčku se můžete rozhodnout, zda budete pokra�
 <b>{}</b>
 Úkol bude trvat maximálně 20 minut.
 
-Fakultní Nemocnice Motol Vám tímto děkuje, že jí pomáháte zlepšovat její služby.
-
 Po přečtení instrukcí zodpovězte kontrolní otázky níže."""
 
 neutral = ""
@@ -57,7 +55,7 @@ Answers2 = ["Vyfotit jídlo a nahrát fotografii do systému.", "Přesně přeps
 Feedback2 = ["Špatně. Máte přesně přepsat údaje o energii, bílkovinách, tucích a cukrech a pak subjektivně ohodnotit chutnost, vzhled a nutriční bohatost jednotlivých jídel.", "Ano, správně.", "Špatně. Máte přesně přepsat údaje o energii, bílkovinách, tucích a cukrech a pak subjektivně ohodnotit chutnost, vzhled a nutriční bohatost jednotlivých jídel.", "Špatně. Máte přesně přepsat údaje o energii, bílkovinách, tucích a cukrech a pak subjektivně ohodnotit chutnost, vzhled a nutriční bohatost jednotlivých jídel."]
 
 
-task = "V záložce Jídelníčky v menu nahoře je seznam všech diet a jejich složení. Prosíme, nejdříve <b>najděte v seznamu dietu označenou jako {} a vyplňte údaje o jejím složení</b>. Následně jídla podávané osobám s danou dietou ohodnoťte."
+task = "V záložce Jídelníčky v menu nahoře je seznam všech diet a jejich složení. Prosíme, nejdříve <b>ve sloupci <color: red4>“Dieta”</color> najděte v seznamu dietu označenou jako {} a vyplňte údaje o jejím složení</b>. Následně jídla v dané dietě ohodnoťte."
 
 tasteText = "Jak chutně toto jídlo působí?"
 lookText = "Jak bude jídlo nejspíše vizuálně přitažlivé?"
@@ -128,19 +126,19 @@ endtime2 = """Dokončili jste hodnocení {} a strávili na úkolu {} minut.
 Jelikož již uplynulo více než 10 minut od začátku úkolu, úkol je ukončen."""
 
 
-BDMtext = """Nyní můžete uvést, kolik peněz vyžadujete jako bonus navíc, abyste na úkolu ještě 10 minut pracovali. Pomocí aukce pak bude určeno, zda na úkolu budete pracovat či ne a tedy zda požadovaný bonus navíc získáte či nikoliv.
+BDMtext = """Nyní můžete uvést, kolik peněz vyžadujete jako bonus navíc, abyste na úkolu ještě 10 minut pracovali. Pomocí mechanismu popsaného níže bude určeno, zda na úkolu budete pracovat či ne a tedy zda požadovaný bonus navíc získáte či nikoliv.
 
-Vysvětleme si pravidla aukce:
+Vysvětleme si pravidla:
 
-Níže uvidíte pole, kam zadáte nejnižší částku (v Kč), za kterou byste byli ochotni strávit dalších 10 minut stejným úkolem (bez možnosti dříve skončit), mezi 0 Kč a 100 Kč.
+Níže uvidíte pole, kam zadáte nejnižší částku (v Kč), za kterou byste byli ochotni strávit dalších 10 minut stejným úkolem (bez možnosti skončit dříve), mezi 0 Kč a 100 Kč.
 
-Po odeslání této částky generátor náhodných čísel vylosuje náhodné číslo mezi 0 a 100.
+Po odeslání této částky generátor náhodných čísel vylosuje náhodné číslo mezi 0 a 100 (tj. všechny čísla od 0 do 100 mají stejnou pravděpodobnost, že budou vylosována).
 
 Pokud bude náhodné číslo větší či rovné (≥) Vámi minimálně požadované částce, obdržíte částku ve velikosti vylosovaného náhodného čísla jako bonus a budete 10 minut dále pracovat na úkolu. Například, uvedete-li 20 Kč a bude vylosováno 50 Kč, získáte bonus 50 Kč navíc a budete pokračovat v úkolu.
 
-Pokud je náhodné číslo menší než (<) Vámi minimálně požadovaná částka, nezískáte dodatečný bonus a na úkolu už pracovat nebudete. Například, uvedete-li 50 Kč a bude vylosováno 20 Kč, nezískáte nic navíc a budete pokračovat další částí studie.
+Pokud je náhodné číslo menší než (<) Vámi minimálně požadovaná částka, nezískáte dodatečný bonus a na úkolu už pracovat nebudete. Například, uvedete-li 50 Kč a bude vylosováno 20 Kč, nezískáte nic navíc, nebudete pokračovat v úkolu a přesunete se k další částí studie.
 
-Tento proces zajišťuje, že nejvýhodnější je zadat skutečné minimum, za které byste na úkolu reálně pracovali. Když uvedete moc vysokou požadovanou částku, je nízká pravděpodobnost, že bude vylosované číslo stejné nebo vyšší a nezískáte tedy nic. Pakliže uvedete příliš nízkou částku, může se stát, že za úkol dostanete méně, než byste chtěli. Přeplacení ani podstřelení se tedy nevyplácí.
+Tento proces zajišťuje, že nejvýhodnější je zadat skutečné minimum, za které byste na úkolu pracovali. Když uvedete moc vysokou požadovanou částku, je nízká pravděpodobnost, že bude vylosované číslo stejné nebo vyšší a nezískáte tedy nic. Pakliže uvedete příliš nízkou částku, může se stát, že za úkol dostanete méně, než byste chtěli. Přeplacení ani podstřelení se tedy nevyplácí.
 
 Než uvedete nejnižší částku (v Kč), za kterou byste byli ochotni strávit dalších 10 minut stejným úkolem, zkontrolujeme si porozumění aukci."""
 
@@ -718,4 +716,4 @@ if __name__ == "__main__":
     from login import Login
     import os
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([BDM, BDMResult, Task, TimeTask, Login, Task, Ratings1, Choice, Task, Choice, Ratings2, MoralizationInstructions])
+    GUI([Task, BDM, BDMResult, Task, TimeTask, Login, Task, Ratings1, Choice, Task, Choice, Ratings2, MoralizationInstructions])
