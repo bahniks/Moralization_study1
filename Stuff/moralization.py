@@ -26,7 +26,7 @@ Vaším úkolem je:
 (b) po přečtení podávaného pokrmu ohodnotit každé jídlo (snídani, oběd, večeři) ve vybraném jídelníčku podle toho, jak Vám osobně připadá chutné, vizuálně přitažlivé a nutričně bohaté.
 Po každém ohodnoceném jídelníčku se můžete rozhodnout, zda budete pokračovat dalším jídelníčkem, nebo úkol zcela ukončíte a přesunete se k další části studie. Záleží pouze na Vás, zda budete v tomto úkolu pokračovat, nebo skončíte. Z předčasného ukončení nevyplývá žádná penalizace.
 <b>{}</b>
-Úkol bude trvat maximálně 20 minut.
+Úkol bude trvat maximálně 30 minut.
 
 Po přečtení instrukcí zodpovězte kontrolní otázky níže."""
 
@@ -46,7 +46,7 @@ Vaše pečlivé hodnocení jídelníčků pomůže nemocničním dietologům zv�
 
 monetary_end = "Za hodnocení jídelníčků jste obdržel(a) navíc odměnu {} Kč."
 
-Control1 = "Co se stane, když se rozhodnete úkol ukončit dříve než za 20 minut?"
+Control1 = "Co se stane, když se rozhodnete úkol ukončit dříve než za 30 minut?"
 Answers1 = ["Budete penalizováni a přijdete o celou odměnu.", "Musíte zaplatit poplatek a opustit laboratoř.", "Můžete úkol bez jakékoli penalizace ukončit a přesunout se na další část studie.", "Musíte počkat, než vyprší časomíra, jinak se studie zneplatní."]
 Feedback1 = ["Špatně. Můžete úkol bez jakékoli penalizace ukončit a přesunout se na další část studie.", "Špatně. Můžete úkol bez jakékoli penalizace ukončit a přesunout se na další část studie.", "Ano, správně.", "Špatně. Můžete úkol bez jakékoli penalizace ukončit a přesunout se na další část studie."]
 
@@ -89,7 +89,7 @@ ratingsText2 = "Tvrzení níže ohodnoťte na základě toho, nakolik s nimi sou
 continuation = """Dosud jste dokončili hodnocení {} a strávili na úkolu {} minut.
 {}
 <b>Uveďte, zda chcete pokračovat hodnocení dalších jídelníčků, nebo zda chcete úkol ukončit.</b>
-V úkolu je možné pokračovat nejdéle do uplynutí 20 minut od jeho začátku.
+V úkolu je možné pokračovat nejdéle do uplynutí 30 minut od jeho začátku.
 
 Pokud zvolíte „Pokračovat“, zobrazí se Vám další jídelníček k přepsání nutričních hodnot a ohodnocení jídel. 
 Pokud zvolíte „Ukončit“, úkol skončí a přesunete se na další část studie.
@@ -112,7 +112,7 @@ Vaše pečlivé hodnocení jídelníčků pomůže nemocničním dietologům zv�
 
 endtime = """Dosud jste dokončili hodnocení {} a strávili na úkolu {} minut.
 
-Jelikož již uplynulo více než 20 minut od začátku úkolu, hodnocení dalších jídelníčků již není možné."""
+Jelikož již uplynulo více než 30 minut od začátku úkolu, hodnocení dalších jídelníčků již není možné."""
 
 
 continuation2 = """Dosud jste dokončili hodnocení {} a strávili na úkolu {} minut.
@@ -466,8 +466,8 @@ class Choice(InstructionsFrame):
     def __init__(self, root):
         self.elapsedTime_s = perf_counter() - root.status["startTime"]
         self.elapsedTime = floor(self.elapsedTime_s / 60)
-        baseText = continuation if self.elapsedTime < 20 else endtime
-        reminderText = "" if self.elapsedTime > 20 else eval("reminder_" + root.status["condition"])
+        baseText = continuation if self.elapsedTime < 30 else endtime
+        reminderText = "" if self.elapsedTime > 30 else eval("reminder_" + root.status["condition"])
         if root.status["trial"] == 1:
             text = baseText.format("jednoho jídelníčku", str(self.elapsedTime), reminderText)
         else:
@@ -481,7 +481,7 @@ class Choice(InstructionsFrame):
         self.buttonFrame.grid(row=2, column=1)
 
         self.continueButton = ttk.Button(self.buttonFrame, text="Pokračovat", command=self.proceed)
-        if self.elapsedTime < 20:
+        if self.elapsedTime < 30:
             self.continueButton.grid(column=0, row=2, sticky="w", padx=60)
 
             self.endButton = ttk.Button(self.buttonFrame, text="Ukončit", command=self.end)
