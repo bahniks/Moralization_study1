@@ -84,7 +84,7 @@ class Stereotypes(InstructionsFrame):
                 self.next.config(state="disabled")
                 self.next.unbind("<Button-1>")
                 self.update()
-                self.after(self.wait * int(1000 / SHORT_LIMIT), lambda: [self.next.config(state="normal"), self.next.bind("<Button-1>", lambda e: self.next.invoke())])
+                self.after(self.wait * int(10000 / SHORT_LIMIT), lambda: [self.next.config(state="normal"), self.next.bind("<Button-1>", lambda e: self.next.invoke())])
             elif self.condition == "imagery":
                 self.destroy()  
                 self.root.content = Imagery[0](self.root, **Imagery[1])
@@ -94,7 +94,8 @@ class Stereotypes(InstructionsFrame):
                 self.root.content = Influence[0](self.root, **Influence[1])
                 self.root.content.grid(row = 0, column = 0, sticky = (N, S, E, W))
             elif self.condition == "control":
-                if self.trial == 1:
+                # add a summary afterward
+                if self.trial == 3:
                     self.destroy()  
                     self.root.content = Control[0](self.root, **Control[1])
                     self.root.content.grid(row = 0, column = 0, sticky = (N, S, E, W))
@@ -107,7 +108,7 @@ class Stereotypes(InstructionsFrame):
                 self.next.config(state="disabled")
                 self.next.unbind("<Button-1>")
                 self.update()
-                self.after(self.wait * int(1000 / SHORT_LIMIT), lambda: [self.next.config(state="normal"), self.next.bind("<Button-1>", lambda e: self.next.invoke())])
+                self.after(self.wait * int(10000 / SHORT_LIMIT), lambda: [self.next.config(state="normal"), self.next.bind("<Button-1>", lambda e: self.next.invoke())])
         else:
             super().nextFun()
 
@@ -159,9 +160,9 @@ class Exposure(InstructionsFrame):
         
 Stories = (TextFrame, {"text": storiesQuestion, "width": 80, "qlines": 2, "alines": 5, "name": "Stories", "timeDisabled_s": int(10/SHORT_LIMIT), "requiredLength": 10})
 
-Imagery = (TextFrame, {"text": imagery, "width": 80, "qlines": 5, "alines": 15, "name": "Imagery", "timeDisabled_s": int(120/SHORT_LIMIT), "requiredLength": 40})
+Imagery = (TextFrame, {"text": imagery, "width": 80, "qlines": 5, "alines": 10, "name": "Imagery", "timeDisabled_s": int(90/SHORT_LIMIT), "requiredLength": 120})
 
-Influence = (TextFrame, {"text": influence, "width": 80, "qlines": 5, "alines": 15, "name": "Influence", "timeDisabled_s": int(120/SHORT_LIMIT), "requiredLength": 40})
+Influence = (TextFrame, {"text": influence, "width": 80, "qlines": 5, "alines": 10, "name": "Influence", "timeDisabled_s": int(90/SHORT_LIMIT), "requiredLength": 120})
 
 Control = (TextFrame, {"text": control, "width": 80, "qlines": 5, "alines": 5, "name": "Control", "timeDisabled_s": int(10/SHORT_LIMIT), "requiredLength": 10})
 
