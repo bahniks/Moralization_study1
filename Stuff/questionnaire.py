@@ -17,7 +17,8 @@ from constants import TESTING, AUTOFILL
 
 intro = "Označte, do jaké míry souhlasíte s následujícímí tvrzeními, na poskytnuté škále."
 
-nfcIntro = "Přečtěte si prosíme každé tvrzení a ohodnoťte, nakolik je pro Vás ne/charakteristické."
+mwbfIntro = """Think about the last 30 days (or since returning to work). Indicate how often each happened in a job-related situation. 
+If an item truly didn't apply to your role, choose N/A."""
 
 boredomIntro = """Přečtěte si prosíme každé tvrzení a označte, nakolik s ním souhlasíte.
 Vaším úkolem je odpovídat co nejupřímněji podle toho, co nejlépe vystihuje Vaše běžné prožívání a chování."""
@@ -71,14 +72,17 @@ class Questionnaire(ExperimentFrame):
             self.labels[word] = ttk.Label(self.frame, text = word, background = "white",
                                           font = "helvetica {}".format(fontsize+1), justify = "left",
                                           width = maxwidth/1.2, wraplength = wraplength)
-            self.labels[word].grid(column = 1, row = count + (count-1)//blocksize, padx = 15,
-                                   sticky = W, pady = pady)
+            self.labels[word].grid(column = 1, row = count + (count-1)//blocksize, padx = 15, sticky = W, pady = pady)
             if not count % blocksize:
                 self.frame.rowconfigure(count + count//blocksize, weight = 1)
 
-        ttk.Label(self.frame, text = "s"*int(ceil(maxwidth/(1+maxwidth/1000))), background = "white", font = "helvetica {}".format(fontsize+1),
-                  foreground = "white", justify = "left", width = maxwidth/1.2, wraplength = wraplength).grid(
-                      column = 1, padx = 15, sticky = W, row = count + 1 + (count-1)//blocksize)
+        avg_char_width = tkfont.Font(family="helvetica", size=fontsize+1).measure("s")
+        if wraplength:
+            fillerSize = min([int(ceil(maxwidth/(1+maxwidth/1000))), wraplength//avg_char_width])
+        else:
+            fillerSize = int(ceil(maxwidth/(1+maxwidth/1000)))
+        fillerLabel = ttk.Label(self.frame, text = "s"*fillerSize, background = "white", font = "helvetica {}".format(fontsize+1), foreground = "white", justify = "left", width = maxwidth/1.2, wraplength = wraplength)
+        fillerLabel.grid(column = 1, padx = 15, sticky = W, row = count + 1 + (count-1)//blocksize)
 
         self.texts = []
         if not labels:
@@ -128,21 +132,22 @@ class Questionnaire(ExperimentFrame):
 
 
 
-NFC = (Questionnaire,
-                {"words": "nfc.txt",
-                 "question": nfcIntro,
-                 "labels": ["pro mě velmi necharakteristické",
-                            "pro mě necharakteristické",
-                            "neutrální",
-                            "pro mě charakteristické",
-                            "pro mě velmi charakteristické"],
-                 "values": 5,
-                 "labelwidth": 15,
+MWBF = (Questionnaire,
+                {"words": "mwbf.txt",
+                 "question": mwbfIntro,
+                 "labels": ["Never (0×)",
+                            "Once (1×)",
+                            "Occasionally (2–3×)",
+                            "Often (4–5×)",
+                            "Very often (6+×)",
+                            "N/A"],
+                 "values": 6,
+                 "labelwidth": 11,
                  "text": False,
-                 "fontsize": 13,
-                 "blocksize": 6,
-                 "wraplength": 500,
-                 "filetext": "NFC",
+                 "fontsize": 15,
+                 "blocksize": 9,
+                 "wraplength": 400,
+                 "filetext": "MWBF",
                  "fixedlines": 3,
                  "pady": 3})
 
@@ -190,4 +195,4 @@ Social = (Questionnaire,
 
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([NFC])
+    GUI([MWBF])

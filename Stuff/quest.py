@@ -36,6 +36,9 @@ attentiontext = "Chcete-li prokázat, že zadání věnujete pozornost, vyberte 
 
 pmsIntro = "Ohodnoťte tvrzení níže, jak je sami cítíte, od 1 (rozhodně nesouhlasím) do 5 (rozhodně souhlasím):"
 
+
+moralizabilityinstructions = """Please indicate your response to the following statements on a scale from 1 (strongly disagree) to 7 (strongly agree). There are no right or wrong answers, but please give each item your full attention."""
+
 ################################################################################
 
 
@@ -209,11 +212,17 @@ class PMS(Quest):
                          height = 3, options = 5, center = True)
 
 
+class Moralizability(Quest):
+    def __init__(self, root):
+        super().__init__(root, 7, "moralizability.txt", "Moralizability", instructions = moralizabilityinstructions, width = 85,
+                         left = "strongly disagree", right = "strongly agree",
+                         height = 5, options = 7, center = True)
+
 
 QuestInstructions = (InstructionsFrame, {"text": questintro, "height": 15})
 
 
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([PMS, Hexaco, QuestInstructions
+    GUI([Moralizability, Hexaco, QuestInstructions
          ])
