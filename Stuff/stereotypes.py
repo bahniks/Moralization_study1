@@ -16,29 +16,31 @@ from constants import TESTING
 ################################################################################
 # TEXTS
 
-storiesIntro = """In this part of the study, you will read three short, real-life stories, each presented on a separate page. You decide when to move on to the next story. 
+storiesIntro = """V další části studie si přečtete tři krátké skutečné příběhy, z nichž každý bude zobrazen na samostatné stránce. Sami rozhodnete, kdy přejdete na další příběh.
 
-Please read each story carefully, as at the end you will be asked to indicate what all three stories have in common."""
+Každý příběh si prosím pečlivě přečtěte. Poté budete požádáni, abyste uvedli, co měly všechny tři příběhy společného."""
 
-influenceIntro = """In this part of the study, please think of an older person who has positively influenced your life or served as a role model. In the text box below, briefly describe who they were and what they were like. Focus on the characteristics you particularly liked or valued about them. Try to keep your response concise - up to 5 sentences."""
+influenceIntro = """V další části studie budete požádáni o krátký písemný úkol."""
 
-imageryIntro = """In this part of the study, please imagine yourself at the age of 70. In the textbox below, briefly describe what an ideal day in your life at that age might look like. Think about how you would spend your time, who you would be with, and how you would feel. Feel free to be creative in your description. Try to keep your response concise - up to 5 sentences."""
+imageryIntro = """V další části studie budete požádáni o krátký písemný úkol."""
 
-controlIntro = """In this part of the study, you will read three short articles, each presented on a separate page. You decide when to move on to the next article. Please read each article carefully, as you will be asked to provide a short summary (up to 2 sentences) of the main points presented in each of them."""
+controlIntro = """V další části studie si přečtete tři krátké články, z nichž každý bude zobrazen na samostatné stránce. Sami rozhodnete, kdy přejdete na další článek. Každý článek si prosím pečlivě přečtěte, protože budete požádáni o krátké shrnutí jeho obsahu."""
 
 
 # stories = """In the following task, you will read three short stories, with one story displayed per page. You decide when to move on to the next story. 
 
 # Please read each story carefully, as at the end you will be asked to indicate what all three stories have in common."""
 
-influence = """Please, think of an older person who has been a positive influence in your life or served as a role model. In the text box below, briefly describe who they were and what they were like. Focus on the characteristics you particularly liked or valued about them. Try to keep your response brief (up to 5 sentences)."""
+influence = """Prosím, vzpomeňte si na starší osobu, která měla ve vašem životě pozitivní vliv nebo vám byla vzorem. Do textového pole níže stručně popište, kdo to byl a jaký byl. Zaměřte se na vlastnosti, které jste na této osobě obzvlášť oceňovali nebo měli rádi. Snažte se odpovědět stručně (do 5 vět)."""
 
-imagery = """Please imagine yourself at the age of 70. In the textbox below, describe what an ideal day in your life at that age might look like. Think about how you would spend your time, who you might spend it with, and how you would feel. Try to keep your response brief (up to 5 sentences)."""
+imagery = """Představte si sami sebe ve věku 70 let. Do textového pole níže stručně popište, jak by mohl vypadat ideální den ve vašem životě v tomto věku. Zamyslete se nad tím, jak byste trávili čas, s kým byste byli a jak byste se cítili. Nebojte se být kreativní. Snažte se odpovědět stručně (do 5 vět)."""
 
-control = """In the following task, you will read a short newspaper-like story. Please, read it carefully, as you will be asked to provide a 2-3 sentence summary afterwards."""
+control = """V následujícím úkolu si přečtete krátký novinový článek. Prosím, přečtěte si jej pečlivě, protože budete požádáni o krátké shrnutí jeho obsahu."""
 
 
 storiesQuestion = "Co měly všechny tři příběhy společného?"
+
+controlQuestion = "Níže napište krátké shrnutí článku, který jste právě četl(a)."
 
 questionnaireInstructions = "Ohodnoťte tvrzení níže, jak je sami cítíte, od 1 (rozhodně nesouhlasím) do 5 (rozhodně souhlasím):"
 
@@ -47,29 +49,40 @@ exposureText = """<center>Následující otázky se týkají Vašich názorů na
 
 ################################################################################
 
-SHORT_LIMIT = 10 if TESTING else 1
+SHORT_LIMIT = 50 if TESTING else 1
 
 
 class Stereotypes(InstructionsFrame):
     def __init__(self, root):
+        if "storiesSeen" in root.status:
+            if root.status["storiesSeen"] > 0:
+                self.instructions = True
+                self.condition = "control"
+                self.trial = 0
+                self.wait = 20                
+                super().__init__(root, "", width = 80, height = 10)     
+                self.nextFun()                
+                return
+
         self.condition = random.choice(["stories", "imagery", "influence", "control"])
-        #self.condition = random.choice(["control"]) if TESTING else self.condition
+        self.condition = random.choice(["control"]) if TESTING else self.condition
 
         text = eval(self.condition + "Intro")
 
         super().__init__(root, text, width = 80, height = 10)
-        
-        self.file.write("Stereotypes\n")
-        self.file.write(f"{self.id}\t{self.condition}\n\n")
 
         self.instructions = True
+       
+        self.file.write("Stereotypes\n")
+        self.file.write(f"{self.id}\t{self.condition}\n\n")
 
         if self.condition == "stories" or self.condition == "control":
             self.trial = 0
             storiesTexts = read_all(f"{self.condition}.txt")
-            self.storiesList = storiesTexts.split("\n\n\n")
-            random.shuffle(self.storiesList)
-            self.wait = 2 if TESTING else 20
+            self.root.status["storiesList"] = storiesTexts.split("\n\n\n")
+            random.shuffle(self.root.status["storiesList"])
+            self.wait = 20
+            self.root.status["storiesSeen"] = 0
 
     def nextFun(self):
         if self.instructions:
@@ -81,7 +94,7 @@ class Stereotypes(InstructionsFrame):
                     self.root.content.grid(row = 0, column = 0, sticky = (N, S, E, W))
                     return
                 self.instructions = True
-                story = self.storiesList[self.trial]
+                story = self.root.status["storiesList"][self.trial]
                 self.trial += 1
                 story = story.split("|")
                 storyText = f"<center><b>{story[0]}</b></center>\n\n{story[1]}"
@@ -89,7 +102,7 @@ class Stereotypes(InstructionsFrame):
                 self.next.config(state="disabled")
                 self.next.unbind("<Button-1>")
                 self.update()
-                self.after(self.wait * int(10000 / SHORT_LIMIT), lambda: [self.next.config(state="normal"), self.next.bind("<Button-1>", lambda e: self.next.invoke())])
+                self.after(self.wait * int(1000 / SHORT_LIMIT), lambda: [self.next.config(state="normal"), self.next.bind("<Button-1>", lambda e: self.next.invoke())])
             elif self.condition == "imagery":
                 self.destroy()  
                 self.root.content = Imagery[0](self.root, **Imagery[1])
@@ -99,21 +112,24 @@ class Stereotypes(InstructionsFrame):
                 self.root.content = Influence[0](self.root, **Influence[1])
                 self.root.content.grid(row = 0, column = 0, sticky = (N, S, E, W))
             elif self.condition == "control":
-                # add a summary afterward
-                if self.trial == 3:
+                if self.trial == 1:
+                    if self.root.status["storiesSeen"] < 3:
+                        self.root.count -= 1  
                     self.destroy()  
                     self.root.content = Control[0](self.root, **Control[1])
-                    self.root.content.grid(row = 0, column = 0, sticky = (N, S, E, W))
-                    return
-                story = self.storiesList[self.trial]
+                    self.root.content.grid(row = 0, column = 0, sticky = (N, S, E, W))                 
+                    return                      
+                self.instructions = True  
+                story = self.root.status["storiesList"][self.root.status["storiesSeen"]]
                 self.trial += 1
                 story = story.split("|")
                 storyText = f"<center><b>{story[0]}</b></center>\n\n{story[1]}"
                 self.changeText(storyText)
+                self.root.status["storiesSeen"] += 1
                 self.next.config(state="disabled")
                 self.next.unbind("<Button-1>")
                 self.update()
-                self.after(self.wait * int(10000 / SHORT_LIMIT), lambda: [self.next.config(state="normal"), self.next.bind("<Button-1>", lambda e: self.next.invoke())])
+                self.after(self.wait * int(1000 / SHORT_LIMIT), lambda: [self.next.config(state="normal"), self.next.bind("<Button-1>", lambda e: self.next.invoke())])
         else:
             super().nextFun()
 
@@ -147,7 +163,6 @@ class Exposure(InstructionsFrame):
         self.lab5.grid(column = 1, row = 6, pady = 2, padx = 2, columnspan=2)
 
         self.lab6 = Measure(self, "Jak pozitivní nebo negativní jsou vaše interakce se staršími dospělými?", values = [i for i in range(1,8)], shortText = "Positive interactions", left = "velmi negativní", right = "velmi pozitivní", questionPosition="above", labelPosition="next", function=self.enable)        
-        #self.lab6 = Likert(self, , options = 5, shortText = "Positivity", left = "velmi negativní", right = "velmi pozitivní")
         self.lab6.grid(column = 1, row = 7, pady = 2, padx = 2, columnspan=2)
 
         self.next.config(state="disabled")
@@ -196,7 +211,7 @@ Imagery = (TextFrame, {"text": imagery, "width": 80, "qlines": 5, "alines": 10, 
 
 Influence = (TextFrame, {"text": influence, "width": 80, "qlines": 5, "alines": 10, "name": "Influence", "timeDisabled_s": int(90/SHORT_LIMIT), "requiredLength": 120})
 
-Control = (TextFrame, {"text": control, "width": 80, "qlines": 5, "alines": 5, "name": "Control", "timeDisabled_s": int(10/SHORT_LIMIT), "requiredLength": 10})
+Control = (TextFrame, {"text": controlQuestion, "width": 80, "qlines": 5, "alines": 5, "name": "Control", "timeDisabled_s": int(10/SHORT_LIMIT), "requiredLength": 10})
 
 
 class StereotypesScale(Quest):
