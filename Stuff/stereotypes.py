@@ -16,18 +16,20 @@ from constants import TESTING
 ################################################################################
 # TEXTS
 
-storiesIntro = """In this part of the study, you will read three short stories, with one story displayed per page. You decide when to move on to the next story."""
-
-influenceIntro = """In this part of the study, we will ask you to recall and briefly describe a positive influence or role model you have had in your life. Please try to remember a specific person who has had a meaningful impact on you. Provide a brief description (up to 5 sentences) focusing on the key characteristics or actions that made this person a positive influence in your life. Try to keep your response concise and to the point."""
-
-imageryIntro = """In this part of the study, we will ask you to imagine and briefly describe an ideal day in your life at the age of 70. Please try to visualize a specific day that reflects your aspirations and values for that stage of life. Provide a brief description (up to 5 sentences) focusing on how you would spend your time, who you would be with, and how you would feel. Try to keep your response concise and to the point."""
-
-controlIntro = """In this part of the study, we will ask you to read a short newspaper-like story and then provide a brief summary. Please read the story carefully, as you will be asked to summarize it in 2-3 sentences afterwards. Focus on capturing the main points and key details of the story in your summary. Try to keep your response concise and to the point."""
-
-
-stories = """In the following task, you will read three short stories, with one story displayed per page. You decide when to move on to the next story. 
+storiesIntro = """In this part of the study, you will read three short, real-life stories, each presented on a separate page. You decide when to move on to the next story. 
 
 Please read each story carefully, as at the end you will be asked to indicate what all three stories have in common."""
+
+influenceIntro = """In this part of the study, please think of an older person who has positively influenced your life or served as a role model. In the text box below, briefly describe who they were and what they were like. Focus on the characteristics you particularly liked or valued about them. Try to keep your response concise - up to 5 sentences."""
+
+imageryIntro = """In this part of the study, please imagine yourself at the age of 70. In the textbox below, briefly describe what an ideal day in your life at that age might look like. Think about how you would spend your time, who you would be with, and how you would feel. Feel free to be creative in your description. Try to keep your response concise - up to 5 sentences."""
+
+controlIntro = """In this part of the study, you will read three short articles, each presented on a separate page. You decide when to move on to the next article. Please read each article carefully, as you will be asked to provide a short summary (up to 2 sentences) of the main points presented in each of them."""
+
+
+# stories = """In the following task, you will read three short stories, with one story displayed per page. You decide when to move on to the next story. 
+
+# Please read each story carefully, as at the end you will be asked to indicate what all three stories have in common."""
 
 influence = """Please, think of an older person who has been a positive influence in your life or served as a role model. In the text box below, briefly describe who they were and what they were like. Focus on the characteristics you particularly liked or valued about them. Try to keep your response brief (up to 5 sentences)."""
 
@@ -36,9 +38,12 @@ imagery = """Please imagine yourself at the age of 70. In the textbox below, des
 control = """In the following task, you will read a short newspaper-like story. Please, read it carefully, as you will be asked to provide a 2-3 sentence summary afterwards."""
 
 
-storiesQuestion = "What do all three stories have in common?"
+storiesQuestion = "Co měly všechny tři příběhy společného?"
 
 questionnaireInstructions = "Ohodnoťte tvrzení níže, jak je sami cítíte, od 1 (rozhodně nesouhlasím) do 5 (rozhodně souhlasím):"
+
+exposureText = """<center>Následující otázky se týkají Vašich názorů na starší dospělé.
+<b>Tímto jsou myšleny všechny osoby ve věku 65 let a více.</b></center>"""
 
 ################################################################################
 
@@ -115,30 +120,37 @@ class Stereotypes(InstructionsFrame):
 
 class Exposure(InstructionsFrame):
     def __init__(self, root):
-        super().__init__(root, text = "<center>Následující otázky se týkají Vašich názorů na starší dospělé.</center>", width = 80, height = 1, savedata=True)
+        super().__init__(root, text = exposureText, width = 80, height = 2, savedata=True)
         self.file.write("Exposure\n")
 
-        self.ageVar = StringVar()
-        self.lab1 = ttk.Label(self, text = "At what age is a person considered old?", background = "white", font = "helvetica 15")
-        self.lab1.grid(column = 1, row = 2, pady = 2, padx = 2)        
-        self.age = ttk.Entry(self, width = 5, font = "helvetica 15", textvariable=self.ageVar)
-        self.age.grid(column = 2, row = 2, pady = 2, padx = 2)
+        # self.ageVar = StringVar()
+        # self.lab1 = ttk.Label(self, text = "At what age is a person considered old?", background = "white", font = "helvetica 15")
+        # self.lab1.grid(column = 1, row = 2, pady = 2, padx = 2)        
+        # self.age = ttk.Entry(self, width = 5, font = "helvetica 15", textvariable=self.ageVar)
+        # self.age.grid(column = 2, row = 2, pady = 2, padx = 2)
 
-        self.lab2 = Measure(self, "Do you live or have you ever lived with a person 65 or older?", values = ["yes, currently", "yes, in the past", "no, I have never"], shortText = "Live with 65+", left = "", right = "", questionPosition="above")
+        self.text.grid(column = 1, row = 1, pady = 10, padx = 10, columnspan=2)
+
+        self.lab2 = Measure(self, "Žijete nebo jste někdy žili s osobou starší 65 let?", values = ["ano, aktuálně", "ano, v minulosti", "ne, nikdy"], shortText = "Live with 65+", left = "", right = "", questionPosition="above", labelPosition="none", function=self.enable)
         self.lab2.grid(column = 1, row = 3, pady = 2, padx = 2, columnspan=2)
 
-        self.lab3 = Measure(self, "During the time you lived with them how would you describe their health status?", values = ["mostly sick/frail", "mostly fit/healthy", "terminally ill"], filler = 700, shortText = "Health status", left = "", right = "", questionPosition="above")
+        self.lab3 = Measure(self, "Jak byste popsali zdravotní stav této osoby během doby, kdy jste s ní žili?", values = ["většinou zdravý/v kondici", "většinou nemocný/křehký", "nevyléčitelně nemocný"], filler = 700, shortText = "Health status", left = "", right = "", questionPosition="above", labelPosition="none", function=self.enable)
         self.lab3.grid(column = 1, row = 4, pady = 2, padx = 2, columnspan=2)
+        self.lab3.grid_remove()
+        self.filler = Canvas(self, width=1, height=68, background="white", highlightbackground="white", highlightcolor="white")
+        self.filler.grid(column = 0, row = 4, pady = 2)
 
-        self.lab4 = Measure(self, "How often do you currently visit or talk to (including phone/video calls)\nwith older adults in your family or close circle (e.g. grandparents, other relatives)?", values = ["Everyday", "Several times a week", "Several times a month", "Several times a year", "Not at all"], shortText = "Visit family", left = "", right = "", questionPosition="above")
+        self.lab4 = Measure(self, "Jak často v současnosti navštěvujete nebo mluvíte (včetně telefonních/videohovorů)\nse staršími dospělými ve vaší rodině nebo blízkém okruhu (např. prarodiče, jiní příbuzní)?", values = ["každý den", "několikrát týdně", "několikrát měsíčně", "několikrát ročně", "vůbec ne"], shortText = "Visit family", left = "", right = "", questionPosition="above", labelPosition="none", function=self.enable)
         self.lab4.grid(column = 1, row = 5, pady = 2, padx = 2, columnspan=2)
 
-        self.lab5 = Measure(self, "How often do you engage in conversations with older adults\nyou are not closely acquainted with (e.g. in public transport, shop)?", values = ["Everyday", "Several times a week", "Several times a month", "Several times a year", "Not at all"], shortText = "Engage with strangers", left = "", right = "", questionPosition="above")
+        self.lab5 = Measure(self, "Jak často se zapojujete do konverzací se staršími dospělými,\nse kterými nejste blízce seznámeni (např. v hromadné dopravě, obchodě)?", values = ["každý den", "několikrát týdně", "několikrát měsíčně", "několikrát ročně", "vůbec ne"], shortText = "Engage with strangers", left = "", right = "", questionPosition="above", labelPosition="none", function=self.enable)
         self.lab5.grid(column = 1, row = 6, pady = 2, padx = 2, columnspan=2)
 
-        self.lab6 = Likert(self, "On average, how positive or negative are your interactions with older adults?", options = 5, shortText = "Positivity", left = "very negative", right = "very positive")
+        self.lab6 = Measure(self, "Jak pozitivní nebo negativní jsou vaše interakce se staršími dospělými?", values = [i for i in range(1,8)], shortText = "Positive interactions", left = "velmi negativní", right = "velmi pozitivní", questionPosition="above", labelPosition="next", function=self.enable)        
+        #self.lab6 = Likert(self, , options = 5, shortText = "Positivity", left = "velmi negativní", right = "velmi pozitivní")
         self.lab6.grid(column = 1, row = 7, pady = 2, padx = 2, columnspan=2)
 
+        self.next.config(state="disabled")
         self.next.grid(column = 1, row = 8, pady = 10, columnspan=2)
 
         for i in range(1, 9):
@@ -149,8 +161,28 @@ class Exposure(InstructionsFrame):
         self.columnconfigure(3, weight = 1)
 
     def write(self):
-        ans = [self.ageVar.get(), self.lab2.answer.get(), self.lab3.answer.get(), self.lab4.answer.get(), self.lab5.answer.get(), self.lab6.answer.get()]        
+        # ans = [self.ageVar.get(), self.lab2.answer.get(), self.lab3.answer.get(), self.lab4.answer.get(), self.lab5.answer.get(), self.lab6.answer.get()]        
+        ans = [self.lab2.answer.get(), self.lab3.answer.get(), self.lab4.answer.get(), self.lab5.answer.get(), self.lab6.answer.get()]        
         self.file.write(self.id + "\t" + "\t".join(ans) + "\n\n")
+
+    def enable(self):
+        self.saved3 = ""        
+        if self.lab2.answer.get() in ["ano, aktuálně", "ano, v minulosti"]:
+            self.lab3.grid()
+            if self.saved3:
+                self.lab3.answer.set(self.saved3)
+        else:
+            self.lab3.grid_remove()
+            self.saved3 = self.lab3.answer.get()
+        if all([self.lab2.answer.get(), self.lab4.answer.get(), self.lab5.answer.get(), self.lab6.answer.get()]):
+            if self.lab2.answer.get() in ["ano, aktuálně", "ano, v minulosti"]:
+                if self.lab3.answer.get():
+                    self.next["state"] = "!disabled"
+                    return
+            else:
+                self.next["state"] = "!disabled"
+                return
+        self.next["state"] = "disabled"
 
         
 

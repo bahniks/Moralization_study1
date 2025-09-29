@@ -152,44 +152,6 @@ MWBF = (Questionnaire,
                  "pady": 3})
 
 
-Boredom = (Questionnaire,
-                {"words": "boredom.txt",
-                 "question": boredomIntro,
-                 "labels": ["rozhodně nesouhlasím",
-                            "nesouhlasím",
-                            "spíše nesouhlasím",
-                            "neutrální",
-                            "spíše souhlasím",
-                            "souhlasím",
-                            "rozhodně souhlasím"],
-                 "values": 7,
-                 "labelwidth": 11,
-                 "text": False,
-                 "fontsize": 13,
-                 "blocksize": 8,
-                 "wraplength": 450,
-                 "filetext": "Boredom",
-                 "fixedlines": 2,
-                 "pady": 5})
-
-
-Social = (Questionnaire,
-                {"words": "social.txt",
-                 "question": socialIntro,
-                 "labels": ["velmi zřídka",
-                            "zřídka",
-                            "někdy",
-                            "často",
-                            "velmi často"],
-                 "values": 5,
-                 "labelwidth": 10,
-                 "text": False,
-                 "fontsize": 13,
-                 "blocksize": 6,
-                 "wraplength": 600,
-                 "filetext": "Social",
-                 "fixedlines": 2,
-                 "pady": 5})
 
 
 
