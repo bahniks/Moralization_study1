@@ -334,6 +334,8 @@ class Moralization(InstructionsFrame):
         self.columnconfigure(2, weight=1)
 
     def checkNutrition(self, value, what):
+        if value and not (value[-1].isdigit() or value[-1] in [".", ","]):
+            return False
         for entry in ["self.entry_energy", "self.entry_protein", "self.entry_fat", "self.entry_sugar"]:
             if not what in entry:                
                 val = eval(entry).get()

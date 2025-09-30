@@ -4,6 +4,7 @@ from time import time, sleep, perf_counter
 
 import os
 import sys
+import ctypes
 import random
 import urllib.request
 import urllib.parse
@@ -595,3 +596,12 @@ def read_all(file, encoding = "utf-8"):
         for line in f:
             text += line.rstrip(" \t")
     return text
+
+
+# Load and activate keyboard layout
+# Language IDs: "00000405" = Czech, "00000409" = English US
+def change_keyboard_layout(language_id):
+    user32 = ctypes.windll.user32
+    layout = user32.LoadKeyboardLayoutW(language_id, 1)  # 1 = KLF_ACTIVATE
+    if layout:
+        user32.ActivateKeyboardLayout(layout, 0)

@@ -16,9 +16,9 @@ from constants import TESTING
 ################################################################################
 # TEXTS
 
-storiesIntro = """V další části studie si přečtete tři krátké skutečné příběhy, z nichž každý bude zobrazen na samostatné stránce. Sami rozhodnete, kdy přejdete na další příběh.
+storiesIntro = """V další části studie si přečtete čtyři krátké skutečné příběhy, z nichž každý bude zobrazen na samostatné stránce. Sami rozhodnete, kdy přejdete na další příběh.
 
-Každý příběh si prosím pečlivě přečtěte. Poté budete požádáni, abyste uvedli, co měly všechny tři příběhy společného."""
+Každý příběh si prosím pečlivě přečtěte. Poté budete požádáni, abyste uvedli, co měly všechny čtyři příběhy společného."""
 
 influenceIntro = """V další části studie budete požádáni o krátký písemný úkol."""
 
@@ -40,7 +40,7 @@ imagery = """Představte si sami sebe ve věku 70 let. Do textového pole níže
 control = """V následujícím úkolu si přečtete krátký novinový článek. Prosím, přečtěte si jej pečlivě, protože budete požádáni o krátké shrnutí jeho obsahu."""
 
 
-storiesQuestion = """Co měly všechny tři příběhy společného?
+storiesQuestion = """Co měly všechny čtyři příběhy společného?
 (musíte napsat alespoň 10 znaků)"""
 
 controlQuestion = """Níže napište krátké shrnutí článku, který jste právě četl(a).

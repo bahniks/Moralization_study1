@@ -17,11 +17,11 @@ from constants import BONUS, TESTING
 
 ################################################################################
 # TEXTS
-questintro = f"""V následující části studie budete odpovídat na otázky o sobě, Vašich postojích a názorech. Tato část by měla trvat asi 10-15 minut.
+questintro = f"""V následující části studie budete odpovídat na otázky o sobě, Vašich postojích a názorech. Tato část by měla trvat asi 15-20 minut.
 
 Každou otázku si pečlivě přečtěte. Snažte se však na otázky nemyslet příliš dlouho; první odpověď, která Vám přijde na mysl, je obvykle nejlepší.
 
-Za účelem ověření, zda otázkám věnujete pozornost, jsou umístěny dvě kontrolní otázky. Pokud odpovíte na všechny kontrolní otázky správně, můžete získat dalších {BONUS} Kč."""
+Za účelem ověření, zda otázkám věnujete pozornost, jsou umístěny tři kontrolní otázky. Pokud odpovíte na všechny kontrolní otázky správně, můžete získat dalších {BONUS} Kč."""
 
 hexacoinstructions = """Na následujících stránkách najdete řadu prohlášení o Vaší osobě.
 

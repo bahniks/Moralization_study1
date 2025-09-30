@@ -11,6 +11,7 @@ import os
 import json
 
 from constants import TESTING, URL, GOTHROUGH, PARTICIPATION_FEE
+from common import change_keyboard_layout
 
 
 class GUI(Tk):
@@ -82,10 +83,16 @@ class GUI(Tk):
 
         if TESTING:
             self.title("TEST " + self.id)
+        else:
+            try:
+                change_keyboard_layout("00000405") # Change to Czech layout
+            except Exception as e:
+                print(f"Error changing keyboard layout: {e}")
 
         mode = "a" if load else "w"
         with open(self.outputfile, mode = mode, encoding = "utf-8") as self.file:
             self.nextFrame()
+            self.after(100, self.frame.focus_force)
             self.mainloop()
             
 
