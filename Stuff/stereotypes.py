@@ -87,7 +87,7 @@ class Stereotypes(InstructionsFrame):
             random.shuffle(self.root.status["storiesList"])
             for i in range(5):
                 self.file.write("\t" + self.root.status["storiesList"][i].split("|")[0])
-            self.wait = 20
+            self.wait = 12
             self.root.status["storiesSeen"] = 0
         else:
             self.file.write("\tNA\tNA\tNA\tNA\tNA")
