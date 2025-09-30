@@ -63,7 +63,7 @@ class Stereotypes(InstructionsFrame):
                 self.instructions = True
                 self.condition = "control"
                 self.trial = 0
-                self.wait = 20                
+                self.waitTime = 12                
                 super().__init__(root, "", width = 80, height = 10)     
                 self.nextFun()                
                 return
@@ -87,7 +87,7 @@ class Stereotypes(InstructionsFrame):
             random.shuffle(self.root.status["storiesList"])
             for i in range(5):
                 self.file.write("\t" + self.root.status["storiesList"][i].split("|")[0])
-            self.wait = 12
+            self.waitTime = 12
             self.root.status["storiesSeen"] = 0
         else:
             self.file.write("\tNA\tNA\tNA\tNA\tNA")
@@ -112,7 +112,7 @@ class Stereotypes(InstructionsFrame):
                 self.next.config(state="disabled")
                 self.next.unbind("<Button-1>")
                 self.update()
-                self.after(self.wait * int(1000 / SHORT_LIMIT), lambda: [self.next.config(state="normal"), self.next.bind("<Button-1>", lambda e: self.next.invoke())])
+                self.after(self.waitTime * int(1000 / SHORT_LIMIT), lambda: [self.next.config(state="normal"), self.next.bind("<Button-1>", lambda e: self.next.invoke())])
             elif self.condition == "imagery":
                 self.destroy()  
                 self.root.content = Imagery[0](self.root, **Imagery[1])
@@ -140,7 +140,7 @@ class Stereotypes(InstructionsFrame):
                 self.next.config(state="disabled")
                 self.next.unbind("<Button-1>")
                 self.update()
-                self.after(self.wait * int(1000 / SHORT_LIMIT), lambda: [self.next.config(state="normal"), self.next.bind("<Button-1>", lambda e: self.next.invoke())])
+                self.after(self.waitTime * int(1000 / SHORT_LIMIT), lambda: [self.next.config(state="normal"), self.next.bind("<Button-1>", lambda e: self.next.invoke())])
         else:
             super().nextFun()
 
@@ -216,13 +216,13 @@ class Exposure(InstructionsFrame):
 
 
         
-Stories = (TextFrame, {"text": storiesQuestion, "width": 80, "qlines": 2, "alines": 5, "name": "Stereotypes Text", "timeDisabled_s": int(10/SHORT_LIMIT), "requiredLength": 10})
+Stories = (TextFrame, {"text": storiesQuestion, "width": 80, "qlines": 2, "alines": 5, "name": "Stereotypes Text", "timeDisabled_s": int(8/SHORT_LIMIT), "requiredLength": 10})
 
 Imagery = (TextFrame, {"text": imagery, "width": 80, "qlines": 5, "alines": 10, "name": "Stereotypes Text", "timeDisabled_s": int(90/SHORT_LIMIT), "requiredLength": 120})
 
 Influence = (TextFrame, {"text": influence, "width": 80, "qlines": 5, "alines": 10, "name": "Stereotypes Text", "timeDisabled_s": int(90/SHORT_LIMIT), "requiredLength": 120})
 
-Control = (TextFrame, {"text": controlQuestion, "width": 80, "qlines": 5, "alines": 5, "name": "Stereotypes Text", "timeDisabled_s": int(10/SHORT_LIMIT), "requiredLength": 10})
+Control = (TextFrame, {"text": controlQuestion, "width": 80, "qlines": 5, "alines": 5, "name": "Stereotypes Text", "timeDisabled_s": int(8/SHORT_LIMIT), "requiredLength": 10})
 
 
 class StereotypesScale(Quest):

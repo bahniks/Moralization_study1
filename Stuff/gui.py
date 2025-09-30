@@ -22,6 +22,7 @@ class GUI(Tk):
         windowed = TESTING or URL == "http://127.0.0.1:8000/"
         if windowed:
             #self.geometry("1920x1080")
+            #self.geometry("1680x1050")
             self.geometry("1280x1024")
         self.attributes("-fullscreen", not windowed)
         self.attributes("-topmost", not windowed)
