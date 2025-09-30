@@ -340,7 +340,7 @@ class TextArea(Canvas):
         self.label.config(state = "disabled")
         self.label.grid(column = 0, row = 0)
 
-        self.field = Text(self, width = int(width*1.2), wrap = "word", font = "helvetica 15",
+        self.field = Text(self, width = width, wrap = "word", font = "helvetica 15",
                   height = alines, relief = "solid")
         self.field.bind("<KeyRelease>", self.on_text_change)
 

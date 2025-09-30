@@ -35,10 +35,11 @@ intro = f"""Tímto začíná naše studie, jejíž krátké shrnutí zde uvádí
     a. Budou Vám prezentovány denní jídelníčky s popisem jídel z nemocniční jídelny FN Motol. 
     b. Vaším úkolem bude přepsat některé údaje a ohodnotit pokrmy. 
     c. Po každém hodnoceném dnu si můžete zvolit, zda chcete pokračovat, nebo úkol ukončit. Za předčasné ukončení nejste nijak penalizováni.
-2) Budete odpovídat na otázky o tom, jak se Vám úkol dělal. 
-3) Na závěr vyplníte dotazník s několika demografickými údaji a dalšími otázkami zaměřenými na to, jak smýšlíte o práci a světě kolem sebe. 
-    a. Součástí jsou také dvě kontrolní otázky pozornosti – pokud odpovíte na obě správně, získáte dodatečnou odměnu {BONUS} Kč.
-4) Vyplacení celkové odměny a rozloučení.
+2) Budete odpovídat na otázky o tom, jak se Vám úkol dělal.
+3) Budete plnit krátký úkol, kde můžete číst krátké příběhy nebo popisovat různé situace.
+4) Na závěr vyplníte dotazník s několika demografickými údaji a dalšími otázkami zaměřenými na to, jak smýšlíte o práci a světě kolem sebe. 
+    a. Součástí jsou také tři kontrolní otázky pozornosti – pokud odpovíte na všechny tři správně, získáte dodatečnou odměnu {BONUS} Kč.
+5) Vyplacení celkové odměny a rozloučení.
 
 V případě, že máte otázky nebo narazíte na technický problém během úkolů, prosíme, zvedněte ruku a tiše vyčkejte příchodu výzkumného asistenta.
 
@@ -108,7 +109,7 @@ class Ending(InstructionsFrame):
 
 
 Initial = (InstructionsFrame, {"text": login, "proceed": False, "height": 25, "keys": ["g", "G"]})
-Intro = (InstructionsFrame, {"text": intro, "proceed": True, "height": 20})
+Intro = (InstructionsFrame, {"text": intro, "proceed": True, "height": 21})
 
 
 if __name__ == "__main__":

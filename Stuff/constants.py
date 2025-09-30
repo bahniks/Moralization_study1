@@ -1,11 +1,11 @@
-PARTICIPATION_FEE = 200
+PARTICIPATION_FEE = 280
 LIMIT = 24
 BONUS = 20
 MAX_BDM_PRIZE = 100
 MINUTEBONUS = 3
 
 AUTOFILL = False
-TESTING = True
+TESTING = False
 GOTHROUGH = False
 URL = "https://bahnik.pythonanywhere.com/"
 #URL = "TEST"

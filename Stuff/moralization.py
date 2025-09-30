@@ -140,7 +140,7 @@ Pokud je náhodné číslo menší než (<) Vámi minimálně požadovaná čás
 
 Tento proces zajišťuje, že nejvýhodnější je zadat skutečné minimum, za které byste na úkolu pracovali. Když uvedete moc vysokou požadovanou částku, je nízká pravděpodobnost, že bude vylosované číslo stejné nebo vyšší a nezískáte tedy nic. Pakliže uvedete příliš nízkou částku, může se stát, že za úkol dostanete méně, než byste chtěli. Přeplacení ani podstřelení se tedy nevyplácí.
 
-Než uvedete nejnižší částku (v Kč), za kterou byste byli ochotni strávit dalších 10 minut stejným úkolem, zkontrolujeme si porozumění aukci."""
+Než uvedete nejnižší částku (v Kč), za kterou byste byli ochotni strávit dalších 10 minut stejným úkolem, zkontrolujeme si porozumění popsaného mechanismu."""
 
 
 BDMcontrol1 = "Co se stane, pokud zadáte částku 20 Kč a generátor vylosuje náhodné číslo 30 Kč?"
@@ -222,8 +222,9 @@ class Task(ExperimentFrame):
 
     def write(self):
         self.file.write("Task\n")
-        self.file.write(self.id + "\t" + str(self.root.status["trial"]) + "\t" + self.root.status["menu_order"][self.root.status["trial"] - 1] + "\t" + self.currentDiet + "\t" + self.root.status["condition"])
-        self.moralization.write()
+        self.file.write(self.id + "\t" + str(self.root.status["trial"]) + "\t" + self.root.status["menu_order"][self.root.status["trial"] - 1] + "\t" + self.currentDiet + "\t" + self.root.status["condition"] + "\t")
+        self.file.write(str(perf_counter() - self.root.status["startTime"]))
+        self.moralization.write()        
 
     def newTrial(self):
         self.root.status["trial"] += 1
@@ -677,7 +678,7 @@ class BDM(InstructionsFrame):
                 self.controlQuestion.showFeedback()
                 self.controlstate = "feedback"
             else:                
-                self.file.write(self.id + "\t" + str(self.controlNum) + "\t" + self.controlQuestion.answer.get() + "\n")
+                self.file.write(self.id + "\t" + str(self.controlNum) + "\t" + self.controlQuestion.getAnswer() + "\n")
                 self.createQuestion()
 
 

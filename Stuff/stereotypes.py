@@ -31,16 +31,20 @@ controlIntro = """V další části studie si přečtete tři krátké články,
 
 # Please read each story carefully, as at the end you will be asked to indicate what all three stories have in common."""
 
-influence = """Prosím, vzpomeňte si na starší osobu, která měla ve vašem životě pozitivní vliv nebo vám byla vzorem. Do textového pole níže stručně popište, kdo to byl a jaký byl. Zaměřte se na vlastnosti, které jste na této osobě obzvlášť oceňovali nebo měli rádi. Snažte se odpovědět stručně (do 5 vět)."""
+influence = """Prosím, vzpomeňte si na starší osobu, která měla ve vašem životě pozitivní vliv nebo vám byla vzorem. Do textového pole níže stručně popište, kdo to byl a jaký byl. Zaměřte se na vlastnosti, které jste na této osobě obzvlášť oceňovali nebo měli rádi.
+(musíte napsat alespoň 120 znaků)"""
 
-imagery = """Představte si sami sebe ve věku 70 let. Do textového pole níže stručně popište, jak by mohl vypadat ideální den ve vašem životě v tomto věku. Zamyslete se nad tím, jak byste trávili čas, s kým byste byli a jak byste se cítili. Nebojte se být kreativní. Snažte se odpovědět stručně (do 5 vět)."""
+imagery = """Představte si sami sebe ve věku 70 let. Do textového pole níže stručně popište, jak by mohl vypadat ideální den ve vašem životě v tomto věku. Zamyslete se nad tím, jak byste trávili čas, s kým byste byli a jak byste se cítili. Nebojte se být kreativní.
+(musíte napsat alespoň 120 znaků)"""
 
 control = """V následujícím úkolu si přečtete krátký novinový článek. Prosím, přečtěte si jej pečlivě, protože budete požádáni o krátké shrnutí jeho obsahu."""
 
 
-storiesQuestion = "Co měly všechny tři příběhy společného?"
+storiesQuestion = """Co měly všechny tři příběhy společného?
+(musíte napsat alespoň 10 znaků)"""
 
-controlQuestion = "Níže napište krátké shrnutí článku, který jste právě četl(a)."
+controlQuestion = """Níže napište krátké shrnutí článku, který jste právě četl(a).
+(musíte napsat alespoň 10 znaků)"""
 
 questionnaireInstructions = "Ohodnoťte tvrzení níže, jak je sami cítíte, od 1 (rozhodně nesouhlasím) do 5 (rozhodně souhlasím):"
 
@@ -65,7 +69,7 @@ class Stereotypes(InstructionsFrame):
                 return
 
         self.condition = random.choice(["stories", "imagery", "influence", "control"])
-        self.condition = random.choice(["control"]) if TESTING else self.condition
+        #self.condition = random.choice(["control"]) if TESTING else self.condition
 
         text = eval(self.condition + "Intro")
 
@@ -74,15 +78,21 @@ class Stereotypes(InstructionsFrame):
         self.instructions = True
        
         self.file.write("Stereotypes\n")
-        self.file.write(f"{self.id}\t{self.condition}\n\n")
+        self.file.write(f"{self.id}\t{self.condition}")
 
         if self.condition == "stories" or self.condition == "control":
             self.trial = 0
             storiesTexts = read_all(f"{self.condition}.txt")
             self.root.status["storiesList"] = storiesTexts.split("\n\n\n")
             random.shuffle(self.root.status["storiesList"])
+            for i in range(5):
+                self.file.write("\t" + self.root.status["storiesList"][i].split("|")[0])
             self.wait = 20
             self.root.status["storiesSeen"] = 0
+        else:
+            self.file.write("\tNA\tNA\tNA\tNA\tNA")
+
+        self.file.write("\n\n")
 
     def nextFun(self):
         if self.instructions:
@@ -124,6 +134,7 @@ class Stereotypes(InstructionsFrame):
                 self.trial += 1
                 story = story.split("|")
                 storyText = f"<center><b>{story[0]}</b></center>\n\n{story[1]}"
+                self.text.config(height = 20)
                 self.changeText(storyText)
                 self.root.status["storiesSeen"] += 1
                 self.next.config(state="disabled")
@@ -205,13 +216,13 @@ class Exposure(InstructionsFrame):
 
 
         
-Stories = (TextFrame, {"text": storiesQuestion, "width": 80, "qlines": 2, "alines": 5, "name": "Stories", "timeDisabled_s": int(10/SHORT_LIMIT), "requiredLength": 10})
+Stories = (TextFrame, {"text": storiesQuestion, "width": 80, "qlines": 2, "alines": 5, "name": "Stereotypes Text", "timeDisabled_s": int(10/SHORT_LIMIT), "requiredLength": 10})
 
-Imagery = (TextFrame, {"text": imagery, "width": 80, "qlines": 5, "alines": 10, "name": "Imagery", "timeDisabled_s": int(90/SHORT_LIMIT), "requiredLength": 120})
+Imagery = (TextFrame, {"text": imagery, "width": 80, "qlines": 5, "alines": 10, "name": "Stereotypes Text", "timeDisabled_s": int(90/SHORT_LIMIT), "requiredLength": 120})
 
-Influence = (TextFrame, {"text": influence, "width": 80, "qlines": 5, "alines": 10, "name": "Influence", "timeDisabled_s": int(90/SHORT_LIMIT), "requiredLength": 120})
+Influence = (TextFrame, {"text": influence, "width": 80, "qlines": 5, "alines": 10, "name": "Stereotypes Text", "timeDisabled_s": int(90/SHORT_LIMIT), "requiredLength": 120})
 
-Control = (TextFrame, {"text": controlQuestion, "width": 80, "qlines": 5, "alines": 5, "name": "Control", "timeDisabled_s": int(10/SHORT_LIMIT), "requiredLength": 10})
+Control = (TextFrame, {"text": controlQuestion, "width": 80, "qlines": 5, "alines": 5, "name": "Stereotypes Text", "timeDisabled_s": int(10/SHORT_LIMIT), "requiredLength": 10})
 
 
 class StereotypesScale(Quest):

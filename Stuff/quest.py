@@ -45,7 +45,7 @@ moralizabilityinstructions = """Please indicate your response to the following s
 
 class Quest(ExperimentFrame):
     def __init__(self, root, perpage, file, name, left, right, options = 5, shuffle = True,
-                 instructions = "", height = 3, width = 80, center = False, checks = 0):
+                 instructions = "", height = 3, width = 80, center = False, checks = 0, wraplength = "auto"):
         super().__init__(root)
 
         self.perpage = perpage
@@ -55,12 +55,12 @@ class Quest(ExperimentFrame):
         self.checks = checks != 0
         self.checksNumber = checks
         self.name = name
+        self.wraplength = wraplength
 
         self.file.write("{}\n".format(name))
 
         if instructions:
-            self.instructions = Text(self, height = height, relief = "flat", width = width,
-                                     font = "helvetica 15", wrap = "word")
+            self.instructions = Text(self, height = height, relief = "flat", width = width, font = "helvetica 15", wrap = "word")
             self.instructions.grid(row = 1, column = 0, columnspan = 3)
             self.instructions.insert("1.0", instructions, "text")
             if center:
@@ -77,14 +77,12 @@ class Quest(ExperimentFrame):
 
         if checks:
             spread = len(self.questions)//checks
-            positions = [random.randint(self.perpage//2 + spread*i, spread*(i+1) - self.perpage//2) for \
-                         i in range(checks)]
+            positions = [random.randint(self.perpage//2 + spread*i, spread*(i+1) - self.perpage//2) for i in range(checks)]
             for i in range(checks):
                 self.questions.insert(positions[i], attentiontext + str(random.randint(1, options)) + ".")
 
         ttk.Style().configure("TButton", font = "helvetica 15")
-        self.next = ttk.Button(self, text = "Pokračovat", command = self.nextFun,
-                               state = "disabled")
+        self.next = ttk.Button(self, text = "Pokračovat", command = self.nextFun, state = "disabled")
         self.next.grid(row = self.perpage*2 + 4, column = 1)
 
         self.rowconfigure(0, weight = 1)
@@ -98,19 +96,17 @@ class Quest(ExperimentFrame):
         
         self.createQuestions()
 
-
     def createQuestions(self):
         self.measures = []
         for i in range(self.perpage):
             m = Likert(self, self.questions[self.mnumber], shortText = str(self.mnumber + 1),
-                       left = self.left, right = self.right, options = self.options)
+                       left = self.left, right = self.right, options = self.options, wraplength=self.wraplength)
             m.grid(column = 0, columnspan = 3, row = i*2 + 3)
             self.rowconfigure(i*2 + 4, weight = 1)
             self.mnumber += 1
             self.measures.append(m)
             if self.mnumber == len(self.questions):
                 break
-
 
     def nextFun(self):
         for measure in self.measures:
@@ -120,19 +116,18 @@ class Quest(ExperimentFrame):
             self.file.write("\n")
             if self.checks:
                 self.file.write("Attention checks\n")
-                wrong_checks = str(self.root.status["attention_checks"])
-                self.file.write(self.id + "\t" + self.name + "\t" + wrong_checks + "\n\n")
-                if wrong_checks:
-                    self.root.status["results"] += [bonusNotGained]
-                else:
+                correct_checks = str(self.root.status["attention_checks"])
+                self.file.write(self.id + "\t" + self.name + "\t" + correct_checks + "\n\n")
+                if correct_checks == str(self.checksNumber):
                     self.root.status["results"] += [bonusGained]
-                    self.root.status["reward"] += BONUS
+                    self.root.status["reward"] += BONUS                    
+                else:
+                    self.root.status["results"] += [bonusNotGained]
             self.destroy()
             self.root.nextFrame()
         else:
             self.next["state"] = "disabled"
             self.createQuestions()
-
 
     def check(self):
         for m in self.measures:
@@ -144,8 +139,11 @@ class Quest(ExperimentFrame):
 
 
 class Likert(Canvas):
-    def __init__(self, root, text, options = 5, shortText = "", left = "strongly disagree", right = "strongly agree"):
+    def __init__(self, root, text, options = 5, shortText = "", left = "strongly disagree", right = "strongly agree", wraplength = "auto"):
         super().__init__(root)
+
+        if wraplength == "auto":
+            wraplength = root.root.screenwidth * 0.9
 
         self.root = root
         self.text = text
@@ -157,14 +155,11 @@ class Likert(Canvas):
 
         ttk.Style().configure("TRadiobutton", background = "white", font = "helvetica 15")
 
-        self.question = ttk.Label(self, text = text, background = "white",
-                                  anchor = "center", font = "helvetica 15")
+        self.question = ttk.Label(self, text = text, background = "white", anchor = "center", font = "helvetica 15", wraplength=wraplength)
         self.question.grid(column = 0, row = 0, columnspan = options + 2, sticky = S)
 
-        self.left = ttk.Label(self, text = left, background = "white",
-                              font = "helvetica 14")
-        self.right = ttk.Label(self, text = right, background = "white",
-                               font = "helvetica 14")
+        self.left = ttk.Label(self, text = left, background = "white", font = "helvetica 14")
+        self.right = ttk.Label(self, text = right, background = "white", font = "helvetica 14")
         self.left.grid(column = 0, row = 1, sticky = E, padx = 5)
         self.right.grid(column = options + 1, row = 1, sticky = W, padx = 5)           
 
@@ -203,8 +198,6 @@ class Hexaco(Quest):
                          height = 3, options = 5, center = True)
 
 
-
-
 class PMS(Quest):
     def __init__(self, root):
         super().__init__(root, 8, "pms.txt", "PMS", instructions = hexacoinstructions, width = 85,
@@ -215,8 +208,7 @@ class PMS(Quest):
 class Moralizability(Quest):
     def __init__(self, root):
         super().__init__(root, 7, "moralizability.txt", "Moralizability", instructions = moralizabilityinstructions, width = 85,
-                         left = "strongly disagree", right = "strongly agree",
-                         height = 5, options = 7, center = True)
+                         left = "strongly disagree", right = "strongly agree", height = 5, options = 7, center = True, wraplength = "auto")
 
 
 QuestInstructions = (InstructionsFrame, {"text": questintro, "height": 15})
@@ -224,5 +216,4 @@ QuestInstructions = (InstructionsFrame, {"text": questintro, "height": 15})
 
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([Moralizability, Hexaco, QuestInstructions
-         ])
+    GUI([Moralizability, Hexaco, QuestInstructions])
