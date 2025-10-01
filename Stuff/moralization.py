@@ -55,7 +55,7 @@ Answers2 = ["Vyfotit jídlo a nahrát fotografii do systému.", "Přesně přeps
 Feedback2 = ["Špatně. Máte přesně přepsat údaje o energii, bílkovinách, tucích a cukrech a pak subjektivně ohodnotit chutnost, vzhled a nutriční bohatost jednotlivých jídel.", "Ano, správně.", "Špatně. Máte přesně přepsat údaje o energii, bílkovinách, tucích a cukrech a pak subjektivně ohodnotit chutnost, vzhled a nutriční bohatost jednotlivých jídel.", "Špatně. Máte přesně přepsat údaje o energii, bílkovinách, tucích a cukrech a pak subjektivně ohodnotit chutnost, vzhled a nutriční bohatost jednotlivých jídel."]
 
 
-task = "V záložce Jídelníčky v menu nahoře je seznam všech diet a jejich složení. Prosíme, nejdříve <b>ve sloupci <color: red4>“Dieta”</color> najděte v seznamu dietu označenou jako {} a vyplňte údaje o jejím složení</b>. Následně jídla v dané dietě ohodnoťte."
+task = "V záložce Jídelníčky v menu nahoře je seznam všech diet a jejich složení. Prosíme, nejdříve <b>ve sloupci <color: red4>“Dieta”</color> najděte v seznamu dietu označenou jako {} a vyplňte přesné údaje o jejím složení</b>. Následně jídla v dané dietě ohodnoťte."
 
 tasteText = "Jak chutně toto jídlo působí?"
 lookText = "Jak bude jídlo nejspíše vizuálně přitažlivé?"
@@ -86,7 +86,7 @@ guiltR = "Cítím velkou vinu"
 ratingsText = "Nyní odpovězte na následující otázky ohledně právě dokončeného úkolu:"
 ratingsText2 = "Tvrzení níže ohodnoťte na základě toho, nakolik s nimi souhlasíte."
 
-continuation = """Dosud jste dokončili hodnocení {} a strávili na úkolu {} minut.
+continuation = """Dosud jste dokončili hodnocení {} a strávili na úkolu {}.
 {}
 <b>Uveďte, zda chcete pokračovat hodnocení dalších jídelníčků, nebo zda chcete úkol ukončit.</b>
 V úkolu je možné pokračovat nejdéle do uplynutí 30 minut od jeho začátku.
@@ -110,18 +110,18 @@ reminder_task_moralization = """
 Vaše pečlivé hodnocení jídelníčků pomůže nemocničním dietologům zvážit nutriční a estetické informace, aby mohli sestavit stravovací plány, které jsou z lékařského hlediska vhodné a zlepšují zdraví pacientů. Pokračováním v tomto úkolu pomůžete dobré věci, protože Vaše hodnocení přímo podporuje zdravější a bezpečnější stravování pro osoby v péči.
 """ 
 
-endtime = """Dosud jste dokončili hodnocení {} a strávili na úkolu {} minut.
+endtime = """Dosud jste dokončili hodnocení {} a strávili na úkolu {}.
 
 Jelikož již uplynulo více než 30 minut od začátku úkolu, hodnocení dalších jídelníčků již není možné."""
 
 
-continuation2 = """Dosud jste dokončili hodnocení {} a strávili na úkolu {} minut.
+continuation2 = """Dosud jste dokončili hodnocení {} a strávili na úkolu {}.
 
 V úkolu budete pokračovat, dokud neuplyne 10 minut.
 
 Klikněte na tlačítko „Pokračovat“."""
 
-endtime2 = """Dokončili jste hodnocení {} a strávili na úkolu {} minut.
+endtime2 = """Dokončili jste hodnocení {} a strávili na úkolu {}.
 
 Jelikož již uplynulo více než 10 minut od začátku úkolu, úkol je ukončen."""
 
@@ -472,9 +472,9 @@ class Choice(InstructionsFrame):
         baseText = continuation if self.elapsedTime < 30 else endtime
         reminderText = "" if self.elapsedTime > 30 else eval("reminder_" + root.status["condition"])
         if root.status["trial"] == 1:
-            text = baseText.format("jednoho jídelníčku", str(self.elapsedTime), reminderText)
+            text = baseText.format("jednoho jídelníčku", minutes(str(self.elapsedTime)), reminderText)
         else:
-            text = baseText.format("{} jídelníčků".format(root.status["trial"]), str(self.elapsedTime), reminderText)
+            text = baseText.format("{} jídelníčků".format(root.status["trial"]), minutes(str(self.elapsedTime)), reminderText)
 
         super().__init__(root, text = text, proceed = False, savedata = True, height = 15, width = 80)
 
@@ -684,6 +684,11 @@ class BDM(InstructionsFrame):
                 self.createQuestion()
 
 
+def minutes(min):
+    min = int(min)
+    return "1 minutu" if min == 1 else "{} minuty".format(min) if 2 <= min <= 4 else "{} minut".format(min)
+
+
 class TimeTask(InstructionsFrame):
     def __init__(self, root):
         elapsedTime = floor((perf_counter() - root.status["startTime"]) / 60)
@@ -694,9 +699,9 @@ class TimeTask(InstructionsFrame):
         else:
             baseText = endtime2
         if root.status["trial"] == 1:
-            text = baseText.format("jednoho jídelníčku", str(elapsedTime))
+            text = baseText.format("jednoho jídelníčku", minutes(str(elapsedTime)))
         else:
-            text = baseText.format("{} jídelníčků".format(root.status["trial"]), str(elapsedTime))
+            text = baseText.format("{} jídelníčků".format(root.status["trial"]), minutes(str(elapsedTime)))
 
         super().__init__(root, text = text, proceed = True, height = 10, width = 80)
 
@@ -719,4 +724,4 @@ if __name__ == "__main__":
     from login import Login
     import os
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([Task, BDM, BDMResult, Task, TimeTask, Login, Task, Ratings1, Choice, Task, Choice, Ratings2, MoralizationInstructions])
+    GUI([Login, Task, Choice, Task, Choice, BDM, BDMResult, Task, TimeTask, Login, Task, Ratings1, Choice, Task, Choice, Ratings2, MoralizationInstructions])
