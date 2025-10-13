@@ -66,17 +66,17 @@ class Questionnaire(ExperimentFrame):
                 self.buttons[word][i].grid(column = i+1, row = count + (count-1)//blocksize, padx = 15)
 
             if fixedlines:
-                fillerlabel = ttk.Label(self.frame, text = "l" + "\nl"*int(fixedlines - 1), background = "white", foreground = "white", font = "helvetica {}".format(fontsize+1))
+                fillerlabel = ttk.Label(self.frame, text = "l" + "\nl"*int(fixedlines - 1), background = "white", foreground = "white", font = "helvetica {}".format(fontsize))
                 fillerlabel.grid(column = 0, row = count + (count-1)//blocksize, pady = pady)
 
             self.labels[word] = ttk.Label(self.frame, text = word, background = "white",
-                                          font = "helvetica {}".format(fontsize+1), justify = "left",
+                                          font = "helvetica {}".format(fontsize), justify = "left",
                                           width = maxwidth/1.2, wraplength = wraplength)
             self.labels[word].grid(column = 1, row = count + (count-1)//blocksize, padx = 15, sticky = W, pady = pady)
             if not count % blocksize:
                 self.frame.rowconfigure(count + count//blocksize, weight = 1)
 
-        avg_char_width = tkfont.Font(family="helvetica", size=fontsize+1).measure("s")
+        avg_char_width = tkfont.Font(family="helvetica", size=fontsize).measure("s")
         if wraplength:
             fillerSize = min([int(ceil(maxwidth/(1+maxwidth/1000))), wraplength//avg_char_width])
         else:

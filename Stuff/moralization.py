@@ -19,12 +19,13 @@ from constants import MAX_BDM_PRIZE, MINUTEBONUS, TESTING
 ################################################################################
 # TEXTS
 
-instructions = """Na následujících stránkách najdete stručné popisy jídel podávaných v nemocniční jídelně <b>Fakultní nemocnice Motol</b>. Cílem tohoto úkolu je pro Fakultní nemocnici Motol daná jídla ohodnotit.
+instructions = """Na následujících stránkách najdete stručné popisy jídel podávaných v nemocniční jídelně <b>Fakultní nemocnice Motol</b>. Cílem tohoto úkolu je pro Fakultní nemocnici Motol daná jídla ohodnotit. Toto Vaše hodnocení je důležité, protože dá nemocnici informace, jak pacienti mohou různá jídla a diety vnímat.
 
 Vaším úkolem je:
-(a) přepsat čtyři údaje o složení (energie, B - bílkoviny, T - tuky, S - sacharidy (cukry)) přesně tak, jak jsou uvedeny pro vybraný jídelníček, a 
-(b) po přečtení podávaného pokrmu ohodnotit každé jídlo (snídani, oběd, večeři) ve vybraném jídelníčku podle toho, jak Vám osobně připadá chutné, vizuálně přitažlivé a nutričně bohaté.
-Po každém ohodnoceném jídelníčku se můžete rozhodnout, zda budete pokračovat dalším jídelníčkem, nebo úkol zcela ukončíte a přesunete se k další části studie. Záleží pouze na Vás, zda budete v tomto úkolu pokračovat, nebo skončíte. Z předčasného ukončení nevyplývá žádná penalizace.
+(a) přepsat přesně čtyři údaje o složení (energie, B - bílkoviny, T - tuky, S - sacharidy (cukry)) přesně tak, jak jsou uvedeny pro vybraný jídelníček, a 
+(b) po přečtení podávaného pokrmu ohodnotíte každé jídlo (snídani, oběd, večeři) ve vybraném jídelníčku podle toho, jak Vám osobně připadá chutné, vizuálně přitažlivé a nutričně bohaté - jen na základě jeho popisu.
+
+Po každém ohodnoceném jídelníčku se můžete rozhodnout, zda budete pokračovat dalším jídelníčkem, nebo úkol zcela ukončíte a přesunete se k další části studie. Záleží pouze na Vás, zda budete v tomto úkolu pokračovat, nebo skončíte. Z předčasného ukončení nevyplývá žádná penalizace. Odměnu za účast ve studii obdržíte v každém případě.
 <b>{}</b>
 Úkol bude trvat maximálně 30 minut.
 
@@ -155,15 +156,15 @@ BDMfeedback1 = ["Špatně. Dostanete 30 Kč navíc a budete 10 minut pracovat na
 BDMcontrol2 = "Proč není výhodné uvést vyšší částku, než za kterou byste byli ochotni úkol vykonat?"
 BDManswers2 = [
     "Protože by to mohlo narušit studii.",
-    "Protože se může stát, že nebudete úkol vykonávat za částku, za kterou byste byli ochotni pracovat.",
+    "Protože se může stát, že nebudete úkol vykonávat, i když byste chtěli.",
     "Protože je větší pravděpodobnost, že vyhraje někdo jiný.",
     "Protože budete automaticky penalizováni."
 ]
 BDMfeedback2 = [
-    "Špatně. Správná odpověď je, že se může stát, že nebudete úkol vykonávat za částku, za kterou byste byli ochotni pracovat.",
+    "Špatně. Správná odpověď je, že se může stát, že nebudete úkol vykonávat, i když byste chtěli.",
     "Ano, správně.",
-    "Špatně. Správná odpověď je, že se může stát, že nebudete úkol vykonávat za částku, za kterou byste byli ochotni pracovat.",
-    "Špatně. Správná odpověď je, že se může stát, že nebudete úkol vykonávat za částku, za kterou byste byli ochotni pracovat."
+    "Špatně. Správná odpověď je, že se může stát, že nebudete úkol vykonávat, i když byste chtěli.",
+    "Špatně. Správná odpověď je, že se může stát, že nebudete úkol vykonávat, i když byste chtěli."
 ]
 
 BDMproceed = "Po dokončení stiskněte tlačítko “Pokračovat”."
@@ -476,7 +477,7 @@ class Choice(InstructionsFrame):
         else:
             text = baseText.format("{} jídelníčků".format(root.status["trial"]), minutes(str(self.elapsedTime)), reminderText)
 
-        super().__init__(root, text = text, proceed = False, savedata = True, height = 15, width = 80)
+        super().__init__(root, text = text, proceed = False, savedata = True, height = 16, width = 80)
 
         ttk.Style().configure("TButton", font = "helvetica 15")
 
@@ -715,7 +716,7 @@ class BDMResult(InstructionsFrame):
 
 
 controlTexts = [[Control1, Answers1, Feedback1], [Control2, Answers2, Feedback2]]
-MoralizationInstructions = (InstructionsAndUnderstanding, {"text": instructions, "update": ["condition"], "height": 22, "width": 100, "name": "Moralization Control Questions", "randomize": False, "controlTexts": controlTexts, "fillerheight": 260, "finalButton": "Pokračovat k úkolu"})
+MoralizationInstructions = (InstructionsAndUnderstanding, {"text": instructions, "update": ["condition"], "height": 25, "width": 100, "name": "Moralization Control Questions", "randomize": False, "controlTexts": controlTexts, "fillerheight": 260, "finalButton": "Pokračovat k úkolu"})
 
 
 
@@ -724,4 +725,4 @@ if __name__ == "__main__":
     from login import Login
     import os
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([Login, Task, Choice, Task, Choice, BDM, BDMResult, Task, TimeTask, Login, Task, Ratings1, Choice, Task, Choice, Ratings2, MoralizationInstructions])
+    GUI([Login, MoralizationInstructions, Task, Choice, Task, Choice, BDM, BDMResult, Task, TimeTask, Login, Task, Ratings1, Choice, Task, Choice, Ratings2])

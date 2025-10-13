@@ -12,15 +12,16 @@ from gui import GUI
 
 from constants import PARTICIPATION_FEE, URL, BONUS
 from login import Login
+from tkinter import *
 
 
 ################################################################################
 # TEXTS
-login = """Vítejte na výzkumné studii pořádané Fakultou podnikohospodářskou Vysoké školy ekonomické v Praze! Tento výzkum probíhá ve spolupráci s <b>Fakultní nemocnicí v Motole (FN Motol)</b>. 
+login = """Vítejte na výzkumné studii pořádané Fakultou podnikohospodářskou Vysoké školy ekonomické v Praze! Na tomto výzkumu se podílíme spolu s  <b>Fakultní nemocnicí v Motole (FN Motol)</b>. Ve spolupráci s Mgr. Marietou Balikovou, vedoucí nutriční terapeutkou, Vás požádáme, abyste hodnotili jídelní lístky (vizte její poděkování níže). Toto Vaše hodnocení je důležité, protože dá nemocnici informace, jak pacienti mohou různá jídla a diety vnímat.
 
 Za účast na studii obdržíte paušálně {} Kč. Kromě toho můžete vydělat další peníze v průběhu studie. 
 
-Studie bude trvat cca 30-60 minut.
+Studie bude trvat cca 35-70 minut.
 
 <b>Všechny informace uvedené v této studii jsou pravdivé</b>, nikdy nebudete klamáni či vystavováni zavádějícím informacím. Pakliže Vám cokoliv v průběhu studie nebude jasné a ověříte, že daná informace není uvedena v instrukcích, přihlašte se. Přijde k Vám výzkumný asistent a pomůže Vám.
 
@@ -106,9 +107,18 @@ class Ending(InstructionsFrame):
 
 
 
+class Initial(InstructionsFrame):
+    def __init__(self, root):
+        super().__init__(root, text = login, proceed = False, height = 25, keys = ["g", "G"])
+        
+        img_path = os.path.join(os.path.dirname(__file__), "letter.png")
+        self.image = PhotoImage(file=img_path)
+        self.image = self.image.subsample(2, 2)
+        self.img_label = Label(self, image=self.image)
+        self.img_label.grid(row=2, column=0, columnspan=3)
 
 
-Initial = (InstructionsFrame, {"text": login, "proceed": False, "height": 25, "keys": ["g", "G"]})
+
 Intro = (InstructionsFrame, {"text": intro, "proceed": True, "height": 21})
 
 

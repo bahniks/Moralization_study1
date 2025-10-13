@@ -18,7 +18,7 @@ from constants import TESTING
 
 storiesIntro = """V další části studie si přečtete čtyři krátké skutečné příběhy, z nichž každý bude zobrazen na samostatné stránce. Sami rozhodnete, kdy přejdete na další příběh.
 
-Každý příběh si prosím pečlivě přečtěte. Poté budete požádáni, abyste uvedli, co měly všechny čtyři příběhy společného."""
+Každý příběh si prosím pečlivě přečtěte. Nakonec budete požádáni, abyste uvedli, co měly všechny čtyři příběhy společného."""
 
 influenceIntro = """V další části studie budete požádáni o krátký písemný úkol."""
 
@@ -26,18 +26,13 @@ imageryIntro = """V další části studie budete požádáni o krátký písemn
 
 controlIntro = """V další části studie si přečtete tři krátké články, z nichž každý bude zobrazen na samostatné stránce. Sami rozhodnete, kdy přejdete na další článek. Každý článek si prosím pečlivě přečtěte, protože budete požádáni o krátké shrnutí jeho obsahu."""
 
-
-# stories = """In the following task, you will read three short stories, with one story displayed per page. You decide when to move on to the next story. 
-
-# Please read each story carefully, as at the end you will be asked to indicate what all three stories have in common."""
-
-influence = """Prosím, vzpomeňte si na starší osobu, která měla ve vašem životě pozitivní vliv nebo vám byla vzorem. Do textového pole níže stručně popište, kdo to byl a jaký byl. Zaměřte se na vlastnosti, které jste na této osobě obzvlášť oceňovali nebo měli rádi.
+influence = """Prosím, vzpomeňte si na starší osobu, která měla na Váš život pozitivní vliv nebo Vám byla vzorem. Do textového pole níže stručně popište, kdo to byl a jaký byl. Zaměřte se na vlastnosti, které jste na této osobě obzvlášť oceňovali nebo měli rádi.
 (musíte napsat alespoň 120 znaků)"""
 
-imagery = """Představte si sami sebe ve věku 70 let. Do textového pole níže stručně popište, jak by mohl vypadat ideální den ve vašem životě v tomto věku. Zamyslete se nad tím, jak byste trávili čas, s kým byste byli a jak byste se cítili. Nebojte se být kreativní.
+imagery = """Představte si sami sebe ve věku 70 let. Do textového pole níže stručně popište, jak by mohl vypadat ideální den ve Vašem životě v tomto věku. Zamyslete se nad tím, jak byste trávili čas, s kým byste byli a jak byste se cítili. Nebojte se být kreativní.
 (musíte napsat alespoň 120 znaků)"""
 
-control = """V následujícím úkolu si přečtete krátký novinový článek. Prosím, přečtěte si jej pečlivě, protože budete požádáni o krátké shrnutí jeho obsahu."""
+# control = """V následujícím úkolu si přečtete krátký novinový článek. Prosím, přečtěte si jej pečlivě, protože budete požádáni o krátké shrnutí jeho obsahu."""
 
 
 storiesQuestion = """Co měly všechny čtyři příběhy společného?
@@ -50,6 +45,20 @@ questionnaireInstructions = "Ohodnoťte tvrzení níže, jak je sami cítíte, o
 
 exposureText = """<center>Následující otázky se týkají Vašich názorů na starší dospělé.
 <b>Tímto jsou myšleny všechny osoby ve věku 65 let a více.</b></center>"""
+
+
+
+difficultyQ1 = "Jak obtížný se Vám úkol zdál?"
+satisfactionQ1 = "Jak se po dokončení úkolu cítíte?"
+
+proceedText = "<center>Ohodnoťte právě dokončený úkol a poté stiskněte tlačítko “Pokračovat”.</center>"
+
+difficultyL = "Velmi snadný"
+difficultyR = "Velmi obtížný"
+
+satisfactionL = "Velmi nespokojen(a)"
+satisfactionR = "Velmi spokojen(a)"
+
 
 ################################################################################
 
@@ -158,16 +167,16 @@ class Exposure(InstructionsFrame):
 
         self.text.grid(column = 1, row = 1, pady = 10, padx = 10, columnspan=2)
 
-        self.lab2 = Measure(self, "Žijete nebo jste někdy žili s osobou starší 65 let?", values = ["ano, aktuálně", "ano, v minulosti", "ne, nikdy"], shortText = "Live with 65+", left = "", right = "", questionPosition="above", labelPosition="none", function=self.enable)
+        self.lab2 = Measure(self, "Žijete nebo jste někdy žili s osobou ve věku 65 let či více?", values = ["ano, aktuálně", "ano, v minulosti", "ne, nikdy"], shortText = "Live with 65+", left = "", right = "", questionPosition="above", labelPosition="none", function=self.enable, filler = 500)
         self.lab2.grid(column = 1, row = 3, pady = 2, padx = 2, columnspan=2)
 
-        self.lab3 = Measure(self, "Jak byste popsali zdravotní stav této osoby během doby, kdy jste s ní žili?", values = ["většinou zdravý/v kondici", "většinou nemocný/křehký", "nevyléčitelně nemocný"], filler = 700, shortText = "Health status", left = "", right = "", questionPosition="above", labelPosition="none", function=self.enable)
+        self.lab3 = Measure(self, "Jak byste popsali zdravotní stav této osoby během doby, kdy jste s ní žili?\n(Pokud jich bylo více, odpovězte s ohledem na osobu, která Vám byla nejbližší)", values = ["většinou zdravý / v kondici", "většinou nemocný / křehký", "nevyléčitelně nemocný"], filler = 700, shortText = "Health status", left = "", right = "", questionPosition="above", labelPosition="none", function=self.enable)
         self.lab3.grid(column = 1, row = 4, pady = 2, padx = 2, columnspan=2)
         self.lab3.grid_remove()
-        self.filler = Canvas(self, width=1, height=68, background="white", highlightbackground="white", highlightcolor="white")
+        self.filler = Canvas(self, width=1, height=100, background="white", highlightbackground="white", highlightcolor="white")
         self.filler.grid(column = 0, row = 4, pady = 2)
 
-        self.lab4 = Measure(self, "Jak často v současnosti navštěvujete nebo mluvíte (včetně telefonních/videohovorů)\nse staršími dospělými ve vaší rodině nebo blízkém okruhu (např. prarodiče, jiní příbuzní)?", values = ["každý den", "několikrát týdně", "několikrát měsíčně", "několikrát ročně", "vůbec ne"], shortText = "Visit family", left = "", right = "", questionPosition="above", labelPosition="none", function=self.enable)
+        self.lab4 = Measure(self, "Jak často v současnosti navštěvujete nebo mluvíte (včetně telefonních/video hovorů)\nse staršími dospělými ve Vaší rodině nebo blízkém okruhu (např. prarodiče, jiní příbuzní)?", values = ["každý den", "několikrát týdně", "několikrát měsíčně", "několikrát ročně", "vůbec ne"], shortText = "Visit family", left = "", right = "", questionPosition="above", labelPosition="none", function=self.enable)
         self.lab4.grid(column = 1, row = 5, pady = 2, padx = 2, columnspan=2)
 
         self.lab5 = Measure(self, "Jak často se zapojujete do konverzací se staršími dospělými,\nse kterými nejste blízce seznámeni (např. v hromadné dopravě, obchodě)?", values = ["každý den", "několikrát týdně", "několikrát měsíčně", "několikrát ročně", "vůbec ne"], shortText = "Engage with strangers", left = "", right = "", questionPosition="above", labelPosition="none", function=self.enable)
@@ -212,7 +221,33 @@ class Exposure(InstructionsFrame):
 
         
 
+class RatingsStereotypes(InstructionsFrame):
+    def __init__(self, root):
+        super().__init__(root, text = proceedText, proceed = True, savedata = True, height = 2, width = 80)
 
+        self.difficulty = Measure(self, difficultyQ1, [i for i in range(1,8)], difficultyL, difficultyR, labelPosition="next", shortText=f"difficultyFirst", questionPosition="above", center=True, function = self.rated)
+
+        self.satisfaction = Measure(self, satisfactionQ1, [i for i in range(1,8)], satisfactionL, satisfactionR, labelPosition="next", shortText=f"satisfactionFirst", questionPosition="above", center=True, function = self.rated)
+
+        self.difficulty.grid(column = 1, row = 2)
+        self.satisfaction.grid(column = 1, row = 3)
+
+        self.next.grid(column = 1, row = 5)
+
+        self.next["state"] = "disabled"
+
+        for i in range(1, 5):
+            self.rowconfigure(i, weight=1)
+        self.rowconfigure(0, weight=3)
+        self.rowconfigure(6, weight=3)
+
+    def rated(self):
+        if self.difficulty.answer.get() and self.satisfaction.answer.get():
+            self.next["state"] = "normal"
+
+    def write(self):
+        self.file.write("Ratings Stereotypes\n")
+        self.file.write(self.id + "\t" + str(self.difficulty.answer.get()) + "\t" + str(self.satisfaction.answer.get()) + "\n\n")
 
 
         
@@ -237,6 +272,6 @@ if __name__ == "__main__":
     from login import Login
     import os
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([Stereotypes, StereotypesScale, Exposure])
+    GUI([RatingsStereotypes, Stereotypes, StereotypesScale, Exposure])
 
 

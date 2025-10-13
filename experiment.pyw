@@ -13,9 +13,9 @@ from demo import Demographics
 from comments import Comments
 from login import Login
 from moralization import MoralizationInstructions, Task, Ratings1, Choice, Ratings2, BDM, BDMResult, TimeTask
-from quest import QuestInstructions, Hexaco, PMS, Moralizability
+from quest import QuestInstructions, Hexaco, PMS, Moralizability, Motivation
 from questionnaire import MWBF
-from stereotypes import Stereotypes, StereotypesScale, Exposure
+from stereotypes import Stereotypes, StereotypesScale, Exposure, RatingsStereotypes
 
 
 # udelat ukladani dat
@@ -34,12 +34,13 @@ frames = [Initial,
           Task,
           TimeTask,
           Stereotypes,
+          RatingsStereotypes,
           QuestInstructions,
           Hexaco,          
           PMS,
           StereotypesScale,
-          MWBF,
-          Moralizability,          
+          Moralizability,    
+          Motivation,  
           Exposure,
           Demographics,
           Comments,
