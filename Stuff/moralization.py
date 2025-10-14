@@ -133,13 +133,13 @@ Vysvětleme si pravidla:
 
 Níže uvidíte pole, kam zadáte nejnižší částku (v Kč), za kterou byste byli ochotni strávit dalších 10 minut stejným úkolem (bez možnosti skončit dříve), mezi 0 Kč a 100 Kč.
 
-Po odeslání této částky generátor náhodných čísel vylosuje náhodné číslo mezi 0 a 100 (tj. všechny čísla od 0 do 100 mají stejnou pravděpodobnost, že budou vylosována).
+Po odeslání této částky generátor náhodných čísel vylosuje náhodné číslo mezi 0 a 100 (tj. všechna čísla od 0 do 100 mají stejnou pravděpodobnost, že budou vylosována).
 
 Pokud bude náhodné číslo větší či rovné (≥) Vámi minimálně požadované částce, obdržíte částku ve velikosti vylosovaného náhodného čísla jako bonus a budete 10 minut dále pracovat na úkolu. Například, uvedete-li 20 Kč a bude vylosováno 50 Kč, získáte bonus 50 Kč navíc a budete pokračovat v úkolu.
 
 Pokud je náhodné číslo menší než (<) Vámi minimálně požadovaná částka, nezískáte dodatečný bonus a na úkolu už pracovat nebudete. Například, uvedete-li 50 Kč a bude vylosováno 20 Kč, nezískáte nic navíc, nebudete pokračovat v úkolu a přesunete se k další částí studie.
 
-Tento proces zajišťuje, že nejvýhodnější je zadat skutečné minimum, za které byste na úkolu pracovali. Když uvedete moc vysokou požadovanou částku, je nízká pravděpodobnost, že bude vylosované číslo stejné nebo vyšší a nezískáte tedy nic. Pakliže uvedete příliš nízkou částku, může se stát, že za úkol dostanete méně, než byste chtěli. Přeplacení ani podstřelení se tedy nevyplácí.
+Tento proces zajišťuje, že nejvýhodnější je zadat skutečné minimum, za které byste na úkolu pracovali. Když uvedete moc vysokou požadovanou částku, je nížší pravděpodobnost, že bude vylosované číslo stejné nebo vyšší a nezískáte tedy nic. Pakliže uvedete příliš nízkou částku, může se stát, že za úkol dostanete méně, než byste chtěli. Přeplacení ani podstřelení se tedy nevyplácí.
 
 Než uvedete nejnižší částku (v Kč), za kterou byste byli ochotni strávit dalších 10 minut stejným úkolem, zkontrolujeme si porozumění popsaného mechanismu."""
 

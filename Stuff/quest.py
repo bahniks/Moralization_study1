@@ -37,7 +37,7 @@ attentiontext = "Chcete-li prokázat, že zadání věnujete pozornost, vyberte 
 pmsIntro = "Ohodnoťte tvrzení níže, jak je sami cítíte, od 1 (rozhodně nesouhlasím) do 5 (rozhodně souhlasím):"
 
 
-moralizabilityinstructions = """Please indicate your response to the following statements on a scale from 1 (strongly disagree) to 7 (strongly agree). There are no right or wrong answers, but please give each item your full attention."""
+moralizabilityinstructions = """Uveďte prosím svou odpověď na následující tvrzení na škále od 1 (rozhodně nesouhlasím) do 5 (rozhodně souhlasím). Neexistují žádné správné nebo špatné odpovědi, ale každému tvrzení věnujte plnou pozornost."""
 
 
 motivationInstructions = """Proč jste motivováni k vykonávání své práce?
@@ -211,12 +211,12 @@ class PMS(Quest):
 class Moralizability(Quest):
     def __init__(self, root):
         super().__init__(root, 7, "moralizability.txt", "Moralizability", instructions = moralizabilityinstructions, width = 85,
-                         left = "strongly disagree", right = "strongly agree", height = 5, options = 7, center = True, wraplength = "auto")
-        
+                         left = "rozhodně nesouhlasím", right = "rozhodně souhlasím", height = 5, options = 5, center = True, wraplength = "auto")
+
 class Motivation(Quest):
     def __init__(self, root):
         super().__init__(root, 8, "motivation.txt", "Motivation", instructions = motivationInstructions, width = 85,
-                         left = "rozhodně nesouhlasím", right = "rozhodně souhlasím", height = 5, options = 7, center = True, wraplength = "auto")
+                         left = "rozhodně nesouhlasím", right = "rozhodně souhlasím", height = 5, options = 5, center = True, wraplength = "auto")
 
 
 QuestInstructions = (InstructionsFrame, {"text": questintro, "height": 15})

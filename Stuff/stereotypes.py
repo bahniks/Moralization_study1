@@ -56,8 +56,8 @@ proceedText = "<center>Ohodnoťte právě dokončený úkol a poté stiskněte t
 difficultyL = "Velmi snadný"
 difficultyR = "Velmi obtížný"
 
-satisfactionL = "Velmi nespokojen(a)"
-satisfactionR = "Velmi spokojen(a)"
+satisfactionL = "Velmi negativně"
+satisfactionR = "Velmi pozitivně"
 
 
 ################################################################################

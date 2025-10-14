@@ -17,7 +17,7 @@ from tkinter import *
 
 ################################################################################
 # TEXTS
-login = """Vítejte na výzkumné studii pořádané Fakultou podnikohospodářskou Vysoké školy ekonomické v Praze! Na tomto výzkumu se podílíme spolu s  <b>Fakultní nemocnicí v Motole (FN Motol)</b>. Ve spolupráci s Mgr. Marietou Balikovou, vedoucí nutriční terapeutkou, Vás požádáme, abyste hodnotili jídelní lístky (vizte její poděkování níže). Toto Vaše hodnocení je důležité, protože dá nemocnici informace, jak pacienti mohou různá jídla a diety vnímat.
+login = """Vítejte na výzkumné studii pořádané Fakultou podnikohospodářskou Vysoké školy ekonomické v Praze! Na tomto výzkumu se podílíme spolu s <b>Fakultní nemocnicí v Motole (FN Motol)</b>. Ve spolupráci s Mgr. Marietou Balikovou, vedoucí nutriční terapeutkou, Vás požádáme, abyste hodnotili jídelní lístky (vizte její poděkování níže). Toto Vaše hodnocení je důležité, protože dá nemocnici informace, jak pacienti mohou různá jídla a diety vnímat.
 
 Za účast na studii obdržíte paušálně {} Kč. Kromě toho můžete vydělat další peníze v průběhu studie. 
 
@@ -25,7 +25,7 @@ Studie bude trvat cca 35-70 minut.
 
 <b>Všechny informace uvedené v této studii jsou pravdivé</b>, nikdy nebudete klamáni či vystavováni zavádějícím informacím. Pakliže Vám cokoliv v průběhu studie nebude jasné a ověříte, že daná informace není uvedena v instrukcích, přihlašte se. Přijde k Vám výzkumný asistent a pomůže Vám.
 
-Děkujeme, že jste vypnuli své mobilní telefony, a že nebudete s nikým komunikovat v průběhu studie. Pokud s někým budete komunikovat, nebo pokud budete nějakým jiným způsobem narušovat průběh studie, budete požádáni, abyste opustili laboratoř, bez nároku na vyplacení peněz. <b>Používání telefonů či psaní poznámek je během studie zakázáno</b>, pokud budete používat telefon či si budete psát poznámky, budete požádáni, abyste opustili laboratoř bez nároku na vyplacení peněz. Prosíme, dodržujte tato pravidla, aby průběh studie byl pro všechny zúčastněné příjemný.
+Děkujeme, že jste vypnuli své mobilní telefony, a že nebudete s nikým komunikovat v průběhu studie. Pokud s někým budete komunikovat, nebo pokud budete nějakým jiným způsobem narušovat průběh studie, budete požádáni, abyste opustili laboratoř, bez nároku na vyplacení peněz. Prosíme, dodržujte tato pravidla, aby průběh studie byl pro všechny zúčastněné příjemný.
 
 Pokud jste již tak neučinili, přečtěte si informovaný souhlas a podepište ho.""".format(PARTICIPATION_FEE)
 

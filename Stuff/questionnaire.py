@@ -21,16 +21,10 @@ Osobně, jaké aspekty zvažujete, když přemýšlíte o dobré práci? Práce 
 
 intro2 = "Považujete tento aspekt práce za otázku morálky (etických hodnot)?"
 
-mwbfIntro = """Think about the last 30 days (or since returning to work). Indicate how often each happened in a job-related situation. 
-If an item truly didn't apply to your role, choose N/A."""
-
-
-
-
 
 class Questionnaire(ExperimentFrame):
     def __init__(self, root, words, question = "", labels = None, blocksize = 4, values = 7, text = True,
-                 filetext = "", fontsize = 13, labelwidth = None, wraplength = 0, pady = 0, fixedlines = 0, randomize = False, perpage = 0):
+                 filetext = "", fontsize = 13, labelwidth = None, wraplength = 0, pady = 0, fixedlines = 0, randomize = False, perpage = 0, questionnaireHeight = "auto"):
         super().__init__(root)
 
         self.fontsize = fontsize
@@ -67,6 +61,9 @@ class Questionnaire(ExperimentFrame):
         self.frame = Canvas(self, background = "white", highlightbackground = "white", highlightcolor = "white")
         self.frame.grid(column = 1, row = 1, sticky = NSEW, pady = 10)
         self.createWidgets()
+        if questionnaireHeight != "auto":
+            self.filler = Canvas(self, background = "white", highlightbackground = "white", highlightcolor = "white", height = questionnaireHeight, width = 1)
+            self.filler.grid(column = 0, row = 1, sticky = NSEW)
 
         self.question = ttk.Label(self, text = self.question, background = "white", font = "helvetica 15")
         self.question.grid(column = 1, row = 0, sticky = S, pady = 10)
@@ -134,8 +131,8 @@ class Questionnaire(ExperimentFrame):
         self.next.grid(column = 1, row = 2)
 
     def nextFun(self):
-        self.write()
         if self.perpage and len(self.allwords) > self.screen * self.perpage:
+            self.write()
             self.screen += 1
             self.words = self.allwords[(self.screen-1)*self.perpage:self.screen*self.perpage]
             for widget in self.frame.winfo_children():
@@ -181,9 +178,10 @@ class WorkMorality(Questionnaire):
                          filetext = "WorkMorality",
                          fontsize = 15,
                          labelwidth = 10,
-                         wraplength = 500,
+                         wraplength = 550,
                          pady = 3,
-                         perpage=12)
+                         perpage=12,
+                         questionnaireHeight=600)
 
 class WorkMorality2(Questionnaire):
     def __init__(self, root):
@@ -197,35 +195,14 @@ class WorkMorality2(Questionnaire):
                          filetext = "WorkMorality",
                          fontsize = 15,
                          labelwidth = 10,
-                         wraplength = 500,
+                         wraplength = 550,
                          pady = 3,
-                         perpage=12)
-
-
-
-MWBF = (Questionnaire,
-                {"words": "mwbf.txt",
-                 "question": mwbfIntro,
-                 "labels": ["Never\n(0×)",
-                            "Once\n(1×)",
-                            "Occasionally\n(2–3×)",
-                            "Often\n(4–5×)",
-                            "Very often\n(6+×)",
-                            "N/A"],
-                 "values": 6,
-                 "labelwidth": 11,
-                 "text": False,
-                 "fontsize": 15,
-                 "blocksize": 9,
-                 "wraplength": 400,
-                 "filetext": "MWBF",
-                 "fixedlines": 3,
-                 "pady": 3})
-
+                         perpage=12,
+                         questionnaireHeight=600)
 
 
 
 
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([WorkMorality2, WorkMorality2])
+    GUI([WorkMorality, WorkMorality2])
