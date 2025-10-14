@@ -14,7 +14,7 @@ from comments import Comments
 from login import Login
 from moralization import MoralizationInstructions, Task, Ratings1, Choice, Ratings2, BDM, BDMResult, TimeTask
 from quest import QuestInstructions, Hexaco, PMS, Moralizability, Motivation
-from questionnaire import MWBF
+from questionnaire import WorkMorality, WorkMorality2
 from stereotypes import Stereotypes, StereotypesScale, Exposure, RatingsStereotypes
 
 
@@ -39,6 +39,8 @@ frames = [Initial,
           Hexaco,          
           PMS,
           StereotypesScale,
+          WorkMorality,
+          WorkMorality2,
           Moralizability,    
           Motivation,  
           Exposure,

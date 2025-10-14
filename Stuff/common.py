@@ -590,10 +590,14 @@ class OneFrame(Canvas):
                 self.file.write("\t")
 
 
-def read_all(file, encoding = "utf-8"):
+def read_all(file, encoding = "utf-8", comments = False):
     text = ""
     with open(os.path.join(os.path.dirname(__file__), file), encoding = encoding) as f:
         for line in f:
+            if comments and line.startswith("#"):
+                continue
+            if comments and "#" in line:
+                line = line[:line.find("#")]
             text += line.rstrip(" \t")
     return text
 

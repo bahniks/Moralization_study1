@@ -9,7 +9,7 @@ from copy import deepcopy
 import os
 import random
 
-from common import ExperimentFrame, InstructionsFrame
+from common import ExperimentFrame, InstructionsFrame, read_all
 from gui import GUI
 
 from constants import BONUS, TESTING
@@ -70,10 +70,10 @@ class Quest(ExperimentFrame):
                 self.instructions.tag_config("text", justify = "center") 
             self.instructions["state"] = "disabled"
 
-        self.questions = []
-        with open(os.path.join("Stuff", file), encoding = "utf-8") as f:
-            for line in f:
-                self.questions.append(line.strip())
+        self.questions = [i for i in read_all(file, comments = True).split("\n")]
+        # with open(os.path.join("Stuff", file), encoding = "utf-8") as f:
+        #     for line in f:
+        #         self.questions.append(line.strip())
 
         if shuffle:
             random.shuffle(self.questions)
