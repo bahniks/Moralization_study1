@@ -25,7 +25,7 @@ Vaším úkolem je:
 (a) přepsat přesně čtyři údaje o složení (energie, B - bílkoviny, T - tuky, S - sacharidy (cukry)) přesně tak, jak jsou uvedeny pro vybraný jídelníček, a 
 (b) po přečtení podávaného pokrmu ohodnotíte každé jídlo (snídani, oběd, večeři) ve vybraném jídelníčku podle toho, jak Vám osobně připadá chutné, vizuálně přitažlivé a nutričně bohaté - jen na základě jeho popisu.
 
-Po každém ohodnoceném jídelníčku se můžete rozhodnout, zda budete pokračovat dalším jídelníčkem, nebo úkol zcela ukončíte a přesunete se k další části studie. Záleží pouze na Vás, zda budete v tomto úkolu pokračovat, nebo skončíte. Z předčasného ukončení nevyplývá žádná penalizace. Odměnu za účast ve studii obdržíte v každém případě.
+Po každém ohodnoceném jídelníčku se můžete rozhodnout, zda budete pokračovat dalším jídelníčkem, nebo úkol zcela ukončíte a přesunete se k další části studie. <b>Záleží pouze na Vás, zda budete v tomto úkolu pokračovat, nebo skončíte. Z předčasného ukončení nevyplývá žádná penalizace.</b> Odměnu za účast ve studii obdržíte v každém případě.
 <b>{}</b>
 Úkol bude trvat maximálně 30 minut.
 
@@ -56,7 +56,7 @@ Answers2 = ["Vyfotit jídlo a nahrát fotografii do systému.", "Přesně přeps
 Feedback2 = ["Špatně. Máte přesně přepsat údaje o energii, bílkovinách, tucích a cukrech a pak subjektivně ohodnotit chutnost, vzhled a nutriční bohatost jednotlivých jídel.", "Ano, správně.", "Špatně. Máte přesně přepsat údaje o energii, bílkovinách, tucích a cukrech a pak subjektivně ohodnotit chutnost, vzhled a nutriční bohatost jednotlivých jídel.", "Špatně. Máte přesně přepsat údaje o energii, bílkovinách, tucích a cukrech a pak subjektivně ohodnotit chutnost, vzhled a nutriční bohatost jednotlivých jídel."]
 
 
-task = "V záložce Jídelníčky v menu nahoře je seznam všech diet a jejich složení. Prosíme, nejdříve <b>ve sloupci <color: red4>“Dieta”</color> najděte v seznamu dietu označenou jako {} a vyplňte přesné údaje o jejím složení</b>. Následně jídla v dané dietě ohodnoťte."
+task = "V záložce Jídelníčky v menu nahoře (↑) je seznam všech diet a jejich složení. Prosíme, nejdříve <b>ve sloupci <color: red4>“Dieta”</color> najděte v seznamu dietu označenou jako: “{}” a pak přepněte zpět do této záložky vyplňte přesné údaje o jejím složení</b>. Následně jídla v dané dietě ohodnoťte."
 
 tasteText = "Jak chutně toto jídlo působí?"
 lookText = "Jak bude jídlo nejspíše vizuálně přitažlivé?"
@@ -89,7 +89,7 @@ ratingsText2 = "Tvrzení níže ohodnoťte na základě toho, nakolik s nimi sou
 
 continuation = """Dosud jste dokončili hodnocení {} a strávili na úkolu {}.
 {}
-<b>Uveďte, zda chcete pokračovat hodnocení dalších jídelníčků, nebo zda chcete úkol ukončit.</b>
+<b>Uveďte, zda chcete pokračovat v hodnocení dalších jídelníčků, nebo zda chcete úkol ukončit.</b>
 V úkolu je možné pokračovat nejdéle do uplynutí 30 minut od jeho začátku.
 
 Pokud zvolíte „Pokračovat“, zobrazí se Vám další jídelníček k přepsání nutričních hodnot a ohodnocení jídel. 
@@ -139,7 +139,7 @@ Pokud bude náhodné číslo větší či rovné (≥) Vámi minimálně požado
 
 Pokud je náhodné číslo menší než (<) Vámi minimálně požadovaná částka, nezískáte dodatečný bonus a na úkolu už pracovat nebudete. Například, uvedete-li 50 Kč a bude vylosováno 20 Kč, nezískáte nic navíc, nebudete pokračovat v úkolu a přesunete se k další částí studie.
 
-Tento proces zajišťuje, že nejvýhodnější je zadat skutečné minimum, za které byste na úkolu pracovali. Když uvedete moc vysokou požadovanou částku, je nížší pravděpodobnost, že bude vylosované číslo stejné nebo vyšší a nezískáte tedy nic. Pakliže uvedete příliš nízkou částku, může se stát, že za úkol dostanete méně, než byste chtěli. Přeplacení ani podstřelení se tedy nevyplácí.
+Tento proces zajišťuje, že nejvýhodnější je zadat skutečné minimum, za které byste na úkolu pracovali. Když uvedete moc vysokou požadovanou částku, je nižší pravděpodobnost, že bude vylosované číslo stejné nebo vyšší a nezískáte tedy nic. Pakliže uvedete příliš nízkou částku, může se stát, že za úkol dostanete méně, než byste chtěli. Přeplacení ani podstřelení se tedy nevyplácí.
 
 Než uvedete nejnižší částku (v Kč), za kterou byste byli ochotni strávit dalších 10 minut stejným úkolem, zkontrolujeme si porozumění popsaného mechanismu."""
 

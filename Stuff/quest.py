@@ -17,7 +17,7 @@ from constants import BONUS, TESTING
 
 ################################################################################
 # TEXTS
-questintro = f"""V následující části studie budete odpovídat na otázky o sobě, Vašich postojích a názorech. Tato část by měla trvat asi 15-20 minut.
+questintro = f"""V následující části studie budete odpovídat na otázky o sobě, Vašich postojích a názorech. Tato část by měla trvat asi 15-25 minut.
 
 Každou otázku si pečlivě přečtěte. Snažte se však na otázky nemyslet příliš dlouho; první odpověď, která Vám přijde na mysl, je obvykle nejlepší.
 
@@ -212,6 +212,7 @@ class Moralizability(Quest):
     def __init__(self, root):
         super().__init__(root, 7, "moralizability.txt", "Moralizability", instructions = moralizabilityinstructions, width = 85,
                          left = "rozhodně nesouhlasím", right = "rozhodně souhlasím", height = 5, options = 5, center = True, wraplength = "auto")
+
 
 class Motivation(Quest):
     def __init__(self, root):

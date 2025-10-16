@@ -21,11 +21,11 @@ login = """Vítejte na výzkumné studii pořádané Fakultou podnikohospodářs
 
 Za účast na studii obdržíte paušálně {} Kč. Kromě toho můžete vydělat další peníze v průběhu studie. 
 
-Studie bude trvat cca 35-70 minut.
+Studie bude trvat cca 35-70 minut. Délka závisí na Vašich rozhodnutích v průběhu studie.
 
 <b>Všechny informace uvedené v této studii jsou pravdivé</b>, nikdy nebudete klamáni či vystavováni zavádějícím informacím. Pakliže Vám cokoliv v průběhu studie nebude jasné a ověříte, že daná informace není uvedena v instrukcích, přihlašte se. Přijde k Vám výzkumný asistent a pomůže Vám.
 
-Děkujeme, že jste vypnuli své mobilní telefony, a že nebudete s nikým komunikovat v průběhu studie. Pokud s někým budete komunikovat, nebo pokud budete nějakým jiným způsobem narušovat průběh studie, budete požádáni, abyste opustili laboratoř, bez nároku na vyplacení peněz. Prosíme, dodržujte tato pravidla, aby průběh studie byl pro všechny zúčastněné příjemný.
+Děkujeme, že jste vypnuli své mobilní telefony, a že nebudete s nikým komunikovat v průběhu studie. Pokud s někým budete komunikovat, nebo pokud budete nějakým jiným způsobem narušovat průběh studie, budete požádáni, abyste opustili laboratoř, bez nároku na vyplacení odměny. Prosíme, dodržujte tato pravidla, aby průběh studie byl pro všechny zúčastněné příjemný.
 
 Pokud jste již tak neučinili, přečtěte si informovaný souhlas a podepište ho.""".format(PARTICIPATION_FEE)
 
@@ -35,7 +35,7 @@ intro = f"""Tímto začíná naše studie, jejíž krátké shrnutí zde uvádí
 1) Hlavním úkolem je hodnocení nemocničních jídel.
     a. Budou Vám prezentovány denní jídelníčky s popisem jídel z nemocniční jídelny FN Motol. 
     b. Vaším úkolem bude přepsat některé údaje a ohodnotit pokrmy. 
-    c. Po každém hodnoceném dnu si můžete zvolit, zda chcete pokračovat, nebo úkol ukončit. Za předčasné ukončení nejste nijak penalizováni.
+    c. Po každém hodnoceném dnu si můžete zvolit, zda chcete pokračovat, nebo úkol ukončit. <b>Za předčasné ukončení nejste nijak penalizováni.</b>
 2) Budete odpovídat na otázky o tom, jak se Vám úkol dělal.
 3) Budete plnit krátký úkol, kde můžete číst krátké příběhy nebo popisovat různé situace.
 4) Na závěr vyplníte dotazník s několika demografickými údaji a dalšími otázkami zaměřenými na to, jak smýšlíte o práci a světě kolem sebe. 
@@ -62,12 +62,10 @@ Až budete mít vše vyplněno, vezměte si své osobní věci, příjmový dokl
 Tímto je experiment u konce.
 Děkujeme Vám ještě jednou za spolupráci a čas!
 
-Centrum laboratorního a experimentálního výzkumu FPH VŠE""" 
+Decision Lab při FPH VŠE""" 
 
-# add contact info, update the website name
+#########################################################################
 
-
-################################################################################
 
 
 

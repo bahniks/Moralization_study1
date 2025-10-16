@@ -21,6 +21,9 @@ Osobně, jaké aspekty zvažujete, když přemýšlíte o dobré práci? Práce 
 
 intro2 = "Považujete tento aspekt práce za otázku morálky (etických hodnot)?"
 
+workMoralityInstructions = "Nyní se budou Vaše odpovědi týkat stejných aspektů práce jako v předchozí části, ale tentokrát budete odpovídat, zda považujete daný aspekt práce za otázku morálky (etických hodnot)."
+
+
 
 class Questionnaire(ExperimentFrame):
     def __init__(self, root, words, question = "", labels = None, blocksize = 4, values = 7, text = True,
@@ -200,9 +203,9 @@ class WorkMorality2(Questionnaire):
                          perpage=12,
                          questionnaireHeight=600)
 
-
+WorkMorality2Instructions = (InstructionsFrame, {"text": workMoralityInstructions, "height": 3, "width": 80, "proceed": True})
 
 
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([WorkMorality, WorkMorality2])
+    GUI([WorkMorality, WorkMorality2Instructions, WorkMorality2])
