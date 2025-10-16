@@ -111,7 +111,7 @@ reminder_task_moralization = """
 Vaše pečlivé hodnocení jídelníčků pomůže nemocničním dietologům zvážit nutriční a estetické informace, aby mohli sestavit stravovací plány, které jsou z lékařského hlediska vhodné a zlepšují zdraví pacientů. Pokračováním v tomto úkolu pomůžete dobré věci, protože Vaše hodnocení přímo podporuje zdravější a bezpečnější stravování pro osoby v péči.
 """ 
 
-endtime = """Dosud jste dokončili hodnocení {} a strávili na úkolu {}.
+endtime = """Dokončili jste hodnocení {}.
 
 Jelikož již uplynulo více než 30 minut od začátku úkolu, hodnocení dalších jídelníčků již není možné."""
 
@@ -122,7 +122,7 @@ V úkolu budete pokračovat, dokud neuplyne 10 minut.
 
 Klikněte na tlačítko „Pokračovat“."""
 
-endtime2 = """Dokončili jste hodnocení {} a strávili na úkolu {}.
+endtime2 = """Dokončili jste hodnocení {}.
 
 Jelikož již uplynulo více než 10 minut od začátku úkolu, úkol je ukončen."""
 
@@ -476,12 +476,17 @@ class Choice(InstructionsFrame):
     def __init__(self, root):
         self.elapsedTime_s = perf_counter() - root.status["startTime"]
         self.elapsedTime = floor(self.elapsedTime_s / 60)
-        baseText = continuation if self.elapsedTime < 30 else endtime
-        reminderText = "" if self.elapsedTime > 30 else eval("reminder_" + root.status["condition"])
-        if root.status["trial"] == 1:
-            text = baseText.format("jednoho jídelníčku", minutes(str(self.elapsedTime)), reminderText)
+        if self.elapsedTime < 30:
+            reminderText = eval("reminder_" + root.status["condition"])
+            if root.status["trial"] == 1:
+                text = continuation.format("jednoho jídelníčku", minutes(str(self.elapsedTime)), reminderText)
+            else:
+                text = continuation.format("{} jídelníčků".format(root.status["trial"]), minutes(str(self.elapsedTime)), reminderText)
         else:
-            text = baseText.format("{} jídelníčků".format(root.status["trial"]), minutes(str(self.elapsedTime)), reminderText)
+            if root.status["trial"] == 1:
+                text = endtime.format("jednoho jídelníčku")
+            else:
+                text = endtime.format("{} jídelníčků".format(root.status["trial"]))
 
         super().__init__(root, text = text, proceed = False, savedata = True, height = 16, width = 80)
 
@@ -702,14 +707,16 @@ class TimeTask(InstructionsFrame):
         elapsedTime = floor((perf_counter() - root.status["startTime"]) / 60)
         limit = 10 if not TESTING else 1
         if elapsedTime < limit:
-            baseText = continuation2
+            if root.status["trial"] == 1:
+                text = continuation2.format("jednoho jídelníčku", minutes(str(elapsedTime)))
+            else:
+                text = continuation2.format("{} jídelníčků".format(root.status["trial"]), minutes(str(elapsedTime)))
             root.count -= 2
         else:
-            baseText = endtime2
-        if root.status["trial"] == 1:
-            text = baseText.format("jednoho jídelníčku", minutes(str(elapsedTime)))
-        else:
-            text = baseText.format("{} jídelníčků".format(root.status["trial"]), minutes(str(elapsedTime)))
+            if root.status["trial"] == 1:
+                text = endtime2.format("jednoho jídelníčku")
+            else:
+                text = endtime2.format("{} jídelníčků".format(root.status["trial"]))
 
         super().__init__(root, text = text, proceed = True, height = 10, width = 80)
 
