@@ -193,7 +193,7 @@ class WorkMorality2(Questionnaire):
                          blocksize = 6,
                          values = 5,
                          text = False,
-                         filetext = "WorkMorality",
+                         filetext = "WorkMorality2",
                          fontsize = 15,
                          labelwidth = 10,
                          wraplength = 550,
