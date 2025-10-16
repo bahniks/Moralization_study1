@@ -386,15 +386,20 @@ class Menus(InstructionsFrame):
 
         self.taskFrame = taskFrame
 
+        self.text.grid(row=1, column=1, columnspan=2)
+
         # Create a frame for the image and scrollbar
         img_frame = Frame(self)
-        img_frame.grid(row=2, column=0, columnspan=3, sticky="nsew")
+        img_frame.grid(row=2, column=1, columnspan=2, sticky="nsew")
 
         self.rowconfigure(0, weight=0)
         self.rowconfigure(1, weight=1)
         self.rowconfigure(2, weight=10)
         self.rowconfigure(3, weight=1)
         self.rowconfigure(4, weight=0)
+        self.columnconfigure(0, weight=1)
+        self.columnconfigure(3, weight=1)
+        self.columnconfigure(2, weight=0)
 
         # Create canvas and scrollbar
         canvas = Canvas(img_frame, bg="white", highlightthickness=0)
@@ -431,7 +436,8 @@ class Menus(InstructionsFrame):
             photo_img = ImageTk.PhotoImage(pil_img)
             img_id = canvas.create_image(0, 0, anchor="nw", image=photo_img)
             canvas.image = photo_img  # Keep reference
-            canvas.config(scrollregion=canvas.bbox(img_id))
+            canvas.config(scrollregion=canvas.bbox(img_id))         
+            canvas.config(width = new_size[0]) 
         except Exception as e:
             canvas.create_text(10, 10, anchor="nw", text=f"Error loading image: {e}", fill="red")
 
@@ -725,4 +731,4 @@ if __name__ == "__main__":
     from login import Login
     import os
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([Login, MoralizationInstructions, Task, Choice, Task, Choice, BDM, BDMResult, Task, TimeTask, Login, Task, Ratings1, Choice, Task, Choice, Ratings2])
+    GUI([Task, Login, MoralizationInstructions, Task, Choice, Task, Choice, BDM, BDMResult, Task, TimeTask, Login, Task, Ratings1, Choice, Task, Choice, Ratings2])

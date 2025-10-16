@@ -210,14 +210,14 @@ class PMS(Quest):
 
 class Moralizability(Quest):
     def __init__(self, root):
-        super().__init__(root, 7, "moralizability.txt", "Moralizability", instructions = moralizabilityinstructions, width = 85,
-                         left = "rozhodně nesouhlasím", right = "rozhodně souhlasím", height = 5, options = 5, center = True, wraplength = "auto")
+        super().__init__(root, 9, "moralizability.txt", "Moralizability", instructions = moralizabilityinstructions, width = 85,
+                         left = "rozhodně nesouhlasím", right = "rozhodně souhlasím", height = 3, options = 5, center = True, wraplength = "auto")
 
 
 class Motivation(Quest):
     def __init__(self, root):
         super().__init__(root, 8, "motivation.txt", "Motivation", instructions = motivationInstructions, width = 85,
-                         left = "rozhodně nesouhlasím", right = "rozhodně souhlasím", height = 5, options = 5, center = True, wraplength = "auto")
+                         left = "rozhodně nesouhlasím", right = "rozhodně souhlasím", height = 3, options = 5, center = True, wraplength = "auto")
 
 
 QuestInstructions = (InstructionsFrame, {"text": questintro, "height": 15})
@@ -225,4 +225,4 @@ QuestInstructions = (InstructionsFrame, {"text": questintro, "height": 15})
 
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([Motivation, Moralizability, Hexaco, QuestInstructions])
+    GUI([Moralizability, Motivation, Hexaco, QuestInstructions])

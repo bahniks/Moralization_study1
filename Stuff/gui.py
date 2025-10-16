@@ -30,8 +30,8 @@ class GUI(Tk):
         self.overrideredirect(not windowed)
         self.protocol("WM_DELETE_WINDOW", lambda: self.closeFun())
 
-        self.screenwidth = 1280 #1920#  adjust
-        self.screenheight = 1024 #1080#  adjust
+        self.screenwidth = 1280 # 1680 # 1920 # adjust
+        self.screenheight = 1024 # 1050 # 1080 # adjust
 
         os.chdir(os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
         filepath = os.path.join(os.getcwd(), "Data")

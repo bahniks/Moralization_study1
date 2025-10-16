@@ -15,13 +15,11 @@ from constants import TESTING, AUTOFILL
 
 
 
-intro = """Uveďte prosím svou odpověď na následující tvrzení na škále od 1 (rozhodně nesouhlasím) do 5 (rozhodně souhlasím).
+intro = """Jaké aspekty zvažujete, když přemýšlíte o dobré práci? Práce je pro mě důležitá, protože mi umožňuje…"""
 
-Osobně, jaké aspekty zvažujete, když přemýšlíte o dobré práci? Práce je pro mě důležitá, protože může…"""
+intro2 = "Považuji práci za záležitost morálky, protože může…"
 
-intro2 = "Považujete tento aspekt práce za otázku morálky (etických hodnot)?"
-
-workMoralityInstructions = "Nyní se budou Vaše odpovědi týkat stejných aspektů práce jako v předchozí části, ale tentokrát budete odpovídat, zda považujete daný aspekt práce za otázku morálky (etických hodnot)."
+workMoralityInstructions = "Nyní se budou Vaše odpovědi týkat stejných aspektů práce jako v předchozí části, ale tentokrát budete odpovídat, zda považujete daný aspekt práce za důvod, proč je práce záležitost morálky."
 
 
 
