@@ -5,7 +5,7 @@ MAX_BDM_PRIZE = 100
 MINUTEBONUS = 3
 
 AUTOFILL = False
-TESTING = True
+TESTING = False
 GOTHROUGH = False
 URL = "https://bahnik.pythonanywhere.com/"
 #URL = "TEST"
