@@ -502,7 +502,8 @@ class Choice(InstructionsFrame):
             self.endButton = ttk.Button(self.buttonFrame, text="Ukončit", command=self.end)
             self.endButton.grid(column=2, row=2, sticky="e", padx=60)
         else:
-            self.continueButton.grid(column=1, row=2, padx=60, command = self.end)            
+            self.continueButton.grid(column=1, row=2, padx=60)        
+            self.continueButton.config(command=self.end)    
 
     def proceed(self):
         self.response = "continue"
