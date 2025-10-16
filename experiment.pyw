@@ -18,7 +18,6 @@ from questionnaire import WorkMorality, WorkMorality2, WorkMorality2Instructions
 from stereotypes import Stereotypes, StereotypesScale, Exposure, RatingsStereotypes
 
 
-# udelat ukladani dat
 frames = [Initial,
           Login, 
           Intro,            

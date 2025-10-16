@@ -731,4 +731,4 @@ if __name__ == "__main__":
     from login import Login
     import os
     os.chdir(os.path.dirname(os.getcwd()))
-    GUI([Task, Login, MoralizationInstructions, Task, Choice, Task, Choice, BDM, BDMResult, Task, TimeTask, Login, Task, Ratings1, Choice, Task, Choice, Ratings2])
+    GUI([Login, MoralizationInstructions, Task, Task, Choice, Task, Choice, BDM, BDMResult, Task, TimeTask, Login, Task, Ratings1, Choice, Task, Choice, Ratings2])
