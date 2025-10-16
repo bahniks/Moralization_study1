@@ -510,8 +510,9 @@ class Choice(InstructionsFrame):
         if self.root.status["trial"] == 1:
             self.root.count += 2
         if self.root.status["condition"] == "monetary":
-            self.root.status["reward"] += self.elapsedTime * MINUTEBONUS
-            self.root.status["results"] += [monetary_end.format(self.elapsedTime * MINUTEBONUS)]
+            reward = self.elapsedTime * MINUTEBONUS if self.elapsedTime < 30 else 30 * MINUTEBONUS
+            self.root.status["reward"] += reward
+            self.root.status["results"] += [monetary_end.format(reward)]
         self.nextFun()
 
     def write(self):
