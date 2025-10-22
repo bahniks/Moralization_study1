@@ -423,7 +423,8 @@ class Menus(InstructionsFrame):
         canvas.pack(side="left", fill="both", expand=True)
 
         # Load image
-        img_path = os.path.join(os.path.dirname(__file__), 'Menus', root.status["menu_order"][root.status["trial"] - 1])
+        folder = 'Menus' if "Dosp" in root.status["menu_order"][root.status["trial"] - 1] else 'Menus2'
+        img_path = os.path.join(os.path.dirname(__file__), folder, root.status["menu_order"][root.status["trial"] - 1])
 
         try:
             pil_img = Image.open(img_path)
